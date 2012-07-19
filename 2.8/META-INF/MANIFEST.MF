@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: sakai
+Build-Jdk: 1.5.0_22
+Extension-Name: library
+Specification-Vendor: University of Michigan
+Implementation-Vendor: University of Michigan
+Implementation-Title: library
+Implementation-Version: 2.8-SNAPSHOT
+
