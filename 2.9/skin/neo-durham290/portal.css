@@ -1420,11 +1420,11 @@ below they are contextually defined depending on the column as an example,as you
 	background-image: url(/library/image/silk/script.png );
 }
 
-.icon-blogger{
+.icon-blogger, .icon-sakai-blogwow {
 	background-image: url(/library/image/silk/book_edit.png );
 }
 
-.icon-sakai-assignment-grades{
+.icon-sakai-assignment-grades, .icon-sakai-assignment2 {
 	background-image: url(/library/image/silk/page_edit.png );
 }
 
@@ -1582,6 +1582,12 @@ background-image: url(/library/image/silk/comment.png);
 }
 .icon-sakai-site-roster2 { 
 	background-image: url(../../image/silk/vcard.png); 
+}
+.icon-sakai-bbb { 
+	background-image: url(/library/image/silk/connect.png); 
+}
+.icon-sakai-signup {
+	background-image: url(/library/image/silk/connect.png); 
 }
 
 /** Privacy Popup Styles **/
