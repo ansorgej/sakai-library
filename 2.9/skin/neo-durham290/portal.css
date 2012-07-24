@@ -2222,3 +2222,10 @@ pc_go_off_ctrl{
    -khtml-border-radius: 3px;
    border-radius: 3px;
 }
+
+ul.topnav li {
+  display: none;
+}
+ul.topnav li.nav-selected, ul.topnav li.more-tab, ul.topnav li:first-child {
+  display: block;
+}
