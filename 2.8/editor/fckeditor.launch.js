@@ -25,24 +25,43 @@ sakai.editor.editors = sakai.editor.editors || {};
 
 
 sakai.editor.editors.fckeditor = {};
-sakai.editor.editors.fckeditor.launch = function(targetId, config) {
+sakai.editor.editors.fckeditor.launch = function(targetId, config, w, h) {
     var oFCKeditor = new FCKeditor(targetId);
     oFCKeditor.BasePath = "/library/editor/FCKeditor/";
-    oFCKeditor.Width  = "675" ;
-    oFCKeditor.Height = "275" ;
+    if(config != null && config.width && config.width != ''){
+	w = config.width;
+    }else if (w == null || w == '') {
+	w = "675";
+    }
+    if(config != null && config.height && config.height != ''){
+	h = config.height;
+    }else if (h == null || h == '') {
+	h = "275";
+    }
+    oFCKeditor.Width  = w;
+    oFCKeditor.Height = h;
 
     var folder = "";
-    if (sakai.editor.collectionId) {
-        folder = '&CurrentFolder=' + sakai.editor.collectionId;
-        oFCKeditor.Config['CurrentFolder'] = sakai.editor.collectionId;
+
+    var collectionId = "";
+    if (config != null && config.collectionId) {
+        collectionId=config.collectionId;
+    }
+    else if (sakai.editor.collectionId) {
+        collectionId=sakai.editor.collectionId
     }
 
-    oFCKeditor.Config['ImageBrowserURL'] = oFCKeditor.BasePath + "editor/filemanager/browser/default/browser.html?Connector=/sakai-fck-connector/filemanager/connector&Type=Image" + folder;
-    oFCKeditor.Config['LinkBrowserURL'] = oFCKeditor.BasePath + "editor/filemanager/browser/default/browser.html?Connector=/sakai-fck-connector/filemanager/connector&Type=Link" + folder;
-    oFCKeditor.Config['FlashBrowserURL'] = oFCKeditor.BasePath + "editor/filemanager/browser/default/browser.html?Connector=/sakai-fck-connector/filemanager/connector&Type=Flash" + folder;
-    oFCKeditor.Config['ImageUploadURL'] = "/sakai-fck-connector/filemanager/connector?Type=Image&Command=QuickUpload&Type=Image" + folder;
-    oFCKeditor.Config['FlashUploadURL'] = "/sakai-fck-connector/filemanager/connector?Type=Flash&Command=QuickUpload&Type=Flash" + folder;
-    oFCKeditor.Config['LinkUploadURL'] = "/sakai-fck-connector/filemanager/connector?Type=File&Command=QuickUpload&Type=Link" + folder;
+    if (collectionId) {
+        folder = '&CurrentFolder=' + collectionId;
+        oFCKeditor.Config['CurrentFolder'] = collectionId 
+    }
+		
+    oFCKeditor.Config['ImageBrowserURL'] = oFCKeditor.BasePath + "editor/filemanager/browser/default/browser.html?Connector=/sakai-fck-connector/filemanager/connector"+collectionId+"&Type=Image" + folder;
+    oFCKeditor.Config['LinkBrowserURL'] = oFCKeditor.BasePath + "editor/filemanager/browser/default/browser.html?Connector=/sakai-fck-connector/filemanager/connector"+collectionId+"&Type=Link" + folder;
+    oFCKeditor.Config['FlashBrowserURL'] = oFCKeditor.BasePath + "editor/filemanager/browser/default/browser.html?Connector=/sakai-fck-connector/filemanager/connector"+collectionId+"&Type=Flash" + folder;
+    oFCKeditor.Config['ImageUploadURL'] = "/sakai-fck-connector/filemanager/connector"+collectionId+"?Type=Image&Command=QuickUpload&Type=Image" + folder;
+    oFCKeditor.Config['FlashUploadURL'] = "/sakai-fck-connector/filemanager/connector"+collectionId+"?Type=Flash&Command=QuickUpload&Type=Flash" + folder;
+    oFCKeditor.Config['LinkUploadURL'] = "/sakai-fck-connector/filemanager/connector"+collectionId+"?Type=File&Command=QuickUpload&Type=Link" + folder;
 
     var config = sakai.editor.enableResourceSearch ? "config_rs.js" : "config.js";
 

@@ -43,3 +43,21 @@ img, input, textarea
 {
 	cursor: default;
 }
+
+.hiddenSpellError
+{
+   border-bottom: 2px solid red;
+   cursor: default;
+}
+
+.hiddenGrammarError
+{
+   border-bottom: 2px solid green;
+   cursor: default;
+}
+
+.hiddenSuggestion
+{
+   border-bottom: 2px solid blue;
+   cursor: default;
+}

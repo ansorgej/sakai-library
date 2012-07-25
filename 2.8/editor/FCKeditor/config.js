@@ -50,9 +50,6 @@ FCKConfig.PluginsPath = FCKConfig.BasePath + 'plugins/' ;
 FCKConfig.Plugins.Add( 'attachments' ) ;
 FCKConfig.Plugins.Add( 'movieplayer', 'en,pt' ) ;
 
-FCKConfig.Plugins.Add( 'sakaientitybrowser' ) ;
-FCKConfig.Plugins.Add('fckeditor_wiris');
-
 // FCKConfig.Plugins.Add( 'autogrow' ) ;
 // FCKConfig.Plugins.Add( 'dragresizetable' );
 FCKConfig.AutoGrowMax = 400 ;
@@ -84,6 +81,8 @@ FCKConfig.ForcePasteAsPlainText	= false ;
 FCKConfig.AutoDetectPasteFromWord = true ;	// IE only.
 FCKConfig.ShowDropDialog = true ;
 FCKConfig.ForceSimpleAmpersand	= false ;
+// SAK-1735: By setting TabSpaces=0 in the config.js files used for the FCKeditor, 
+// then the FCKeditor is no longer a keyboard trap. The user can tab in and tab out of it.
 FCKConfig.TabSpaces		= 5 ;
 FCKConfig.ShowBorders	= true ;
 FCKConfig.SourcePopup	= false ;
@@ -107,7 +106,7 @@ FCKConfig.ToolbarSets["Default"] = [
         ['OrderedList','UnorderedList','Outdent','Indent'],
         ['JustifyLeft','JustifyCenter','JustifyRight','JustifyFull','TextColor','BGColor'],
         ['Link','Unlink','Anchor'],
-        ['Sakai_Entity_Link','Image','Movie','Flash','Table','Rule','Smiley','SpecialChar','fckeditor_wiris_openFormulaEditor','fckeditor_wiris_openCAS'],['Style'],
+        ['Image','Movie','Flash','Table','Rule','Smiley','SpecialChar'],['Style'],
         ['FontFormat','FontName','FontSize'],
         ['About']
 ] ;
@@ -120,7 +119,7 @@ FCKConfig.ToolbarSets["large"] = [
         ['OrderedList','UnorderedList','Outdent','Indent'],
         ['JustifyLeft','JustifyCenter','JustifyRight','JustifyFull','TextColor','BGColor'],
         ['Link','Unlink','Anchor'],
-        ['Sakai_Entity_Link','Image','Movie','Flash','Table','Rule','Smiley','SpecialChar','fckeditor_wiris_openFormulaEditor','fckeditor_wiris_openCAS'],['Style'],
+        ['Image','Movie','Flash','Table','Rule','Smiley','SpecialChar'],['Style'],
         ['FontFormat','FontName','FontSize'],
 ] ;
 
@@ -130,7 +129,7 @@ FCKConfig.ToolbarSets["largecompressed"] = [
         ['Bold','Italic','Underline','StrikeThrough','Subscript','Superscript'],
         ['OrderedList','UnorderedList','Outdent','Indent','JustifyLeft','JustifyCenter','JustifyRight','JustifyFull'],
         ['TextColor','BGColor','Link','Unlink','Anchor'],
-        ['Sakai_Entity_Link','Image','Movie','Flash','Table','Rule','Smiley','SpecialChar','fckeditor_wiris_openFormulaEditor','fckeditor_wiris_openCAS'],
+        ['Image','Movie','Flash','Table','Rule','Smiley','SpecialChar'],
         ['FontFormat','FontName'],['Style','FontSize'],
 ] ;
 
@@ -139,7 +138,7 @@ FCKConfig.ToolbarSets["medium"] = [
 	      ['Cut','Copy','Paste','PasteText','PasteWord'],
         ['Undo','Redo','-','Find','Replace'],
         ['Bold','Italic','Underline','TextColor','BGColor','OrderedList','UnorderedList','Outdent','Indent','JustifyLeft','JustifyCenter','JustifyRight','JustifyFull'],
-        ['Sakai_Entity_Link','fckeditor_wiris_openFormulaEditor','fckeditor_wiris_openCAS','Image','Table','Link','Unlink','-','FontFormat','Style']        
+        ['Image','Table','Link','Unlink','-','FontFormat','Style']        
 ] ;
 
 FCKConfig.ToolbarSets["small"] = [
@@ -155,7 +154,7 @@ FCKConfig.ToolbarSets["Attachments"] = [
    ['OrderedList','UnorderedList','Outdent','Indent'],
    ['JustifyLeft','JustifyCenter','JustifyRight','JustifyFull','TextColor','BGColor'],
    ['Link','Unlink','Anchor'],
-   ['Sakai_Entity_Link','Image','Movie','Flash','Table','Rule','Smiley','SpecialChar','fckeditor_wiris_openFormulaEditor','fckeditor_wiris_openCAS'],['Style'],
+   ['Image','Movie','Flash','Table','Rule','Smiley','SpecialChar'],['Style'],
    ['FontFormat','FontName','FontSize'],
    ['About'],
    '/',
@@ -204,9 +203,9 @@ FCKConfig.FontSizes		= 'smaller;larger;xx-small;x-small;small;medium;large;x-lar
 FCKConfig.StylesXmlPath		= FCKConfig.EditorPath + 'fckstyles.xml' ;
 FCKConfig.TemplatesXmlPath	= FCKConfig.EditorPath + 'fcktemplates.xml' ;
 
-FCKConfig.SpellChecker		= 'ieSpell' ;	// 'ieSpell' | 'SpellerPages'
+FCKConfig.SpellChecker		= 'SpellerPages' ;	// 'ieSpell' | 'SpellerPages'
 FCKConfig.IeSpellDownloadUrl	= 'http://www.iespell.com/download.php' ;
-FCKConfig.SpellerPagesServerScript = 'server-scripts/spellchecker.php' ;	// Available extension: .php .cfm .pl
+FCKConfig.SpellerPagesServerScript = '/proxy/spellcheck/' ;	// Available extension: .php .cfm .pl
 FCKConfig.FirefoxSpellChecker	= false ;
 
 FCKConfig.MaxUndoLevels = 15 ;

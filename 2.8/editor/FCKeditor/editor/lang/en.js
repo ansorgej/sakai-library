@@ -530,7 +530,5 @@ DlgAboutInfo		: "For further information go to",
 DlgDivGeneralTab	: "General",
 DlgDivAdvancedTab	: "Advanced",
 DlgDivStyle		: "Style",
-DlgDivInlineStyle	: "Inline Style",
-
-DlgEntityTitle		: "Entity Link"
+DlgDivInlineStyle	: "Inline Style"
 };
