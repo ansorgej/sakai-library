@@ -40,7 +40,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config) {
     }
     CKEDITOR.replace(targetId, {
         skin: 'v2',
-        height: 460,
+        height: 310,
         filebrowserBrowseUrl :'/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + collectionId + folder,
         filebrowserImageBrowseUrl : '/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Type=Image&Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + collectionId + folder,
         filebrowserFlashBrowseUrl :'/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Type=Flash&Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + collectionId + folder,
@@ -54,6 +54,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config) {
         disableNativeSpellChecker: false,
         browserContextMenuOnCtrl: true,
 
+        toolbarCanCollapse: false,
         toolbar_Full:
         [
             ['Source','-','Templates'],
@@ -75,7 +76,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config) {
             '/',
             ['Styles','Format','Font','FontSize'],
             ['TextColor','BGColor'],
-            ['Maximize', 'ShowBlocks','-','About']
+            ['Maximize', 'ShowBlocks']
         ],
         resize_dir: 'vertical'
     });
