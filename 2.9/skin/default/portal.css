@@ -1,4 +1,3 @@
-
 /*general body - used by main portal document */ 
 body{
 	width: 100%;
@@ -16,6 +15,13 @@ body{
 
 /*inner wrapper for portal content (decorative - children are #header #container and #footer )*/
 #portalContainer{
+}
+
+#portal_js_warn {
+    font-size: 1.2em;
+    background:#c00;
+    color:#fff;
+    padding:10px;
 }
 
 /*wrapper masthead  and site navigation 
@@ -722,16 +728,15 @@ page estate
 /*PART 6 - SITE AFFILIATION,SITE TYPE/STATUS AND PRESENCE - children of #toolMenuWrap	*/
 /*site logo wrapper*/
 #worksiteLogo{
-	width: 9.7em;
-	height: auto;
-	overflow: hidden;
-	display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
 }
-
 /*site logo image - Sakai may output,depending on installation,an image here based in site affiliation. Site owner may also point to a url - overriding the Sakai provided image*/
-#worksiteLogo img{
-	display: block;
-	margin: .5em auto;
+#worksiteLogo img{ 
+    width:95%;
+    margin:.5em auto;
 }
 
 /*wrapper for the string that Sakai will output based on site type (ie. project,course) this is open ended and institution specific*/
@@ -984,7 +989,7 @@ below they are contextually defined depending on the column as an example,as you
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     vertical-align:middle;
-    padding:6px 10px;
+    padding:6px 10px !important;
     outline:none;
     z-index:200000;
     box-shadow:0px 0px 10px #000;
@@ -1406,3 +1411,25 @@ div#privacy_overlay {
     font-size:130%;
     color:#fff;
 }
+
+.portletTitle .action a.tool-directurl{
+	padding:2px;
+	background: url(/library/image/silk/link.png) center right no-repeat;
+}
+        
+.portletTitle .action a.tool-directurl:hover{
+	background: url(/library/image/silk/link.png) center right no-repeat;
+}
+
+.direct-url-wrap {
+	font-size: 85%;
+	color: #555;
+}
+
+.direct-url-wrap textarea {
+	color: #000;
+	overflow:auto;
+	width:250px;
+	display:block;
+}
+
