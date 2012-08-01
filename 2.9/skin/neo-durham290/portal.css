@@ -131,7 +131,7 @@ that can be used or hidden,can also use a background: url(images/<image name>.<e
 in this skin is rendered via ul.topnav, which a anon user does not see)*/
 #headerMin #mastLogo {
     display: block; 
-    background-image: url(images/logo.png);
+    background-image: url(images/gateway-dtcclogo-42px-high.png);
     background-repeat: no-repeat;
     background-position: 8px 4px;
     float: left;
@@ -332,7 +332,7 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
     padding: 8px 0 5px 155px; /* matches the width of the toolMenu*/
     margin: 0;
     width: 100%;
-    background: transparent url(images/logo.png) 8px 4px no-repeat;
+    background: transparent url(images/myworkspace-dtcclogo-35px-high.png) 8px 4px no-repeat;
 }
 /* the individual containers for the site links, tool menu control, tool menu*/
 ul.topnav li {
