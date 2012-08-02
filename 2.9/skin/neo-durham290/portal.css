@@ -1678,3 +1678,13 @@ a.qtipLinkButton:hover {
 	width:250px;
 	display:block;
 }
+
++ul.topnav li {
+  display: none;
+}
+
++ul.topnav li.nav-selected, ul.topnav li.more-tab, ul.topnav li:first-child {
+	display: block;
+}
+
+
