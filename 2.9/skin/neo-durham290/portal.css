@@ -180,7 +180,7 @@ that can be used or hidden,can also use a background: url(images/<image name>.<e
 }
 /* login links for CAS,logout link  */
 #loginLinks a, #loginLinks a:visited {
-    color: #fff;
+    color: #2683BC;
     float: right;
 }
 /* #loginLink1 is the "login/logout" link in a CAS setup, #loginLink2 is the secondary CAS link: login for
@@ -199,21 +199,21 @@ guests, for example */
     padding: 4px 6px;
     text-align: center;
     text-decoration: none;
-    background: #ADB49E;
-    background: -moz-linear-gradient(top, #ADB49E 0%, #73786A 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ADB49E), color-stop(100%,#73786A));
-    background: -webkit-linear-gradient(top, #ADB49E 0%,#73786A 100%);
-    background: -o-linear-gradient(top, #ADB49E 0%,#73786A 100%);
-    background: -ms-linear-gradient(top, #ADB49E 0%,#73786A 100%);
-    background: linear-gradient(top, #ADB49E 0%,#73786A 100%);
-    border: 1px solid #73786A;
+    background: #E0E3E5;
+    background: -moz-linear-gradient(top, #F6F6F5 0%, #E0E3E5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F6F6F5), color-stop(100%,#E0E3E5));
+    background: -webkit-linear-gradient(top, #F6F6F5 0%,#E0E3E5 100%);
+    background: -o-linear-gradient(top, #F6F6F5 0%,#E0E3E5 100%);
+    background: -ms-linear-gradient(top, #F6F6F5 0%,#E0E3E5 100%);
+    background: linear-gradient(top, #F6F6F5 0%,#E0E3E5 100%);
+    border: 1px solid #E0E0E0;
+    box-shadow: 0 1px 1px 0 #999999 !important;
 }
 #headerMin #loginLink1, #headerMin #loginLink2 {
     margin-top: -2px;
 }
 #loginLink1:hover, #loginLink2:hover, form#loginForm input#submit:hover {
-    background: #73786A;
-    text-decoration: none;
+    background: #F6F6F5;
 }
 /*make secondary CAS login link (ie. Guest Login) different*/ 
 #loginLink2, #loginLink2:hover {
@@ -355,17 +355,6 @@ ul.topnav li.nav-menu:hover, ul.topnav li.more-tab:hover {
 }
 /* current site control rendering */
  ul.topnav li.nav-selected {
-     background: #ADB49E;
-    background: -moz-linear-gradient(top, #ADB49E 0%, #73786A 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ADB49E), color-stop(100%,#73786A));
-    background: -webkit-linear-gradient(top, #ADB49E 0%,#73786A 100%);
-    background: -o-linear-gradient(top, #ADB49E 0%,#73786A 100%);
-    background: -ms-linear-gradient(top, #ADB49E 0%,#73786A 100%);
-    background: linear-gradient(top, #ADB49E 0%,#73786A 100%);
-    border: 1px solid #73786A;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
  }
 /* site submenu trigger */
 ul.topnav li span.drop {
@@ -1683,8 +1672,12 @@ ul.topnav li {
   display: none;
 }
 
-ul.topnav li.nav-selected, ul.topnav li.more-tab, ul.topnav li:first-child {
+ul.topnav li.nav-selected, ul.topnav li.more-tab, ul.topnav li:first-child, ul.topnav li:first-child, ul.nav-submenu li.submenuitem {
 	display: inline-block;
+}
+
+ul.topnav li.nav-selected a{
+    color: #009DCE;
 }
 
 
