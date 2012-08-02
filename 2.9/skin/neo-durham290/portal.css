@@ -273,7 +273,7 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
     padding-left: 25px;
     font-weight: normal;
     color: #111;
-    color: #444;
+    color: #444 !important;
     padding: 7px 6px 6px 25px !important;
     font-size: 1em !important;
 }
