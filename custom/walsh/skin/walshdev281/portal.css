@@ -1444,3 +1444,11 @@ div.orientation a{
 div.orientation a:hover {
   text-decoration: underline
 }
+
+/* LS-130 */
+ul#siteLinkList li {
+  display: none;
+}
+ul#siteLinkList li.selectedTab, ul#siteLinkList li.more-tab, ul#siteLinkList li:first-child {
+  display: inline-block;
+}
