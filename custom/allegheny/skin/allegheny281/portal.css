@@ -1257,6 +1257,12 @@ background-image: url(../../image/silk/comment.png);
 .icon-sakai-rsf-evaluation { 
 	background-image: url(../../image/silk/chart_bar.png); 
 }
+.icon-sakai-lessonbuildertool {
+    background-image: url(../../image/silk/book_open.png);
+}
+.icon-sakai-site-roster2 { 
+	background-image: url(../../image/silk/vcard.png); 
+}
 
 
 /** Privacy Popup Styles **/
