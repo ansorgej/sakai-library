@@ -41,7 +41,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config) {
 	
     CKEDITOR.replace(targetId, {
         skin: 'v2',
-        height: 460,
+        height: 310,
         filebrowserBrowseUrl :'/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + collectionId + folder,
         filebrowserImageBrowseUrl : '/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Type=Image&Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + collectionId + folder,
         filebrowserFlashBrowseUrl :'/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Type=Flash&Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + collectionId + folder,
@@ -60,9 +60,9 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config) {
             // Uncomment the next line and comment the following to enable the default spell checker.
             // Note that it uses spellchecker.net, displays ads and sends content to remote servers without additional setup.
             //['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print', 'SpellChecker', 'Scayt'],
-            ['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print'],
+            ['Cut','Copy','Paste','PasteText','-','Print'],
             ['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
-            ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote','CreateDiv'],
+            ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
             '/',
             ['Bold','Italic','Underline','Strike','-','Subscript','Superscript'],
             ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
@@ -74,7 +74,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config) {
             '/',
             ['Styles','Format','Font','FontSize'],
             ['TextColor','BGColor'],
-            ['Maximize', 'ShowBlocks','-','About']
+            ['Maximize', 'ShowBlocks']
         ],
         resize_dir: 'vertical'
     });
