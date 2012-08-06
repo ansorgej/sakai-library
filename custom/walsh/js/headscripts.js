@@ -284,7 +284,7 @@ function setMainFrameHeightNow(id)
    // SAK-11014 revert             var height = getFrameHeight(frame);
 
 		// here we fudge to get a little bigger
-		var newHeight = height + 40;
+		var newHeight = height + 90;
 
 		// but not too big!
 		if (newHeight > 32760) newHeight = 32760;
