@@ -45,7 +45,8 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config) {
         filebrowserBrowseUrl :'/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + collectionId + folder,
         filebrowserImageBrowseUrl : '/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Type=Image&Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + collectionId + folder,
         filebrowserFlashBrowseUrl :'/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Type=Flash&Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + collectionId + folder,
-        extraPlugins: (sakai.editor.enableResourceSearch ? 'resourcesearch' : ''),
+        extraPlugins: (sakai.editor.enableResourceSearch ? 'resourcesearch,' : '')+'movieplayer,atd-ckeditor',
+	atd_rpc: '/proxy/atd',
 
         // These two settings enable the browser's native spell checking and context menus.
         // Control-Right-Click (Windows/Linux) or Command-Right-Click (Mac) on highlighted words
@@ -65,12 +66,13 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config) {
             ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
             '/',
             ['Bold','Italic','Underline','Strike','-','Subscript','Superscript'],
+	    ['atd-ckeditor'],
             ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
             ['BidiLtr', 'BidiRtl' ],
             ['Link','Unlink','Anchor'],
             (sakai.editor.enableResourceSearch
-                ? ['ResourceSearch', 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak']
-                : ['Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak']),
+                ? ['ResourceSearch', 'Image','Movie','Table','HorizontalRule','Smiley','SpecialChar','PageBreak']
+                : ['Image','Movie','Table','HorizontalRule','Smiley','SpecialChar','PageBreak']),
             '/',
             ['Styles','Format','Font','FontSize'],
             ['TextColor','BGColor'],
