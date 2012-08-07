@@ -40,6 +40,7 @@ function eqImageInsert()
     fontsize: $('#EqnSize').val()
 	}, function(xml) {
 		var image_url = $(xml).find('url').text();
+		image_url = image_url.replace('/mathml/umm/', '/proxy/umm/');
 		var image_width = $(xml).find('width').text();
 		var image_height = $(xml).find('height').text();
 
