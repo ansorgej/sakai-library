@@ -188,7 +188,6 @@ that can be used or hidden,can also use a background:url(images/<image name>.<ex
 	float: left;
 	margin-left: 0.2em;
 	width: auto;
-	background:url(images/logo_inst.png)
 }
 
 #loginUser{
@@ -1096,7 +1095,7 @@ below they are contextually defined depending on the column as an example,as you
 	background-image: url(../../image/silk/script.png );
 }
 
-.icon-blogger{
+.icon-blogger, .icon-sakai-blogwow {
 	background-image: url(../../image/silk/book_edit.png );
 }
 
