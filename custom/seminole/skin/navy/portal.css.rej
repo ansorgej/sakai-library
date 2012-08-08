@@ -1,0 +1,162 @@
+--- /tmp/seminolestate/portal.css	2010-08-20 10:11:39.000000000 -0400
++++ ./portal.css	2011-07-14 18:35:49.653093114 -0400
+@@ -582,43 +587,140 @@
+ also hide if are going to be using icon links (as background of <a> nad <li>
+ */
+ 
+-#toolMenu li a:link,#toolMenu li a, #toolMenu li.selectedTool span {
+-    background-position : 5% 50%;
+-    background-repeat : no-repeat !important;
+-	display: block;
+-    padding: 5px 10px 5px 29px;
+-	color: white;
+-	margin: 0;
+-	text-decoration: none;
+-	font-size: 0.85em;
++
++#toolMenu li span, #subSites li span{
++
+ }
+-#toolMenu li.selectedTool span{
+-	font-weight: bold;
+-    background-color: #f6cb6a;
+-	color: #112469;
++
++#toolMenu li.selectedTool, #toolMenu li.selectedTool a{
++	color:#000;
++	text-decoration:none;
++	background-color: #F6CB6A;
+ }
+ 
+-#toolMenu li a:link,#toolMenu li a{
+-    margin-bottom : 0;
+-	text-decoration: none;
++#toolMenu li a:link,#toolMenu li a,
++#subSites li a:link,#subSites li a{
++	display: block;
++	text-decoration: none !important;
++	color: #fff;
++    padding: 5px 10px 5px 29px;
++    margin-bottom : 0px;
++    margin-left : 0px;
++    margin-right : 0px;
++    margin-top : 0px;
++    background-position : 5% 50% !important;
++    background-repeat : no-repeat !important;
++    font-size: 0.85em;
+ }
+-#toolMenu li a:hover {
++#toolMenu li a:hover,
++#subSites li a:hover {
+ 	text-decoration: none;
+ 	background-color: #303993;
+ }
+ 
+-#toolMenu li a.selected{
++#toolMenu li a.selected,
++#subSites li a:selected{
+ 	text-decoration: none;
+ 	color: #000;
+ 	cursor: text;
+ }
+ 
+-#toolMenu li a.selected:hover{
++#toolMenu li a.selected:hover,
++#subSites li a:selected:hover{
+ 	text-decoration: none;
+ 	color: #000;
+ 	cursor: text;
+ }
+ 
++#toolMenu .hidden { 
++	font-style: italic;
++	filter: alpha(opacity=70); /* opacity for IE */
++	opacity: 0.7; /* CSS3 standard */
++} 
++
++/*
++set of special selectors when a user has chosen to minimize navigation and maximize real
++page estate
++*/
++
++#toggleToolMax, #toggleNormal{
++	height:16px;
++}
++#toggleToolMax{
++    position:absolute;
++    top:0;
++    right:0;
++    display:block;
++}
++#toggleNormal{
++    position:absolute;
++    top:0;
++    right:-18px;
++    display:block;
++
++}
++.toggleToolstoggleNav img#toggleToolMax{
++    background:#fff url(images/toggler-back.png) 0 0 no-repeat
++ }
++.toggleToolstoggleNav #toggleNormal{
++	background:#fff url(images/toggler-back.png) -16px 0 no-repeat
++ }
++.toggleNav #toggleToolMax{
++	background:#fff url(images/toggler-back.png) -32px 0 no-repeat
++ }
++.toggleNav #toggleNormal{
++	background:#fff url(images/toggler-back.png) -48px 0 no-repeat
++ }  
++ .toggleTools #toggleToolMax{
++	background:#fff url(images/toggler-back.png) -64px 0 no-repeat
++ }
++.toggleTools #toggleNormal{
++	background:#fff url(images/toggler-back.png) -80px 0 no-repeat
++ }
++.sakaiMinimizePageNavigation #toolMenu li a, .sakaiMinimizePageNavigation #subSites li a{
++	display:block;
++	height:16px;
++	padding-right:0 !important;
++	width:16px;
++}
++.sakaiMinimizePageNavigation #toolMenu{
++	width:16px;
++}
++.sakaiMinimizePageNavigation #worksiteLogo, .sakaiMinimizePageNavigation #presenceWrapper{
++	display:none
++}
++.sakaiMinimizePageNavigation #toolMenu li span,.sakaiMinimizePageNavigation #subSites li span{
++    position:absolute; 
++    left:-10000px; 
++    top:auto; 
++    width:1px; 
++    height:1px; 
++    overflow:hidden; 
++}
++.sakaiMinimizePageNavigation #toolMenuWrap, .sakaiMinimizePageNavigation #toolMenuWrap:hover{
++	width:0px;
++	margin-right:1em;
++	border-right:none;
++}
++.sakaiMinimizePageNavigation #content{
++	padding-left:2em;
++	margin-left:0;
++}
++.sakaiMinimizeSiteNavigation #siteNavWrapper{
++	display:none
++}
++.sakaiMinimizeSiteNavigation #headerMax{
++	padding:0;
++	margin:0; 
++}
++
++#toolMenuWrap #toggler {
++	display:block;
++    position:relative;
++    width:100%;
++    height:17px;
++    text-align:right;
++}
+ /** Portal Timeout **/
+ #timeout_alert_body {
+     position: absolute;

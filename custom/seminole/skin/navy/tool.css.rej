@@ -1,0 +1,47 @@
+--- /tmp/seminolestate/tool.css	2011-05-17 16:21:22.000000000 -0400
++++ ./tool.css	2011-07-14 18:37:02.403097708 -0400
+@@ -1195,6 +1195,36 @@
+ 	cursor:pointer;
+ }
+ 
++
++#davdocs_step1{
++        border: 3px solid #eee;
++        padding: 1em;
++        background-color: #FFFCE9;
++
++}
++
++#davdocs_step2{
++        margin-top: 1.2em;
++        border: 3px solid #eee;
++        padding: 1em;
++        background-color: #EBFFE8;
++
++}
++
++#davdocs_step2 ul{
++               list-style-type: none;
++}
++
++#davdocs_step2 ul li{
++               display: inline;
++               margin-right: 1.5em;
++}
++
++.webdav_os{
++                margin-top: 4em;
++                border: 3px solid #eee;
++                padding: 2em;
++}
+ table#currentSites .attach {
+ 	width: 200px;
+ }
+@@ -1205,3 +1235,7 @@
+ form.inlineForm fieldset legend {
+ display: none;
+ }
++
++iframe {
++	margin-top: 0 !important;
++}
