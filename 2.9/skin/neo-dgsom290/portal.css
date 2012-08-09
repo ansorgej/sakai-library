@@ -50,7 +50,7 @@ body.portalBody {
 }
 #col1of2 .portletTitleWrap, #col2of2 .portletTitleWrap {
     width: 98.5%;
-    border-bottom: 2px solid #009DCE;
+    border-bottom: 2px solid #536895;
 }
 #col1of2 .portletMainWrap, #col2of2 .portletMainWrap {
     width: 98.5%;
@@ -685,7 +685,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     padding: 0 1px 0 0;
 }
 #siteHierarchy li a, #siteHierarchy li a:visited {
-    color: #009DCE;
+    color: #536895;
     font-size: 1.2em;
     text-decoration: none;
 }
@@ -1323,7 +1323,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 /* list item when the user is an a chat room is a link to that chat room */
 .presenceList li a {
-    color: #009DCE;
+    color: #536895;
     text-decoration: none;
 }
 
