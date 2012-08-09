@@ -96,14 +96,14 @@ body.portalBody {
 
 /* PART 2 - HEADER BLOCKS (BRANDING,LOGIN) */
 #headerMax, #headerMin {
-    background: #009DCE;
-    background: -moz-linear-gradient(top, #009DCE 0%, #007EA5 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#009DCE), color-stop(100%,#007EA5));
-    background: -webkit-linear-gradient(top, #009DCE 0%,#007EA5 100%);
-    background: -o-linear-gradient(top, #009DCE 0%,#007EA5 100%);
-    background: -ms-linear-gradient(top, #009DCE 0%,#007EA5 100%);
-    background: linear-gradient(top, #009DCE 0%,#007EA5 100%);
-    border-bottom: 1px solid #007194;
+    background: #8896B6;
+    background: -moz-linear-gradient(top, #8896B6 0%, #8896B6 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8896B6), color-stop(100%,#8896B6));
+    background: -webkit-linear-gradient(top, #8896B6 0%,#8896B6 100%);
+    background: -o-linear-gradient(top, #8896B6 0%,#8896B6 100%);
+    background: -ms-linear-gradient(top, #8896B6 0%,#8896B6 100%);
+    background: linear-gradient(top, #8896B6 0%,#8896B6 100%);
+    border-bottom: 1px solid #536895;
 }
 #headerMin {
     overflow: hidden;
@@ -180,7 +180,7 @@ that can be used or hidden,can also use a background: url(images/<image name>.<e
 }
 /* login links for CAS,logout link  */
 #loginLinks a, #loginLinks a:visited {
-    color: #fff;
+    color: #536895;
     float: right;
 }
 /* #loginLink1 is the "login/logout" link in a CAS setup, #loginLink2 is the secondary CAS link: login for
@@ -199,20 +199,21 @@ guests, for example */
     padding: 4px 6px;
     text-align: center;
     text-decoration: none;
-    background: #008DB9;
-    background: -moz-linear-gradient(top, #008DB9 0%, #007194 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#008DB9), color-stop(100%,#007194));
-    background: -webkit-linear-gradient(top, #008DB9 0%,#007194 100%);
-    background: -o-linear-gradient(top, #008DB9 0%,#007194 100%);
-    background: -ms-linear-gradient(top, #008DB9 0%,#007194 100%);
-    background: linear-gradient(top, #008DB9 0%,#007194 100%);
-    border: 1px solid #005A76;
+    background: #F6F6F5;
+    background: -moz-linear-gradient(top, #F6F6F5 0%, #E0E0E0 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F6F6F5), color-stop(100%,#E0E0E0));
+    background: -webkit-linear-gradient(top, #F6F6F5 0%,#E0E0E0 100%);
+    background: -o-linear-gradient(top, #F6F6F5 0%,#E0E0E0 100%);
+    background: -ms-linear-gradient(top, #F6F6F5 0%,#E0E0E0 100%);
+    background: linear-gradient(top, #F6F6F5 0%,#E0E0E0 100%);
+    border: 1px solid #E0E3E5
+    box-shadow: 0 1px 1px 0 #999999 !important;;
 }
 #headerMin #loginLink1, #headerMin #loginLink2 {
     margin-top: -2px;
 }
 #loginLink1:hover, #loginLink2:hover, form#loginForm input#submit:hover {
-    background: #007194;
+    background: #F6F6F5;
     text-decoration: none;
 }
 /*make secondary CAS login link (ie. Guest Login) different*/ 
@@ -348,21 +349,21 @@ ul.topnav li {
 }
 /* hover treatment for site links*/
 ul.topnav li.nav-menu:hover, ul.topnav li.more-tab:hover {
-    border: 1px solid #005A76;
+    border: 1px solid #536895;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
 }
 /* current site control rendering */
  ul.topnav li.nav-selected {
-     background: #008DB9;
-    background: -moz-linear-gradient(top, #008DB9 0%, #007194 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#008DB9), color-stop(100%,#007194));
-    background: -webkit-linear-gradient(top, #008DB9 0%,#007194 100%);
-    background: -o-linear-gradient(top, #008DB9 0%,#007194 100%);
-    background: -ms-linear-gradient(top, #008DB9 0%,#007194 100%);
-    background: linear-gradient(top, #008DB9 0%,#007194 100%);
-    border: 1px solid #005A76;
+     background: #536895;
+    background: -moz-linear-gradient(top, #536895 0%, #536895 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#536895), color-stop(100%,#536895));
+    background: -webkit-linear-gradient(top, #536895 0%,#536895 100%);
+    background: -o-linear-gradient(top, #536895 0%,#536895 100%);
+    background: -ms-linear-gradient(top, #536895 0%,#536895 100%);
+    background: linear-gradient(top, #536895 0%,#536895 100%);
+    border: 1px solid #536895;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
@@ -729,8 +730,9 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 /* the current tool */
 #toolMenu li.selectedTool a {
-    color: #009DCE !important;
+    color: #536895 !important;
     cursor: default;
+    font-weight: bold !important;
 }
 /* eliminate the normal hover effect when it is current tool */
 #toolMenu li.selectedTool a:hover {
@@ -768,13 +770,13 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 #toolMenu li a:hover, #subSites li a:hover, #toolMenu li a:focus, #subSites li a:focus {
     text-decoration: none;
-    background: #009DCE;
-    background: -moz-linear-gradient(top, #009DCE 0%, #007EA5 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#009DCE), color-stop(100%,#007EA5));
-    background: -webkit-linear-gradient(top, #009DCE 0%,#007EA5 100%);
-    background: -o-linear-gradient(top, #009DCE 0%,#007EA5 100%);
-    background: -ms-linear-gradient(top, #009DCE 0%,#007EA5 100%);
-    background: linear-gradient(top, #009DCE 0%,#007EA5 100%);
+    background: #536895;
+    background: -moz-linear-gradient(top, #536895 0%, #536895 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#536895), color-stop(100%,#536895));
+    background: -webkit-linear-gradient(top, #536895 0%,#536895 100%);
+    background: -o-linear-gradient(top, #536895 0%,#536895 100%);
+    background: -ms-linear-gradient(top, #536895 0%,#536895 100%);
+    background: linear-gradient(top, #536895 0%,#536895 100%);
     color: #fff;
 }
 /* link in tool menu that allows adding one more tool, may be disabled */
