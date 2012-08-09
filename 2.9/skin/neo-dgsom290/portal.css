@@ -133,10 +133,10 @@ in this skin is rendered via ul.topnav, which a anon user does not see)*/
     display: block; 
     background-image: url(images/logo.png);
     background-repeat: no-repeat;
-    background-position: 8px 4px;
+    background-position: 6px 4px;
     float: left;
-    width: 100px;
-    height: 50px;
+    width: 58px;
+    height: 62px;
 }
 /* another container wrapping branding images - portal outputs one /library/skin/<skin name>/images/banner_inst.gif
 that can be used or hidden,can also use a background: url(images/<image name>.<ext>) in this block,or both superimposing them  */
@@ -720,7 +720,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     width: auto;
     padding: 0;
     border-bottom: 1px solid #ccc;
-    text-align: right;
+    text-align: left;
     background: #f3f3f3;
     background: -moz-linear-gradient(top, #f3f3f3 0%, #e7e7e7 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(100%,#e7e7e7));
@@ -743,9 +743,9 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 /* span holds the tool icon bkgnd image - here a default is provided */
 #toolMenu li span, #subSites li span {
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: left;
     background-image: url(../../image/silk/application.png);
-    padding-right: 22px;
+    padding-left: 22px;
     line-height: 1.4;
 }
 /* adjusting rendering of last item in the tool menu */
