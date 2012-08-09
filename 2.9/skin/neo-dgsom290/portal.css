@@ -58,7 +58,7 @@ body.portalBody {
 }
 #col1 .portletTitleWrap {
     width: 99%;
-    border-bottom: 2px solid #009DCE !important;
+    border-bottom: 2px solid #536895 !important;
 }
 #col1 .portletMainWrap {
     width: 99%
@@ -330,7 +330,7 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
  * if you do not have a logo you can eliminate it to save some room */
 #linkNav ul.topnav {
     list-style: none;
-    padding: 8px 0 5px 155px; /* matches the width of the toolMenu*/
+    padding: 14px 0 5px 155px; /* matches the width of the toolMenu*/
     margin: 0;
     width: 100%;
     background: transparent url(images/logo.png) 8px 4px no-repeat;
@@ -539,7 +539,7 @@ ul#otherSitesMenu li, #siteStatus a {
 }
 /* since the publish site link is the same, doubled up here */ 
 #otherSitesMenu li a:hover, #siteStatus a:hover, #siteStatus a:focus {
-    color: #009dce;
+    color: #536895;
 }
 /*container and control to close the "Other sites tray"*/
 #otherSitesMenu #otherSiteCloseW {
@@ -564,14 +564,14 @@ ul#otherSiteList, ul.otherSitesCategorList {
  *  ul.otherSitesCategorList. This last one will appear once per each category
  */
 ul#otherSiteList li, ul.otherSitesCategorList li {
-    background: #009DCE;
-    background: -moz-linear-gradient(top, #009DCE 0%, #007EA5 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#009DCE), color-stop(100%,#007EA5));
-    background: -webkit-linear-gradient(top, #009DCE 0%,#007EA5 100%);
-    background: -o-linear-gradient(top, #009DCE 0%,#007EA5 100%);
-    background: -ms-linear-gradient(top, #009DCE 0%,#007EA5 100%);
-    background: linear-gradient(top, #009DCE 0%,#007EA5 100%);
-    border: 1px solid #005A76;
+    background: #536895;
+    background: -moz-linear-gradient(top, #536895 0%, #536895 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#536895), color-stop(100%,#536895));
+    background: -webkit-linear-gradient(top, #536895 0%,#536895 100%);
+    background: -o-linear-gradient(top, #536895 0%,#536895 100%);
+    background: -ms-linear-gradient(top, #536895 0%,#536895 100%);
+    background: linear-gradient(top, #536895 0%,#536895 100%);
+    border: 1px solid #536895;
     font-weight: bold;
     position: relative;
     border-radius: 5px;
@@ -643,7 +643,8 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     display: block;
 }
 #otherSiteTools li a:focus {
-    color: #009DCE;
+    color: #536895;
+    font-weight: bold;
 }
 /* trigger that retrieves from entity broker the tool menu for a site in the "More sites" tray*/
 .toolMenus {
