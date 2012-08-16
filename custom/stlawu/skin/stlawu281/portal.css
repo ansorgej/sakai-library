@@ -1247,6 +1247,12 @@ background-image: url(../../image/silk/comment.png);
 .icon-sakai-signup {
         background-image: url(../../image/silk/clock_edit.png);                 
 }
+.icon-sakai-iclicker {
+        background-image: url(../../image/silk/chart_bar.png);                 
+}
+.icon-sakai-gradebook-gwt-rpc {
+	background-image: url(../../image/silk/report.png);
+}
 
 
 
