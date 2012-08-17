@@ -62,7 +62,7 @@ margin below on the toolbar if there is one to make it flush horiz.
 	font-size: 14px;
 	font-family: Helvetica, Arial, sans-serif;
 	width:100%;
-	background:#1D4EA3 url(images/pda-menu-back.gif) center left repeat-x;
+	background:#3e3e3e url(images/pda-menu-back.gif) center left repeat-x;
 	list-style: none;
 	color:#fff;
 	margin:0;
@@ -89,7 +89,7 @@ margin below on the toolbar if there is one to make it flush horiz.
 
 #pda-portlet-menu li.sitesLink:before,#pda-portlet-menu li.currentSiteParentLink:before,#pda-portlet-menu li.currentSiteChildLink:before,#pda-portlet-menu li.currentSiteLink:before,#pda-portlet-menu li.currentToolTitle:before{
 	content: "\00BB \0020";
-	color: #ff9;
+	color: #fff;
 	font-weight: bold;
 }
 
@@ -98,11 +98,11 @@ margin below on the toolbar if there is one to make it flush horiz.
 	visibility:hidden;
 	color: #fff;
 }
-#pda-portlet-menu li.instanceNote a{
+#pda-portlet-menu li.instanceNote a {
 	text-decoration:none;
     display:block;
-    width:45px;
-    height:25px
+    width:50px;
+    height:45px
 }
 #pda-portlet-menu li.sitesLink:before{
 	content: "\00BB";
@@ -110,11 +110,12 @@ margin below on the toolbar if there is one to make it flush horiz.
 	color: #fff;
 }
 /*the first item in the menu - contains small logo*/
-#pda-portlet-menu li.instanceNote{
+#pda-portlet-menu li.instanceNote {
 	color:#fff;
-    padding:0 10px 4px 4px;
-    background:transparent url(images/pda-menu-instance-icon.gif) center left no-repeat;
-	width:40px;
+	background:transparent url(images/pda-menu-instance-icon.gif) top left no-repeat;
+	width:50px;
+	height:25px;
+	margin: -2px 2px 0;
 }
 /*put non site links to the right*/
 #pda-portlet-menu li.loginLink, #pda-portlet-menu li.logoutLink, #pda-portlet-menu li.helpLink,#pda-portlet-menu li.usersPresentLink {
@@ -125,7 +126,7 @@ margin below on the toolbar if there is one to make it flush horiz.
 	margin-left:1em;
 }
 #pda-portlet-menu li span a{
-	color:#ff9;
+	color:#fff;
 	text-decoration:none !important;
 }	
 #pda-portlet-menu li span a:hover{
@@ -212,7 +213,7 @@ margin below on the toolbar if there is one to make it flush horiz.
 	padding: .8em;
 	height:100%;
     text-align:center;
-    background:#1D4EA3 url(images/pda-menu-back.gif) center left repeat-x;
+    background:#3e3e3e url(images/pda-menu-back.gif) center left repeat-x;
 	overflow:hidden;
 }
 
@@ -284,7 +285,7 @@ pad the top menu so user no longer clicks on the iPad OS toolbar by mistake
 #pda-footer {
 	padding:5px 0 2px;
 	height:34px;
-    background:#1D4EA3 url(images/pda-menu-back.gif) top left repeat-x;
+    background:#3e3e3e url(images/pda-menu-back.gif) top left repeat-x;
 	overflow:hidden;
 }
 
@@ -315,6 +316,14 @@ it will make the experience better for any new takers
 html {
     -webkit-text-size-adjust: none;
 }
+.login td.logo{
+	width: 115px;
+	height:112px;
+	width:100%;
+	background:#3e3e3e url(images/logo_inst_pda.png) top left no-repeat;
+	background-size: 115px 112px;
+}
+
 #pda-portlet-menu{
 	position:absolute;
 	top:0;
@@ -322,7 +331,7 @@ html {
 	height:35px;
 	font-size: 14px !important;
 	width:100%;
-	background:#1D4EA3 url(images/pda-menu-back.gif) top left repeat-x;
+	background:#3e3e3e url(images/pda-menu-back.gif) top left repeat-x;
 	border-bottom:1px solid #222
 }
 #pda-portlet-site-menu, #pda-portlet-page-menu, .portletpda .portletBody{
@@ -352,16 +361,14 @@ html {
     text-decoration: none;
 	display:block;
 	width: 55px;
-    margin-top:2px;
-	height:35px;
-	
+    margin-top:0;
+	height:45px;
 }
 #pda-portlet-menu li.instanceNote {
 	position:relative;
-    margin: -6px 3px 0;
-    padding: 5px 5px 5px 0 !important;
-    background: url(images/pda-menu-instance-icon.gif) 0 4px no-repeat;
-    width: 55px;
+    margin: -8px 3px 0;
+    background: url(images/pda-menu-instance-icon.png) 0 4px no-repeat;
+		background-size: 50px 45px;
 }
 #pda-portlet-menu li.resetToolLink a, #pda-portlet-menu  li.jsreditLink a{
    	position:relative;
@@ -408,7 +415,7 @@ html {
 #pda-footer {
 	padding: .7em 0 .9em 0;
 	height:100%;
-    background:#03348E url(images/pda-menu-back.gif) top left repeat-x;
+    background:#3e3e3e url(images/pda-menu-back.gif) top left repeat-x;
 	overflow:hidden;
 }
 
