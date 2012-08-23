@@ -322,7 +322,7 @@ your browser doesn't support iframes
                            <xsl:with-param name="extra" select="'false'" />
                         </xsl:apply-templates>
                      </xsl:for-each>
-                     <xsl:if test="/portal/sites/tabsMoreSites/site">
+                     <xsl:if test="1=1">
                         <li class="more-tab">
                            <a href="#" onclick="return dhtml_more_tabs();">
                               <xsl:attribute name="title"><xsl:value-of select="$externalized/entry[@key='sit_more']"/></xsl:attribute>
