@@ -1121,3 +1121,6 @@ border:0px solid #fff;
 text-decoration:none !important;
 }
 
+ul.navIntraTool a[title~=Edit][title~=Class] {
+  display: none;
+}
