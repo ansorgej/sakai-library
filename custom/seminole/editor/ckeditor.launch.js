@@ -31,29 +31,31 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config) {
     }
     CKEDITOR.replace(targetId, {
         skin: 'v2',
-        height: 320,
+        height: 310,
         filebrowserBrowseUrl :'/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + folder,
         filebrowserImageBrowseUrl : '/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Type=Image&Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + folder,
         filebrowserFlashBrowseUrl :'/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Type=Flash&Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + folder,
-        extraPlugins: (sakai.editor.enableResourceSearch ? 'resourcesearch,' : '') + 'ckeditor_wiris,wordcount',
+        extraPlugins: (sakai.editor.enableResourceSearch ? 'resourcesearch,' : '') + 'ckeditor_wiris,wordcount,atd-ckeditor',
+	atd_rpc: '/proxy/atd',
 
         // These two settings enable the browser's native spell checking and context menus.
         // Control-Right-Click (Windows/Linux) or Command-Right-Click (Mac) on highlighted words
         // will cause the CKEditor menu to be suppressed and display the browser's standard context
         // menu. In some cases (Firefox and Safari, at least), this supplies corrections, suggestions, etc.
-        disableNativeSpellChecker: false,
+        disableNativeSpellChecker: true,
         browserContextMenuOnCtrl: true,
 	toolbarCanCollapse: false,
 
         toolbar_Full:
         [
             ['Source','-','Templates'],
-            ['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print', 'SpellChecker'],
+            ['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print' ],
             ['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
             ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
             '/',
             ['Bold','Italic','Underline','Strike','-','Subscript','Superscript'],
             ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+	    ['atd-ckeditor'],
             ['BidiLtr', 'BidiRtl' ],
             ['Link','Unlink','Anchor'],
             (sakai.editor.enableResourceSearch
