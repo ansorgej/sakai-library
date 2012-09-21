@@ -986,6 +986,10 @@ font-weight:normal;
 
 /* PART 9 - Tool Icons */
 
+.icon-sakai-gsbm-syllabus {
+        background-image: url(../../image/silk/page_red.png);
+}
+
 .icon-osp-evaluation {
 	background-image: url(../../image/silk/thumb_up.png);
 }
