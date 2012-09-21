@@ -1148,3 +1148,12 @@ ul.makeMenu li.menuClose a:hover {
                 border: 3px solid #eee;
                 padding: 2em;
 }
+
+a[class='item_control hide_link'] {
+    visibility: hidden;
+}
+
+a[class='item_control disable_link'] {
+    visibility: hidden;
+}
+

@@ -4,8 +4,8 @@ var tab1doc=null;
 var oMovie=null;
 var isNew=true;
 //var flashPlayer = "/library/editor/ckeditor/plugins/movieplayer/player_flv_maxi.swf";
-var flashPlayer = "/library/editor/ckeditor/plugins/movieplayer/StrobeMediaPlayback.swf";
-var youtubePlugin = "/library/editor/ckeditor/plugins/movieplayer/YouTubePlugin.swf";
+var flashPlayer = "/library/editor/ckextraplugins/movieplayer/StrobeMediaPlayback.swf";
+var youtubePlugin = "/library/editor/ckextraplugins/movieplayer/YouTubePlugin.swf";
 var mimeSupported = ['video/mp4','audio/mpeg','application/x-shockwave-flash'];
 
 /** Create Movie html */
@@ -26,7 +26,6 @@ Movie.prototype.getInnerHTML = function (objectId){
 	var rnd = Math.floor(Math.random()*1000001);
 	var s = "";
 
-	//debugger;
 	// html
 	if(mimeSupported.contains(this.contentType)) {
 			var addYoutube = "";
@@ -38,11 +37,9 @@ Movie.prototype.getInnerHTML = function (objectId){
 			// Flash video (FLV)
 			s += '<OBJECT id="movie' + rnd + '" ';
 			s += '        type="application/x-shockwave-flash" ';
-	//		s += '        classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"';
-
 			s += '        data="'+ flashPlayer +'" ';
 			s += '        width="'+this.width+'" height="'+this.height+'" >';
-		    s += '  <PARAM name="movie" value="'+ flashPlayer +'" />';
+			s += '  <PARAM name="movie" value="'+ encodeURI(this.url) +'" />';
 		    s += '  <PARAM name="FlashVars" value="src='+encodeURI(this.url)+'&amp;showplayer=always&amp;width='+this.width+'&amp;height='+this.height+'&amp;showiconplay=true&amp;autoplay='+this.autoplay+addYoutube+'" />';
 				s += '<param name="allowFullScreen" value="true">';
 		    s += '</OBJECT>';
@@ -101,7 +98,7 @@ Movie.prototype.setAttribute = function(attr, val) {
 CKEDITOR.plugins.add( 'movieplayer',
 {
 
-   requires: [ 'iframedialog' ],
+	 requires : [ 'fakeobjects', 'flash', 'iframedialog' ],
    //http://alfonsoml.blogspot.com/2009/12/plugin-localization-in-ckeditor-vs.html
    lang: ['en','pt'],
    init: function( editor )
@@ -115,6 +112,17 @@ CKEDITOR.plugins.add( 'movieplayer',
          command: 'movie.cmd',
 	 icon:  thispath + 'filmreel.gif'
       });
+			editor.addCss(
+				'img.cke_movieplayer' +
+				'{' +
+					'background-image: url(' + CKEDITOR.getUrl( this.path + 'images/placeholder.png' ) + ');' +
+					'background-position: center center;' +
+					'background-repeat: no-repeat;' +
+					'border: 1px solid #a9a9a9;' +
+					'width: 80px;' +
+					'height: 80px;' +
+				'}'
+				)
 	//movie_plugin.js
     CKEDITOR.dialog.add( 'movie.dlg', function( api ) {
             var dialogDef = {
@@ -124,7 +132,7 @@ CKEDITOR.plugins.add( 'movieplayer',
                         elements : [ {
                                 type : 'iframe',
                                 //TODO: Pass the name as a extra parameter to iframe if possible instead
-                                src : thispath + 'movieplayer.phtml?parentname='+api.name,
+                                src : thispath + 'movieplayer.html?parentname='+api.name,
                                 width : 450, height : 260 - (CKEDITOR.env.ie ? 10 : 0),
                                 onContentLoad : function() {
                                     //Save the frameId
@@ -158,18 +166,24 @@ CKEDITOR.plugins.add( 'movieplayer',
 
                     var e = (oMovie || new Movie()) ;
                     updateMovieObject(e,tab1doc) ;
+										//debugger;
+										var realElement = CKEDITOR.dom.element.createFromHtml(e.getInnerHTML());
+										var fakeElement;
                     if(!isNew) {
                         //TODO: Is this still a problem with Safari?
                         if(!navigator.userAgent.contains('Safari')) {
                             //FCK.Selection.Delete();
                         }
-                        this._.editor.insertHtml(e.getInnerHTML());
+												fakeElement= this._.editor.createFakeElement( realElement, 'cke_movieplayer', 'movieplayer', true );
                     }else{
-                        this._.editor.insertHtml(e.getInnerHTML());
+												fakeElement= this._.editor.createFakeElement( realElement, 'cke_movieplayer', 'movieplayer', true );
                     }
+
+										this._.editor.insertHtml(fakeElement.getOuterHtml());
                 }
 
             };
+
             return dialogDef;
         }) ;
 
