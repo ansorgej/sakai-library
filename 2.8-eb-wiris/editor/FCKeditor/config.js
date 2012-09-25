@@ -108,8 +108,8 @@ FCKConfig.ToolbarSets["Default"] = [
         ['OrderedList','UnorderedList','Outdent','Indent'],
         ['JustifyLeft','JustifyCenter','JustifyRight','JustifyFull','TextColor','BGColor'],
         ['Link','Unlink','Anchor'],
-        ['Sakai_Entity_Link','Image','Movie','Flash','Table','Rule','Smiley','SpecialChar'],['fckeditor_wiris_openFormulaEditor'],['Style'],
-        ['FontFormat','FontName','FontSize']
+        ['Sakai_Entity_Link','Image','Movie','Flash','Table','Rule','Smiley','SpecialChar'],['fckeditor_wiris_openFormulaEditor'],
+        ['Style','FontFormat','FontName','FontSize']
 ] ;
 
 FCKConfig.ToolbarSets["large"] = [
