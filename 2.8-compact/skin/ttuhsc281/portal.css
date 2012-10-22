@@ -4,7 +4,8 @@ body{
 	padding: 0;
 	font-family: Arial,Helvetica,serif;
         color: #6D6E70;
-	font-size:.8em;
+	font-size:.9em;
+        line-height: 1.6em;
 	margin: 0;
 	background: #fff;
 }
@@ -390,7 +391,7 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 	background: transparent url(images/tab-right.gif) no-repeat right top;
 	padding: 8px 13px 3px 2px;
 	margin: 0pt;
-	font-size: 10.4px;
+	font-size: 13px;
 }
 
 /*the current sites' link - consists of the li and a*/
@@ -570,6 +571,7 @@ html>body .dhtml_more_tabs {
 	padding: 0;
 	border: 1px solid #fff;
 	text-align: right;
+        font-size: 12px;
 }
 
 /*span shim for fine grained manipulation of link display (decorative)

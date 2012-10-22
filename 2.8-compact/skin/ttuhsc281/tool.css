@@ -5,7 +5,8 @@
 /*SECTION 1 GENERIC SELECTORS*/
 body{
 	font-family: Arial,Helvetica,serif;
-	font-size: 80%;
+	font-size:.9em;
+        line-height: 1.6em;
 }	
 
 /*stub in tool_base.css - skinned here */
