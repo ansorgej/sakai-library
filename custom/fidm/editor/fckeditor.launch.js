@@ -39,7 +39,7 @@ sakai.editor.editors.fckeditor.launch = function(targetId, config, w, h) {
 	h = "500";
     }
     oFCKeditor.Width  = w;
-    oFCKeditor.Height = h;
+    oFCKeditor.Height = "500";
 
     var folder = "";
 
