@@ -112,9 +112,10 @@ see: http://www.quirksmode.org/bugreports/archives/2005/07/Wrapped_inlinenowrap_
     white-space: nowrap;
     display: inline-block;
     color: #000;
+    font-weight: bold;
 }
 .navIntraTool a:hover {
-    color: #009DCE !important;
+    color: #006699 !important;
     text-decoration: underline;
 }
 /* where one is at in hierarchy - can be static or active links */
@@ -305,19 +306,20 @@ table.calendar .event {
 */
 .listHier th {
     padding: .3em .4em !important;
-    background: #eeeeee;
-    background: -moz-linear-gradient(top, #f3f3f3 0%, #e7e7e7 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(100%,#e7e7e7));
-    background: -webkit-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
-    background: -o-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
-    background: -ms-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
-    background: linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
+    background: #f3f3f3; /* Old browsers */
+    background: -moz-linear-gradient(top, #f3f3f3 0%, #e7e7e7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(100%,#e7e7e7)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #f3f3f3 0%,#e7e7e7 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#e7e7e7',GradientType=0 ); /* IE6-9 */
     border: 1px solid #e2e2e2 !important;
     border-width: 1px 0 1px 0 !important;
     font-weight: bold !important;
 }
 .listHier th a:hover {
-    color: #009DCE
+    color: #006699
 }
 /* skinned cell of standard tab. data table */
 .listHier td {
@@ -476,7 +478,7 @@ label {
 }
 /* a required marker for a shorttext label/input pair */
 .shorttext .reqStar {
-    color: #009DCE;
+    color: #006699;
     width: auto;
     margin: 0 0 0 -1em;
     font-weight: bold;
@@ -541,12 +543,8 @@ textarea:focus {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 80%;
     text-align: left;
-    background: #f9f9f9;
-    border-bottom: 1px solid #eee;
 }
 .navIntraTool:hover {
-    background: #f5f5f5;
-    border-bottom: 1px solid #d9d9d9;
 }
 /* Button styling
 Turns the old links into buttons. The many different ways the tools have implemented the links in the past forces us to use these every specific and many selectors. The proper way is to use a UL with LIs as the buttons. */
@@ -559,13 +557,14 @@ Turns the old links into buttons. The many different ways the tools have impleme
     border-radius: 4px;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
-    background: #e7e7e7 !important;
-    background: -moz-linear-gradient(top, #f7f7f7 0%, #e7e7e7 100%) !important;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#e7e7e7)) !important;
-    background: -webkit-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%) !important;
-    background: -o-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%) !important;
-    background: -ms-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%) !important;
-    background: linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%) !important;
+    background: #f7f7f7; /* Old browsers */
+    background: -moz-linear-gradient(top, #f7f7f7 0%, #e7e7e7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#e7e7e7)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #f7f7f7 0%,#e7e7e7 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#e7e7e7',GradientType=0 ); /* IE6-9 */
     box-shadow: 0 0 5px rgba(200, 200, 200, .2);
 }
 /* IE chokes on the whole ruleset if it sees a NOT selector, so this rule has to be written separately */
@@ -578,13 +577,14 @@ Turns the old links into buttons. The many different ways the tools have impleme
     border-radius: 4px;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
-    background: #e7e7e7 !important;
-    background: -moz-linear-gradient(top, #f7f7f7 0%, #e7e7e7 100%) !important;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#e7e7e7)) !important;
-    background: -webkit-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%) !important;
-    background: -o-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%) !important;
-    background: -ms-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%) !important;
-    background: linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%) !important;
+    background: #f7f7f7; /* Old browsers */
+    background: -moz-linear-gradient(top, #f7f7f7 0%, #e7e7e7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#e7e7e7)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #f7f7f7 0%,#e7e7e7 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#e7e7e7',GradientType=0 ); /* IE6-9 */
     box-shadow: 0 0 5px rgba(200, 200, 200, .2);
 }
 /* Make invisible any unruly empty spans or .separator class items (remnants of old skin styles) */
@@ -626,7 +626,7 @@ ul.navIntraTool>li>span.separator, .navIntraTool>li>span:empty, span.navSeparato
     min-height: 15px;
     margin-left: 5px !important;
     padding: 1px !important;
-    background: #009DCE;
+    background: #006699;
     border: 2px solid white !important;
     border-radius: 20pt;
     color: #fff !important;
@@ -638,13 +638,14 @@ ul.navIntraTool>li>span.separator, .navIntraTool>li>span:empty, span.navSeparato
 /* ===[ More Tools dropdown styling ]=== */
 #dropDownDiv {
     padding: 10px !important;
-    background: #eeeeee !important;
-    background: -moz-linear-gradient(top, #eeeeee 0%, #e4e4e4 100%) !important;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#e4e4e4)) !important;
-    background: -webkit-linear-gradient(top, #eeeeee 0%,#e4e4e4 100%) !important;
-    background: -o-linear-gradient(top, #eeeeee 0%,#e4e4e4 100%) !important;
-    background: -ms-linear-gradient(top, #eeeeee 0%,#e4e4e4 100%) !important;
-    background: linear-gradient(top, #eeeeee 0%,#e4e4e4 100%) !important;
+    background: #eeeeee; /* Old browsers */
+    background: -moz-linear-gradient(top, #eeeeee 0%, #e4e4e4 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#e4e4e4)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #eeeeee 0%,#e4e4e4 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #eeeeee 0%,#e4e4e4 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #eeeeee 0%,#e4e4e4 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #eeeeee 0%,#e4e4e4 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#e4e4e4',GradientType=0 ); /* IE6-9 */
     border: 1px solid #d1d1d1 !important;
 }
 /* Unstyle all in More Tools, then restyle */
@@ -700,12 +701,22 @@ ul.navIntraTool>li>span.separator, .navIntraTool>li>span:empty, span.navSeparato
 }
 /* button link color */
 .navIntraTool a:link:hover, #actionToolbar a:link:hover {
-    color: #009DCE !important
+    color: #006699 !important;
 }
 .neoPortletTitleWrap {
-    width: 99%;
-    border-bottom: 2px solid #009DCE;
+    width: 98%;
     border-radius: 3px;
+    background: #F3F3F3;
+    background: -moz-linear-gradient(top, #F3F3F3 0%, #E7E7E7 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F3F3F3), color-stop(100%,#E7E7E7));
+    background: -webkit-linear-gradient(top, #F3F3F3 0%,#E7E7E7 100%);
+    background: -o-linear-gradient(top, #F3F3F3 0%,#E7E7E7 100%);
+    background: -ms-linear-gradient(top, #F3F3F3 0%,#E7E7E7 100%);
+    background: linear-gradient(top, #F3F3F3 0%,#E7E7E7 100%);
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    padding: 5px 10px 6px 10px;
 }
 /* SECTION 9 MESSAGES */
 /* see: create any item */
@@ -720,7 +731,7 @@ ul.navIntraTool>li>span.separator, .navIntraTool>li>span:empty, span.navSeparato
 /* the generic required marker */
 /* see: create any item */
 .reqStar {
-    color: #009DCE;
+    color: #006699;
     width: auto;
     margin-left: -1em;
     font-weight: bold;
@@ -732,7 +743,7 @@ ul.navIntraTool>li>span.separator, .navIntraTool>li>span:empty, span.navSeparato
 /* the required marker for a longtext label/input pair */
 /* see: create any item with a textarea */
 .longtext .reqStar {
-    color: #009DCE;
+    color: #006699;
     font-size: 1.2em;
     font-weight: normal;
     padding: 0 0 0 .1em;
@@ -741,7 +752,7 @@ ul.navIntraTool>li>span.separator, .navIntraTool>li>span:empty, span.navSeparato
 /* when need to display the required marker inline as a part of a text */
 /* see: create any item - instruction message about requireed fields */
 .reqStarInline {
-    color: #009DCE;
+    color: #006699;
     font-size: 1.2em;
     vertical-align: middle;
     width: 1em;
@@ -985,28 +996,32 @@ tr.selectedFound td {
     color: #111
 }
 .login td.logo {
-    width: 122px;
-    background-color: #009DCE;
-    background-image: url(../neo-default/images/logo_inst.png);
-    background-position: -150px 25px;
-    border: 1px solid #ccc;
+    display: none;
+}
+table.login td.form form table.loginform {
+    position: relative;
+    left: 65px;
+}
+table.login td.form form table.loginform input.loginsubmit {
+    color: #000;
 }
 .login td.form {
-
+    border: 1px solid black;
 }
 .login th {
-    background: #eeeeee;
-    background: -moz-linear-gradient(top, #f3f3f3 0%, #e7e7e7 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(100%,#e7e7e7));
-    background: -webkit-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
-    background: -o-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
-    background: -ms-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
-    background: linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
-    border: 1px solid #ccc;
+    background: #333 url(images/logo_longsight_white5.png) 2px 8px no-repeat;
+    border: 1px solid #000;
+    height: 50px;
+    text-align: right;
+    color: white;
+    width: 332px;
 }
 .login {
     border: 1px solid #ccc;
     border-collapse: collapse;
+}
+body table.login {
+    background: url(images/background_gray2.jpg) top left repeat;
 }
 /* ===[ Make a list based css menu ]=== */
 ul.makeMenu, ul.makeMenu ul {
@@ -1132,7 +1147,7 @@ ul.makeMenu li.menuClose a:hover {
 /* ===[ Lessons ]=== */
 .lessonsHeader {
     width: 99%;
-    border-bottom: 2px solid #009DCE !important;
+    border-bottom: 2px solid #006699 !important;
     border-radius: 3px !important;
     height: 25px;
 }
@@ -1152,7 +1167,7 @@ ul.makeMenu li.menuClose a:hover {
     background-image: url(../../image/silk/information.png)
 }
 /* override native button things rendering */
-input[type="submit"], input[type="button"], input[type="reset"] {
+/*input[type="submit"], input[type="button"], input[type="reset"] {
     background: #f6f6f5 !important;
     background: -moz-linear-gradient(top, #f6f6f5 0%, #e0e0e0 93%, #e0e0e0 97%, #e9e9e9 100%) !important;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6f6f5), color-stop(93%,#e0e0e0), color-stop(97%,#e0e0e0), color-stop(100%,#e9e9e9)) !important;
@@ -1179,7 +1194,7 @@ input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hove
     background: -o-linear-gradient(top, #fefefe 0%,#e9edf0 96%,#e2e5e7 100%) !important;
     background: -ms-linear-gradient(top, #fefefe 0%,#e9edf0 96%,#e2e5e7 100%) !important;
     background: linear-gradient(top, #fefefe 0%,#e9edf0 96%,#e2e5e7 100%) !important;
-}
+}*/
 input[type="submit"][disabled="disabled"],
   input[type="button"][disabled="disabled"],
   input[type="submit"][disabled="true"],
