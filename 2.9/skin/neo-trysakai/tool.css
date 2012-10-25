@@ -558,13 +558,13 @@ Turns the old links into buttons. The many different ways the tools have impleme
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
     background: #f7f7f7; /* Old browsers */
-    background: -moz-linear-gradient(top, #f7f7f7 0%, #e7e7e7 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#e7e7e7)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%); /* IE10+ */
-    background: linear-gradient(to bottom, #f7f7f7 0%,#e7e7e7 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#e7e7e7',GradientType=0 ); /* IE6-9 */
+    background: -moz-linear-gradient(top, #f7f7f7 0%, #e7e7e7 100%) !important; /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#e7e7e7)) !important; /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%) !important; /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%) !important; /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%) !important; /* IE10+ */
+    background: linear-gradient(to bottom, #f7f7f7 0%,#e7e7e7 100%) !important; /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#e7e7e7',GradientType=0 ) !important; /* IE6-9 */
     box-shadow: 0 0 5px rgba(200, 200, 200, .2);
 }
 /* IE chokes on the whole ruleset if it sees a NOT selector, so this rule has to be written separately */
@@ -577,14 +577,14 @@ Turns the old links into buttons. The many different ways the tools have impleme
     border-radius: 4px;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
-    background: #f7f7f7; /* Old browsers */
-    background: -moz-linear-gradient(top, #f7f7f7 0%, #e7e7e7 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#e7e7e7)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%); /* IE10+ */
-    background: linear-gradient(to bottom, #f7f7f7 0%,#e7e7e7 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#e7e7e7',GradientType=0 ); /* IE6-9 */
+    background: #f7f7f7 !important; /* Old browsers */
+    background: -moz-linear-gradient(top, #f7f7f7 0%, #e7e7e7 100%) !important; /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#e7e7e7)) !important; /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%) !important; /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%) !important; /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%) !important; /* IE10+ */
+    background: linear-gradient(to bottom, #f7f7f7 0%,#e7e7e7 100%) !important; /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#e7e7e7',GradientType=0 ) !important; /* IE6-9 */
     box-shadow: 0 0 5px rgba(200, 200, 200, .2);
 }
 /* Make invisible any unruly empty spans or .separator class items (remnants of old skin styles) */
@@ -639,13 +639,13 @@ ul.navIntraTool>li>span.separator, .navIntraTool>li>span:empty, span.navSeparato
 #dropDownDiv {
     padding: 10px !important;
     background: #eeeeee; /* Old browsers */
-    background: -moz-linear-gradient(top, #eeeeee 0%, #e4e4e4 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#e4e4e4)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #eeeeee 0%,#e4e4e4 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #eeeeee 0%,#e4e4e4 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #eeeeee 0%,#e4e4e4 100%); /* IE10+ */
-    background: linear-gradient(to bottom, #eeeeee 0%,#e4e4e4 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#e4e4e4',GradientType=0 ); /* IE6-9 */
+    background: -moz-linear-gradient(top, #eeeeee 0%, #e4e4e4 100%) !important; /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#e4e4e4)) !important; /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #eeeeee 0%,#e4e4e4 100%) !important; /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #eeeeee 0%,#e4e4e4 100%) !important; /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #eeeeee 0%,#e4e4e4 100%) !important; /* IE10+ */
+    background: linear-gradient(to bottom, #eeeeee 0%,#e4e4e4 100%) !important; /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#e4e4e4',GradientType=0 ) !important; /* IE6-9 */
     border: 1px solid #d1d1d1 !important;
 }
 /* Unstyle all in More Tools, then restyle */
