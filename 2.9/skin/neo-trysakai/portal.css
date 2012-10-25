@@ -534,7 +534,7 @@ ul.topnav li ul.subnav li:hover, ul.topnav li ul.subnav li a:focus, ul.nav-subme
     background: -ms-linear-gradient(top, #000000 0%,#555555 100%); /* IE10+ */
     background: linear-gradient(to bottom, #000000 0%,#555555 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#555555',GradientType=0 ); /* IE6-9 */
-    color: #fff;
+    color: #fff !important;
     border-radius: 0px 0px 0px 0px;
     -moz-border-radius: 0px 0px 0px 0px;
     -webkit-border-radius: 0px 0px 0px 0px;
