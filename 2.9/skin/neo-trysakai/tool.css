@@ -704,7 +704,7 @@ ul.navIntraTool>li>span.separator, .navIntraTool>li>span:empty, span.navSeparato
     color: #006699 !important;
 }
 .neoPortletTitleWrap {
-    width: 98%;
+    width: 99%;
     border-radius: 3px;
     background: #F3F3F3;
     background: -moz-linear-gradient(top, #F3F3F3 0%, #E7E7E7 100%);
