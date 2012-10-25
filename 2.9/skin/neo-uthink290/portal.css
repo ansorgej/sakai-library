@@ -96,13 +96,13 @@ body.portalBody {
 
 /* PART 2 - HEADER BLOCKS (BRANDING,LOGIN) */
 #headerMax, #headerMin {
-    background: #8896B6;
-    background: -moz-linear-gradient(top, #8896B6 0%, #8896B6 100%);
+    background: #FFF;
+    /* background: -moz-linear-gradient(top, #8896B6 0%, #8896B6 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8896B6), color-stop(100%,#8896B6));
     background: -webkit-linear-gradient(top, #8896B6 0%,#8896B6 100%);
     background: -o-linear-gradient(top, #8896B6 0%,#8896B6 100%);
     background: -ms-linear-gradient(top, #8896B6 0%,#8896B6 100%);
-    background: linear-gradient(top, #8896B6 0%,#8896B6 100%);
+    background: linear-gradient(top, #8896B6 0%,#8896B6 100%); */
     border-bottom: 1px solid #536895;
 }
 #headerMin {
@@ -133,10 +133,9 @@ in this skin is rendered via ul.topnav, which a anon user does not see)*/
     display: block; 
     background-image: url(images/logo.png);
     background-repeat: no-repeat;
-    background-position: 6px 4px;
     float: left;
-    width: 58px;
-    height: 62px;
+    width: 180px;
+    height: 68px;
 }
 /* another container wrapping branding images - portal outputs one /library/skin/<skin name>/images/banner_inst.gif
 that can be used or hidden,can also use a background: url(images/<image name>.<ext>) in this block,or both superimposing them  */
@@ -160,7 +159,7 @@ that can be used or hidden,can also use a background: url(images/<image name>.<e
 }
 #loginForm label {
     padding: 0 6px;
-    color: #fff;
+    color: #666;
 }
 #eid, #pw {
     border: 1px solid #ccc;
@@ -330,10 +329,10 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
  * if you do not have a logo you can eliminate it to save some room */
 #linkNav ul.topnav {
     list-style: none;
-    padding: 14px 0 5px 155px; /* matches the width of the toolMenu*/
+    padding: 14px 0 5px 175px; /* matches the width of the toolMenu*/
     margin: 0;
     width: 100%;
-    background: transparent url(images/logo.png) 8px 4px no-repeat;
+    background: transparent url(images/logo.png) -6px -7px no-repeat;
 }
 /* the individual containers for the site links, tool menu control, tool menu*/
 ul.topnav li {
@@ -346,6 +345,10 @@ ul.topnav li {
     position: relative; /*--Declare X and Y axis base for sub navigation--*/
     font-weight: bold;
     border: 1px solid transparent;
+    background: #eee;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
 }
 /* hover treatment for site links*/
 ul.topnav li.nav-menu:hover, ul.topnav li.more-tab:hover {
@@ -356,13 +359,13 @@ ul.topnav li.nav-menu:hover, ul.topnav li.more-tab:hover {
 }
 /* current site control rendering */
  ul.topnav li.nav-selected {
-     background: #536895;
-    background: -moz-linear-gradient(top, #536895 0%, #536895 100%);
+     background: #999;
+    /* background: -moz-linear-gradient(top, #536895 0%, #536895 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#536895), color-stop(100%,#536895));
     background: -webkit-linear-gradient(top, #536895 0%,#536895 100%);
     background: -o-linear-gradient(top, #536895 0%,#536895 100%);
     background: -ms-linear-gradient(top, #536895 0%,#536895 100%);
-    background: linear-gradient(top, #536895 0%,#536895 100%);
+    background: linear-gradient(top, #536895 0%,#536895 100%); */
     border: 1px solid #536895;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -425,10 +428,13 @@ ul.topnav li ul.subnav li:hover, ul.topnav li ul.subnav li a:focus,
 ul.topnav li a {
     padding: 8px 7px 8px 8px;
     font-size: 13px;
-    color: #fff;
+    color: #666;
     text-decoration: none;
     float: left;
     display: block;
+}
+ul.topnav li.nav-selected > a {
+  color: #fff;
 }
 /* Note:not needed? tool submenu for sites in site list
 span.topnav li ul.subnav li {
@@ -564,13 +570,13 @@ ul#otherSiteList, ul.otherSitesCategorList {
  *  ul.otherSitesCategorList. This last one will appear once per each category
  */
 ul#otherSiteList li, ul.otherSitesCategorList li {
-    background: #536895;
-    background: -moz-linear-gradient(top, #536895 0%, #536895 100%);
+    background: #999;
+    /* background: -moz-linear-gradient(top, #536895 0%, #536895 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#536895), color-stop(100%,#536895));
     background: -webkit-linear-gradient(top, #536895 0%,#536895 100%);
     background: -o-linear-gradient(top, #536895 0%,#536895 100%);
     background: -ms-linear-gradient(top, #536895 0%,#536895 100%);
-    background: linear-gradient(top, #536895 0%,#536895 100%);
+    background: linear-gradient(top, #536895 0%,#536895 100%); */
     border: 1px solid #536895;
     font-weight: bold;
     position: relative;
