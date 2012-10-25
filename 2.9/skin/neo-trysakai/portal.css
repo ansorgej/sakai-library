@@ -404,16 +404,12 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
     margin: 0;
     width: 94%;
     background: url(images/logo_longsight_white5.png) 5px 10px no-repeat;
-    position: relative;
-    overflow: hidden;
     min-height: 37px;
 }
 /* the individual containers for the site links, tool menu control, tool menu*/
 ul.topnav li {
     display: inline-block;
     /* Note: IE 7 hack and IE 8 compat mode*/
-    display: inline;
-    float: left;
     margin: 0 5px 0 0;
     padding: 0;
     position: relative; /*--Declare X and Y axis base for sub navigation--*/
@@ -479,7 +475,7 @@ ul.topnav li span.subhover {
 in constructing menu for user links in #mastLogin, as well as the submenus for the sites in the "more sites" tray */ 
 ul.topnav li ul.subnav {
     list-style: none;
-    position: fixed;
+    position: absolute;
     background: #f3f3f3;
     font-size: .9em;
     margin: 31px 0 0 0;
@@ -496,7 +492,7 @@ ul.topnav li ul.subnav {
 }
 #otherSiteTools {
     list-style: none;
-    position: fixed;
+    position: absolute;
     background: #f3f3f3;
     font-size: .9em;
     margin: 0;
@@ -513,7 +509,7 @@ ul.topnav li ul.subnav {
 }
 #mastLogin ul.subnav {
     list-style: none;
-    position: fixed;
+    position: absolute;
     background: #f3f3f3;
     font-size: .9em;
     margin: 15px 0 0 0;
@@ -733,14 +729,14 @@ ul#otherSiteList li, ul.otherSitesCategorList li {
     background: -ms-linear-gradient(top, #000000 0%,#555555 100%); /* IE10+ */
     background: linear-gradient(to bottom, #000000 0%,#555555 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#555555',GradientType=0 ); /* IE6-9 */
-    border: 1px solid #005A76;
+    border: 1px solid #555555;
     font-weight: bold;
     position: relative;
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     overflow: hidden;
-    margin: 6px 6px 0 0;; /*Note: check uncategorized */
+    margin: 8px 6px 0 0;; /*Note: check uncategorized */
     line-height: 1.1em;
     width: 18em;
     float: left;
