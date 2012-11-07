@@ -1863,3 +1863,8 @@ a.qtipLinkButton:hover {
 	 width:250px;
 	 display:block;
 }
+
+div.qtip-content {
+    max-height: 400px;
+    overflow-y: scroll !important;
+}
