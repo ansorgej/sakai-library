@@ -6,8 +6,35 @@ var optsCache;
 var maxWidth = 500;
 var previousClicked = false;
 
+$(document).ready(function() {
+	setTimeout('startTrysakaiHelper();', 3000);
+});
+
+function startTrysakaiHelper(){
+        $.getJSON("/direct/session/current.json?"  + new Date().getTime(),function(response){
+                if(response.userId == null && getCookie('trysakai') == null){
+                        startTrySakaiSignup();
+                }
+        });
+}
+
+function getCookie(c_name)
+{
+var i,x,y,ARRcookies=document.cookie.split(";");
+for (i=0;i<ARRcookies.length;i++)
+  {
+  x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+  y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+  x=x.replace(/^\s+|\s+$/g,"");
+  if (x==c_name)
+    {
+    return unescape(y);
+    }
+  }
+}
+
 $.fn.qtip.styles.trysakai= { // Last part is the name of the style
-                width: 620,
+                width: 650,
                 height: {max: 200},
                 padding: '14px',
                 border: {
@@ -25,7 +52,7 @@ function startTrySakaiSignup(){
         $("div#tutorial").qtip(
                 {
                         content: {
-                                url: "https://trysakai.longsight.com/portal/tool/!gateway-120",
+                                url: "https://trysakai.longsight.com/portal/tool/9ccff91b-cc44-4135-bb3f-4a69f0bfdabe",
                                 title: {
                                         text: 'Join TrySakai',
                                         button: '<a href="#"><img src="/library/image/silk/cancel.png"/></a>'
