@@ -7,12 +7,14 @@ var maxWidth = 500;
 var previousClicked = false;
 
 $(document).ready(function() {
-	setTimeout('startTrysakaiHelper();', 3000);
+	if(document.domain == "trysakai.longsight.com" && getCookie('trysakai') == null){
+		setTimeout('startTrysakaiHelper();', 3000);
+	}
 });
 
 function startTrysakaiHelper(){
         $.getJSON("/direct/session/current.json?"  + new Date().getTime(),function(response){
-                if(response.userId == null && getCookie('trysakai') == null){
+                if(response.userId == null){
                         startTrySakaiSignup();
                 }
         });
