@@ -275,7 +275,7 @@ that can be used or hidden,can also use a background:url(images/<image name>.<ex
 	font-weight: bold;
 }
 #loginLinks a, #loginLinks a:visited {
-	color: #0736A4;
+	color: white;
 }
 
 /*main CAS link*/
