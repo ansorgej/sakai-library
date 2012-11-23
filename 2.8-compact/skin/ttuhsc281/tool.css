@@ -5,7 +5,8 @@
 /*SECTION 1 GENERIC SELECTORS*/
 body{
 	font-family: Arial,Helvetica,serif;
-	font-size: 80%;
+	font-size:.9em;
+        line-height: 1.6em;
 }	
 
 /*stub in tool_base.css - skinned here */
@@ -1144,4 +1145,15 @@ ul.makeMenu li.menuClose a:hover {
 
 iframe {
 	margin-top: 0;
+}
+
+
+@media screen and (max-device-width: 480px){
+/* chris - trying a higher res image to see if works better on phone display */
+.login td.logo{
+	width: 115px;
+	height:112px;
+	width:100%;
+	background:#3e3e3e url(images/logo_inst_pda.png) top left no-repeat;
+	background-size: 115px 112px;
 }
