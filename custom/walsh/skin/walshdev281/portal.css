@@ -1453,3 +1453,6 @@ ul#siteLinkList li {
 ul#siteLinkList li.selectedTab, ul#siteLinkList li.more-tab, ul#siteLinkList li:first-child {
   display: inline-block;
 }
+span.unpublishedSite {
+  color: #999;
+}
