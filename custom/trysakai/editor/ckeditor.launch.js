@@ -40,8 +40,9 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
         filebrowserBrowseUrl :'/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + folder,
         filebrowserImageBrowseUrl : '/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Type=Image&Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + folder,
         filebrowserFlashBrowseUrl :'/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Type=Flash&Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + folder,
-        extraPlugins: (sakai.editor.enableResourceSearch ? 'resourcesearch' : '')+'atd-ckeditor',
-	atd_rpc: '/proxy/atd',
+        //extraPlugins: (sakai.editor.enableResourceSearch ? 'resourcesearch' : '')+'atd-ckeditor',
+        extraPlugins: 'ckeditor_wiris',
+	//atd_rpc: '/proxy/atd',
 
         // These two settings enable the browser's native spell checking and context menus.
         // Control-Right-Click (Windows/Linux) or Command-Right-Click (Mac) on highlighted words
@@ -70,7 +71,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
             ['Font','FontSize'],
             ['Link','Unlink',],
             ['Image','-','Table','-','HorizontalRule','-','SpecialChar'],
-            ['Cut','Copy','Paste','PasteText'],
+            ['Cut','Copy','Paste','PasteText'],['ckeditor_wiris_formulaEditor'],
             ['Source']
         ],
         toolbar: 'Full',
