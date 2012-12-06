@@ -23,22 +23,3 @@ ol,ul,dl
 	/* preserved spaces for list items with text direction other than the list. (#6249,#8049)*/
     padding:0 40px;
 }
-
-.hiddenSpellError
-{
-   border-bottom: 2px solid red;
-   cursor: default;
-}
-
-.hiddenGrammarError
-{
-   border-bottom: 2px solid green;
-   cursor: default;
-}
-
-.hiddenSuggestion
-{
-   border-bottom: 2px solid blue;
-   cursor: default;
-}
-

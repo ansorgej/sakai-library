@@ -1,88 +1,9 @@
 var sakaiTutorialSkin = 'sakaiTutorial';
-var trysakai = 'trysakai';
 var sakaiTutorialStartUrl = "/direct/tutorial/introToSakai_p1.json";
 var sakaiTutorialLocationUrl = '/direct/tutorial/introToSakai_pTutorialLocation.json';
 var optsCache;
 var maxWidth = 500;
 var previousClicked = false;
-
-$(document).ready(function() {
-	if(document.domain == "trysakai.longsight.com" && getCookie('trysakai') == null){
-		setTimeout('startTrysakaiHelper();', 3000);
-	}
-});
-
-function startTrysakaiHelper(){
-        $.getJSON("/direct/session/current.json?"  + new Date().getTime(),function(response){
-                if(response.userId == null){
-                        startTrySakaiSignup();
-                }
-        });
-}
-
-function getCookie(c_name)
-{
-var i,x,y,ARRcookies=document.cookie.split(";");
-for (i=0;i<ARRcookies.length;i++)
-  {
-  x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
-  y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
-  x=x.replace(/^\s+|\s+$/g,"");
-  if (x==c_name)
-    {
-    return unescape(y);
-    }
-  }
-}
-
-$.fn.qtip.styles.trysakai= { // Last part is the name of the style
-                width: 650,
-                height: {max: 200},
-                padding: '14px',
-                border: {
-                        width: 9,
-                        radius: 9,
-                        color: '#666666'
-                },
-                tip: {
-                        color: '#6699CC'
-                },
-                name: 'light' // Inherit the rest of the attributes from the preset dark style
-}
-
-function startTrySakaiSignup(){
-        $("div#tutorial").qtip(
-                {
-                        content: {
-                                url: "https://trysakai.longsight.com/portal/tool/9ccff91b-cc44-4135-bb3f-4a69f0bfdabe",
-                                title: {
-                                        text: 'Join TrySakai',
-                                        button: '<a href="#"><img src="/library/image/silk/cancel.png"/></a>'
-                                }
-                        },
-                        position: {
-                                target: $(document.body), // Position it via the document body...
-                                corner: 'center' // ...at the center of the viewport
-                        },
-                        show: {
-                                ready: true, // Show it when ready
-                                solo: true // And hide all other tooltips
-                        },
-                        hide: false,
-                        style: {
-                                name: trysakai,
-                                api: {
-                                        onHide: function()
-                                        {
-                                        // javascript to run after hiding
-                                        $(response.data.selection).qtip("destroy");
-                                        }
-                                }
-                        }
-                }
-        );
-}
-
 //create sakai tutorial style skin
 $.fn.qtip.styles.sakaiTutorial = { // Last part is the name of the style
 		width: { max: 800 },

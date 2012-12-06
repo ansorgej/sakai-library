@@ -284,6 +284,8 @@ div.listNav legend {
      margin:0; 
      padding:0; 
      position: absolute !important; 
+     top:1px;
+     left:1px; 
      clip: rect(1px 1px 1px 1px); /* IE6, IE7 */ 
      clip: rect(1px, 1px, 1px, 1px); 
 } 
@@ -980,6 +982,8 @@ span.nil a{
 	margin:0;
 	padding:0;
 	list-style: none;
+    height:100%;
+    overflow: hidden;
 }
 /*a list item - children are h3.textPanelHeader, p.textPanelFooter, div.textPanel*/
 .synopticList li{ 
@@ -1027,6 +1031,8 @@ span.nil a{
 	display:block;
 	float:left;
 	width:45%;
+    overflow: hidden;
+    white-space: nowrap;
 	}
 #reorder-list li span{
 	padding-right:2em;
