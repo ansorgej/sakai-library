@@ -970,6 +970,10 @@ below they are contextually defined depending on the column as an example,as you
 
 /* PART 9 - Tool Icons */
 
+.icon-sakai-piazza {
+        background-image: url(../../image/silk/group_go.png);
+}
+
 .icon-osp-evaluation {
 	background-image: url(../../image/silk/thumb_up.png);
 }
@@ -1258,6 +1262,9 @@ background-image: url(../../image/silk/comment.png);
 } 
 .icon-sakai-melete { 
     background-image: url(../../image/sakai/sakai.melete.png); 
+} 
+.icon-sakai-kaltura { 
+    background-image: url(../../image/silk/film.png); 
 } 
 
 /** Privacy Popup Styles **/
