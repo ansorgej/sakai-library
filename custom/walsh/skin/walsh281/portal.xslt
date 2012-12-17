@@ -783,11 +783,19 @@ your browser doesn't support iframes
    -->
    <xsl:template match="site">
       <li>
+        <xsl:choose>
+          <xsl:when test="published='false' and siteUpdate='false'">
+            <span class="unpublishedSite" title="Unpublished site"><xsl:value-of disable-output-escaping="yes" select="title"/></span>
+          </xsl:when>
+          <xsl:otherwise>
          <a>
+           <xsl:attribute name="class">sitelink</xsl:attribute>
             <xsl:attribute name="href"><xsl:value-of select="url"/></xsl:attribute>
             <xsl:attribute name="title"><xsl:value-of disable-output-escaping="yes" select="title"/></xsl:attribute>
             <span><xsl:value-of disable-output-escaping="yes" select="title"/></span>
          </a>
+          </xsl:otherwise>
+        </xsl:choose>
       </li>
    </xsl:template>
 
