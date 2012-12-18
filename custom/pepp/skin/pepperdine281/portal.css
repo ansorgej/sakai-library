@@ -192,6 +192,7 @@ that can be used or hidden,can also use a background:url(images/<image name>.<ex
 #mastLogo{
 	float: left;
 	width: auto;
+	height: 62px;
 }
 
 /*the portal outputs an image that can be treated here or hidden with display:none*/
