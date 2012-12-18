@@ -29,13 +29,19 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config) {
     if (sakai.editor.collectionId) {
         folder = "&CurrentFolder=" + sakai.editor.collectionId;
     }
+
+    var basePath = CKEDITOR.basePath;
+    basePath = basePath.substr(0, basePath.indexOf("ckeditor/"))+"ckextraplugins/";
+    CKEDITOR.plugins.addExternal('movieplayer',basePath+'movieplayer/', 'plugin.js');
+    CKEDITOR.plugins.addExternal('wordcount',basePath+'wordcount/', 'plugin.js');
+
     CKEDITOR.replace(targetId, {
         skin: 'v2',
-        height: 400,
+        height: 310,
         filebrowserBrowseUrl :'/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + folder,
         filebrowserImageBrowseUrl : '/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Type=Image&Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + folder,
         filebrowserFlashBrowseUrl :'/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Type=Flash&Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + folder,
-        extraPlugins: (sakai.editor.enableResourceSearch ? 'resourcesearch' : ''),
+        extraPlugins: (sakai.editor.enableResourceSearch ? 'resourcesearch,movieplayer' : 'movieplayer'),
 
         // These two settings enable the browser's native spell checking and context menus.
         // Control-Right-Click (Windows/Linux) or Command-Right-Click (Mac) on highlighted words
@@ -43,6 +49,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config) {
         // menu. In some cases (Firefox and Safari, at least), this supplies corrections, suggestions, etc.
         disableNativeSpellChecker: false,
         browserContextMenuOnCtrl: true,
+        toolbarCanCollapse: false,
 
         toolbar_Full:
         [
@@ -50,17 +57,17 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config) {
             // Uncomment the next line and comment the following to enable the default spell checker.
             // Note that it uses spellchecker.net, displays ads and sends content to remote servers without additional setup.
             //['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print', 'SpellChecker', 'Scayt'],
-            ['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print'],
+            ['Cut','Copy','Paste','PasteText','-','Print'],
             ['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
-            ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote','CreateDiv'],
+            ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
             '/',
             ['Bold','Italic','Underline','Strike','-','Subscript','Superscript'],
             ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
             ['BidiLtr', 'BidiRtl' ],
             ['Link','Unlink','Anchor'],
             (sakai.editor.enableResourceSearch
-                ? ['ResourceSearch', 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak']
-                : ['Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak']),
+                ? ['ResourceSearch', 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar']
+                : ['Image','Movie','Flash','Table','HorizontalRule','Smiley','SpecialChar']),
             '/',
             ['Styles','Format','Font','FontSize'],
             ['TextColor','BGColor'],
