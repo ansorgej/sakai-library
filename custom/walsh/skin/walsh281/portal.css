@@ -1454,4 +1454,6 @@ ul#siteLinkList li.selectedTab, ul#siteLinkList li.more-tab, ul#siteLinkList li:
   display: inline-block;
 }
 
-
+span.unpublishedSite {
+  color: #999;
+}
