@@ -605,7 +605,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 /* search elements for flat other sites tray search */
 #otherSiteSearch {
     position: absolute;
-    top: 15px;
+    top: 0px;
     left:10px;
 }
 #otherSiteSearch span#noSearchResults {
@@ -621,7 +621,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 /* specific to  categorized view */
 #otherSitesCategorWrap {
-    margin: 5px;
+    margin: 30px 5px;
     max-height: 300px !important;
     overflow: auto;
 }
