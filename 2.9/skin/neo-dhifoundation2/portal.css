@@ -330,11 +330,7 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
     padding: 36px 0 5px 180px; /* matches the width of the toolMenu*/
     margin: 0;
     width: 100%;
-<<<<<<< HEAD
     background: transparent url(images/logo_inst.jpg) 0px 0px no-repeat;
-=======
-    background: url(images/DHI-Foundation-banner-Hex.d1d3d4.jpg) #69ABDB top left no-repeat; 
->>>>>>> origin/master
 }
 /* the individual containers for the site links, tool menu control, tool menu*/
 ul.topnav li {
