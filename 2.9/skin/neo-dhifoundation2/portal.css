@@ -50,7 +50,7 @@ body.portalBody {
 }
 #col1of2 .portletTitleWrap, #col2of2 .portletTitleWrap {
     width: 98.5%;
-    border-bottom: 2px solid #68AADC;
+    border-bottom: 2px solid #A33400;
 }
 #col1of2 .portletMainWrap, #col2of2 .portletMainWrap {
     width: 98.5%;
@@ -58,7 +58,7 @@ body.portalBody {
 }
 #col1 .portletTitleWrap {
     width: 99%;
-    border-bottom: 2px solid #68AADC !important;
+    border-bottom: 2px solid #A33400 !important;
 }
 #col1 .portletMainWrap {
     width: 99%
@@ -96,7 +96,13 @@ body.portalBody {
 
 /* PART 2 - HEADER BLOCKS (BRANDING,LOGIN) */
 #headerMax, #headerMin {
-    background: #68AADC;
+    background: #CCBAB0E;
+    background: -moz-linear-gradient(top, #CCBAB0 0%, #CCBAB0 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#CCBAB0), color-stop(100%,#CCBAB0));
+    background: -webkit-linear-gradient(top, #CCBAB0 0%,#CCBAB0 100%);
+    background: -o-linear-gradient(top, #CCBAB0 0%,#CCBAB0 100%);
+    background: -ms-linear-gradient(top, #CCBAB0 0%,#CCBAB0 100%);
+    background: linear-gradient(top, #CCBAB0 0%,#CCBAB0 100%);
     border-bottom: 1px solid #000;
 }
 #headerMin {
@@ -125,9 +131,11 @@ that can be used or hidden,can also use a background: url(images/<image name>.<e
 in this skin is rendered via ul.topnav, which a anon user does not see)*/
 #headerMin #mastLogo {
     display: block; 
+    background-image: url(images/logo_inst.jpg);
+    background-repeat: no-repeat;
     float: left;
-    width: 100px;
-    height: 50px;
+    width: 285px;
+    height: 80px;
 }
 /* another container wrapping branding images - portal outputs one /library/skin/<skin name>/images/banner_inst.gif
 that can be used or hidden,can also use a background: url(images/<image name>.<ext>) in this block,or both superimposing them  */
@@ -190,20 +198,20 @@ guests, for example */
     padding: 4px 6px;
     text-align: center;
     text-decoration: none;
-    background: #008DB9;
-    background: -moz-linear-gradient(top, #008DB9 0%, #007194 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#008DB9), color-stop(100%,#007194));
-    background: -webkit-linear-gradient(top, #008DB9 0%,#007194 100%);
-    background: -o-linear-gradient(top, #008DB9 0%,#007194 100%);
-    background: -ms-linear-gradient(top, #008DB9 0%,#007194 100%);
-    background: linear-gradient(top, #008DB9 0%,#007194 100%);
-    border: 1px solid #005A76;
+    background: #A33400;
+    background: -moz-linear-gradient(top, #A33400 0%, #832900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#A33400), color-stop(100%,#832900));
+    background: -webkit-linear-gradient(top, #A33400 0%,#832900 100%);
+    background: -o-linear-gradient(top, #A33400 0%,#832900 100%);
+    background: -ms-linear-gradient(top, #A33400 0%,#832900 100%);
+    background: linear-gradient(top, #A33400 0%,#832900 100%);
+    border: 1px solid #832900;
 }
 #headerMin #loginLink1, #headerMin #loginLink2 {
     margin-top: -2px;
 }
 #loginLink1:hover, #loginLink2:hover, form#loginForm input#submit:hover {
-    background: #007194;
+    background: #832900;
     text-decoration: none;
 }
 /*make secondary CAS login link (ie. Guest Login) different*/ 
@@ -263,8 +271,7 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
     width: 180px;
     padding-left: 25px;
     font-weight: normal;
-    color: #111;
-    color: #444;
+    color: #444 !important;
     padding: 7px 6px 6px 25px !important;
     font-size: 1em !important;
 }
@@ -320,10 +327,10 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
  * if you do not have a logo you can eliminate it to save some room */
 #linkNav ul.topnav {
     list-style: none;
-    padding: 36px 0 5px 290px; /* matches the width of the toolMenu*/
+    padding: 36px 0 5px 180px; /* matches the width of the toolMenu*/
     margin: 0;
     width: 100%;
-    background: url(images/logo_inst.jpg) #69ABDB top left no-repeat; 
+    background: transparent url(images/logo_inst.jpg) 0px 0px no-repeat;
 }
 /* the individual containers for the site links, tool menu control, tool menu*/
 ul.topnav li {
@@ -339,21 +346,21 @@ ul.topnav li {
 }
 /* hover treatment for site links*/
 ul.topnav li.nav-menu:hover, ul.topnav li.more-tab:hover {
-    border: 1px solid #005A76;
+    border: 1px solid #832900;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
 }
 /* current site control rendering */
  ul.topnav li.nav-selected {
-     background: #008DB9;
-    background: -moz-linear-gradient(top, #008DB9 0%, #007194 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#008DB9), color-stop(100%,#007194));
-    background: -webkit-linear-gradient(top, #008DB9 0%,#007194 100%);
-    background: -o-linear-gradient(top, #008DB9 0%,#007194 100%);
-    background: -ms-linear-gradient(top, #008DB9 0%,#007194 100%);
-    background: linear-gradient(top, #008DB9 0%,#007194 100%);
-    border: 1px solid #005A76;
+     background: #A33400;
+    background: -moz-linear-gradient(top, #A33400 0%, #832900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#A33400), color-stop(100%,#832900));
+    background: -webkit-linear-gradient(top, #A33400 0%,#832900 100%);
+    background: -o-linear-gradient(top, #A33400 0%,#832900 100%);
+    background: -ms-linear-gradient(top, #A33400 0%,#832900 100%);
+    background: linear-gradient(top, #A33400 0%,#832900 100%);
+    border: 1px solid #832900;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
@@ -415,10 +422,13 @@ ul.topnav li ul.subnav li:hover, ul.topnav li ul.subnav li a:focus,
 ul.topnav li a {
     padding: 8px 7px 8px 8px;
     font-size: 13px;
-    color: #fff;
+    color: #000;
     text-decoration: none;
     float: left;
     display: block;
+}
+ul.topnav li.nav-selected a {
+    color: #FFF;
 }
 /* Note:not needed? tool submenu for sites in site list
 span.topnav li ul.subnav li {
@@ -526,7 +536,7 @@ ul#otherSitesMenu li, #siteStatus a {
 }
 /* since the publish site link is the same, doubled up here */ 
 #otherSitesMenu li a:hover, #siteStatus a:hover, #siteStatus a:focus {
-    color: #68AADC;
+    color: #009dce;
 }
 /*container and control to close the "Other sites tray"*/
 #otherSitesMenu #otherSiteCloseW {
@@ -558,14 +568,14 @@ ul.otherSitesCategorList {
  *  ul.otherSitesCategorList. This last one will appear once per each category
  */
 ul#otherSiteList li, ul.otherSitesCategorList li {
-    background: #68AADC;
-    background: -moz-linear-gradient(top, #68AADC 0%, #007EA5 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#68AADC), color-stop(100%,#007EA5));
-    background: -webkit-linear-gradient(top, #68AADC 0%,#007EA5 100%);
-    background: -o-linear-gradient(top, #68AADC 0%,#007EA5 100%);
-    background: -ms-linear-gradient(top, #68AADC 0%,#007EA5 100%);
-    background: linear-gradient(top, #68AADC 0%,#007EA5 100%);
-    border: 1px solid #005A76;
+    background: #A33400;
+    background: -moz-linear-gradient(top, #A33400 0%, #832900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#A33400), color-stop(100%,#832900));
+    background: -webkit-linear-gradient(top, #A33400 0%,#832900 100%);
+    background: -o-linear-gradient(top, #A33400 0%,#832900 100%);
+    background: -ms-linear-gradient(top, #A33400 0%,#832900 100%);
+    background: linear-gradient(top, #A33400 0%,#832900 100%);
+    border: 1px solid #832900;
     font-weight: bold;
     position: relative;
     border-radius: 5px;
@@ -638,7 +648,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     display: block;
 }
 #otherSiteTools li a:focus {
-    color: #68AADC;
+    color: #A33400;
 }
 /* trigger that retrieves from entity broker the tool menu for a site in the "More sites" tray*/
 .toolMenus {
@@ -679,7 +689,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     padding: 0 1px 0 0;
 }
 #siteHierarchy li a, #siteHierarchy li a:visited {
-    color: #68AADC;
+    color: #A33400;
     font-size: 1.2em;
     text-decoration: none;
 }
@@ -725,7 +735,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 /* the current tool */
 #toolMenu li.selectedTool a {
-    color: #68AADC !important;
+    color: #A33400 !important;
     cursor: default;
 }
 /* eliminate the normal hover effect when it is current tool */
@@ -764,13 +774,13 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 #toolMenu li a:hover, #subSites li a:hover, #toolMenu li a:focus, #subSites li a:focus {
     text-decoration: none;
-    background: #68AADC;
-    background: -moz-linear-gradient(top, #68AADC 0%, #007EA5 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#68AADC), color-stop(100%,#007EA5));
-    background: -webkit-linear-gradient(top, #68AADC 0%,#007EA5 100%);
-    background: -o-linear-gradient(top, #68AADC 0%,#007EA5 100%);
-    background: -ms-linear-gradient(top, #68AADC 0%,#007EA5 100%);
-    background: linear-gradient(top, #68AADC 0%,#007EA5 100%);
+    background: #A33400;
+    background: -moz-linear-gradient(top, #A33400 0%, #832900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#A33400), color-stop(100%,#832900));
+    background: -webkit-linear-gradient(top, #A33400 0%,#832900 100%);
+    background: -o-linear-gradient(top, #A33400 0%,#832900 100%);
+    background: -ms-linear-gradient(top, #A33400 0%,#832900 100%);
+    background: linear-gradient(top, #A33400 0%,#832900 100%);
     color: #fff;
 }
 /* link in tool menu that allows adding one more tool, may be disabled */
@@ -818,7 +828,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 #siteStatus {
     text-transform: capitalize;
     clear: both;
-    color: #68AADC;
+    color: #009dce;
     font-size: small;
     font-weight: bold;
     line-height: 130%;
@@ -1316,7 +1326,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 /* list item when the user is an a chat room is a link to that chat room */
 .presenceList li a {
-    color: #68AADC;
+    color: #A33400;
     text-decoration: none;
 }
 

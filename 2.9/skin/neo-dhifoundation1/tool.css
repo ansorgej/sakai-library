@@ -1,25 +1,26 @@
-/* NOTE: This file is linked to after the tool_base.css file inside of tools. It provides for skinning. */
-/* many of the definitions below exist also in tool_base.css - the duplication allows for one instalation with many different looks sharing some common elements
- */
-/* SECTION 1 GENERIC SELECTORS */
-body {
-    font-family: 'Helvetica Neue', Arial,sans-serif;
+/*NOTE:This file is linked to after the tool_base.css file inside of tools. It provides for skinning.*/
+/*many of the definitions below exist also in tool_base.css - the duplication allows for one instalation with many different looks sharing some common elements
+*/
+
+/*SECTION 1 GENERIC SELECTORS*/
+body{
+	font-family: Arial,Helvetica,sans-serif;
     font-size: 80%;
 }
 /* stub in tool_base.css - skinned here */
 hr.itemSeparator {
     height: 1px;
-    border-color: #0064cd;
+	border-color: #27d;
     border-style: solid;
     border-width: 1px 0 0 0;
 }
 /* SECTION 2 LINKS */
 a:link {
-    color: #0064cd;
+    color: #35b;
     text-decoration: underline;
 }
 a:visited {
-    color: #4e5192;
+    color: #53b;
     text-decoration: underline;
 }
 a:hover, a:active {
@@ -985,9 +986,9 @@ tr.selectedFound td {
     color: #111
 }
 .login td.logo {
-    width: 122px;
     background-color: #009DCE;
-    background-image: url(../neo-default/images/logo_inst.png);
+	width: 370px; 
+	background: url(images/DHI-Foundation-button_HOME.jpg) 10px 5px no-repeat
     background-position: -150px 25px;
     border: 1px solid #ccc;
 }
