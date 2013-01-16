@@ -595,7 +595,7 @@ ul#otherSiteList li, ul.otherSitesCategorList li {
 }
 ul#otherSiteList li a, ul.otherSitesCategorList li a {
     display: block;
-    padding: 8px;
+    padding: 7px;
     text-decoration: none;
     color: #fff;
     white-space: nowrap;
