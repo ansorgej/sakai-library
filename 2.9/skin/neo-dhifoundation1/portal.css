@@ -422,7 +422,7 @@ ul.topnav li a {
 }
 
 ul.topnav li.nav-selected a{
-    color: #FFF;
+    #color: #FFF;
 }
 
 /* Note:not needed? tool submenu for sites in site list
