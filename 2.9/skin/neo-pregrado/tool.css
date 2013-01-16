@@ -114,7 +114,11 @@ see: http://www.quirksmode.org/bugreports/archives/2005/07/Wrapped_inlinenowrap_
     color: #000;
 }
 .navIntraTool a:hover {
+<<<<<<< HEAD
     color: #009DCE !important;
+=======
+    color: #086A67 !important;
+>>>>>>> origin/master
     text-decoration: underline;
 }
 /* where one is at in hierarchy - can be static or active links */
@@ -317,7 +321,11 @@ table.calendar .event {
     font-weight: bold !important;
 }
 .listHier th a:hover {
+<<<<<<< HEAD
     color: #009DCE
+=======
+    color: #086A67
+>>>>>>> origin/master
 }
 /* skinned cell of standard tab. data table */
 .listHier td {
@@ -476,7 +484,11 @@ label {
 }
 /* a required marker for a shorttext label/input pair */
 .shorttext .reqStar {
+<<<<<<< HEAD
     color: #009DCE;
+=======
+    color: #086A67;
+>>>>>>> origin/master
     width: auto;
     margin: 0 0 0 -1em;
     font-weight: bold;
@@ -626,7 +638,11 @@ ul.navIntraTool>li>span.separator, .navIntraTool>li>span:empty, span.navSeparato
     min-height: 15px;
     margin-left: 5px !important;
     padding: 1px !important;
+<<<<<<< HEAD
     background: #009DCE;
+=======
+    background: #086A67;
+>>>>>>> origin/master
     border: 2px solid white !important;
     border-radius: 20pt;
     color: #fff !important;
@@ -700,11 +716,19 @@ ul.navIntraTool>li>span.separator, .navIntraTool>li>span:empty, span.navSeparato
 }
 /* button link color */
 .navIntraTool a:link:hover, #actionToolbar a:link:hover {
+<<<<<<< HEAD
     color: #009DCE !important
 }
 .neoPortletTitleWrap {
     width: 99%;
     border-bottom: 2px solid #009DCE;
+=======
+    color: #086A67 !important
+}
+.neoPortletTitleWrap {
+    width: 99%;
+    border-bottom: 2px solid #086A67;
+>>>>>>> origin/master
     border-radius: 3px;
 }
 /* SECTION 9 MESSAGES */
@@ -720,7 +744,11 @@ ul.navIntraTool>li>span.separator, .navIntraTool>li>span:empty, span.navSeparato
 /* the generic required marker */
 /* see: create any item */
 .reqStar {
+<<<<<<< HEAD
     color: #009DCE;
+=======
+    color: #086A67;
+>>>>>>> origin/master
     width: auto;
     margin-left: -1em;
     font-weight: bold;
@@ -732,7 +760,11 @@ ul.navIntraTool>li>span.separator, .navIntraTool>li>span:empty, span.navSeparato
 /* the required marker for a longtext label/input pair */
 /* see: create any item with a textarea */
 .longtext .reqStar {
+<<<<<<< HEAD
     color: #009DCE;
+=======
+    color: #086A67;
+>>>>>>> origin/master
     font-size: 1.2em;
     font-weight: normal;
     padding: 0 0 0 .1em;
@@ -741,7 +773,11 @@ ul.navIntraTool>li>span.separator, .navIntraTool>li>span:empty, span.navSeparato
 /* when need to display the required marker inline as a part of a text */
 /* see: create any item - instruction message about requireed fields */
 .reqStarInline {
+<<<<<<< HEAD
     color: #009DCE;
+=======
+    color: #086A67;
+>>>>>>> origin/master
     font-size: 1.2em;
     vertical-align: middle;
     width: 1em;
@@ -986,9 +1022,15 @@ tr.selectedFound td {
 }
 .login td.logo {
     width: 122px;
+<<<<<<< HEAD
     background-color: #009DCE;
     background-image: url(../neo-default/images/logo_inst.png);
     background-position: -150px 25px;
+=======
+    background-color: #086A67;
+    background-image: url(images/logo.png);
+    background-position: 15px 25px;
+>>>>>>> origin/master
     border: 1px solid #ccc;
 }
 .login td.form {
@@ -1132,7 +1174,11 @@ ul.makeMenu li.menuClose a:hover {
 /* ===[ Lessons ]=== */
 .lessonsHeader {
     width: 99%;
+<<<<<<< HEAD
     border-bottom: 2px solid #009DCE !important;
+=======
+    border-bottom: 2px solid #086A67 !important;
+>>>>>>> origin/master
     border-radius: 3px !important;
     height: 25px;
 }
@@ -1162,7 +1208,11 @@ input[type="submit"], input[type="button"], input[type="reset"] {
     background: linear-gradient(top, #f6f6f5 0%,#e0e0e0 93%,#e0e0e0 97%,#e9e9e9 100%) !important;
     border: 1px solid #E0E3E5 !important;
     box-shadow: 0 1px 1px 0 #999999 !important;
+<<<<<<< HEAD
     color: #2683BC !important;
+=======
+    color: #086A67 !important;
+>>>>>>> origin/master
     font-size: 11px !important;
     font-weight: bold !important;
     height: 24px !important;
