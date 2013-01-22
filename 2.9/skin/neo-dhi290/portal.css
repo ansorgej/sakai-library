@@ -126,8 +126,11 @@ in this skin is rendered via ul.topnav, which a anon user does not see)*/
 #headerMin #mastLogo {
     display: block; 
     float: left;
-    width: 100px;
-    height: 50px;
+    width: 290px;
+    height: 78px;
+    background-image: url("images/logo_inst.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
 }
 /* another container wrapping branding images - portal outputs one /library/skin/<skin name>/images/banner_inst.gif
 that can be used or hidden,can also use a background: url(images/<image name>.<ext>) in this block,or both superimposing them  */

@@ -988,8 +988,8 @@ tr.selectedFound td {
 .login td.logo {
     background-color: #009DCE;
 	width: 370px; 
-	background: url(images/DHI-Foundation-button_HOME.jpg) 10px 5px no-repeat
-    background-position: -150px 25px;
+	background: url(images/logo_inst.jpg) 10px 5px no-repeat
+    background-position: 0 0;
     border: 1px solid #ccc;
 }
 .login td.form {
