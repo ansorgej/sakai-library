@@ -43,10 +43,8 @@ function initJQuery() {
         setTimeout("initJQuery()", 50);
     } else {
                         
-        $.noConflict();
         jQuery(document).ready(function($) {
                 if (location.href.indexOf("addAssignment") > -1) {
-                  console.log(location.href);
                   return false;
                 }
             //do anything that needs to be done on document.ready
