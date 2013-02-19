@@ -49,9 +49,10 @@ FCKConfig.PluginsPath = FCKConfig.BasePath + 'plugins/' ;
 
 FCKConfig.Plugins.Add( 'attachments' ) ;
 FCKConfig.Plugins.Add( 'movieplayer', 'en,pt' ) ;
-FCKConfig.Plugins.Add( 'mathedit', 'en' );
 FCKConfig.Plugins.Add( 'sakaientitybrowser', 'en' ) ;
 FCKConfig.Plugins.Add( 'kaltura' );
+FCKConfig.Plugins.Add('fckeditor_wiris');
+//FCKConfig.Plugins.Add( 'mathedit', 'en' );
 
 // FCKConfig.Plugins.Add( 'autogrow' ) ;
 // FCKConfig.Plugins.Add( 'dragresizetable' );
@@ -107,7 +108,7 @@ FCKConfig.ToolbarSets["Default"] = [
         ['OrderedList','UnorderedList','Outdent','Indent'],
         ['JustifyLeft','JustifyCenter','JustifyRight','JustifyFull','TextColor','BGColor'],
         ['Link','Unlink','Anchor'],
-        ['Kaltura','Sakai_Entity_Link','Image','Movie','Flash','Table','Rule','Smiley','SpecialChar'],['MathEdit'],['Style'],
+        ['Kaltura','Sakai_Entity_Link','Image','Movie','Flash','Table','Rule','Smiley','SpecialChar'],['fckeditor_wiris_openFormulaEditor'],['Style'],
         ['FontFormat','FontName','FontSize']
 ] ;
 
