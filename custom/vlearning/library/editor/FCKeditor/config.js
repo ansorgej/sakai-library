@@ -108,8 +108,7 @@ FCKConfig.ToolbarSets["Default"] = [
         ['JustifyLeft','JustifyCenter','JustifyRight','JustifyFull','TextColor','BGColor'],
         ['Link','Unlink','Anchor'],
         ['Kaltura','Sakai_Entity_Link','Image','Movie','Flash','Table','Rule','Smiley','SpecialChar'],['MathEdit'],['Style'],
-        ['FontFormat','FontName','FontSize'],
-        ['About']
+        ['FontFormat','FontName','FontSize']
 ] ;
 
 FCKConfig.ToolbarSets["large"] = [
