@@ -20,9 +20,6 @@ body.portalBody {
 /* accessibility links wrapper   */
 #skipNav {}
 /* wrapper for site content (includes as children #toolMenuWrap,#content and #footer)  */
-#container {
-    background: #fff;
-}
 /* wrapper for #toolMenu - children are #worsiteLogo,#toolMenu  */
 #toolMenuWrap {
     float: left;
@@ -48,35 +45,14 @@ body.portalBody {
 #content {
     padding: .8em 0 0 13.2em;
 }
-#col1of2 .portletTitleWrap, #col2of2 .portletTitleWrap {
-    width: 98.5%;
-    border-bottom: 2px solid #1B9D85;
-}
 #col1of2 .portletMainWrap, #col2of2 .portletMainWrap {
     width: 98.5%;
     margin-bottom: .5em;
-}
-#col1 .portletTitleWrap {
-    width: 99%;
-    border-bottom: 2px solid #1B9D85 !important;
 }
 #col1 .portletMainWrap {
     width: 99%
 }
 /* wrapper for footer blocks  */
-#footer {
-    clear: both;
-    background: #444;
-    padding: 10px;
-    text-align: center;
-    background: #f3f3f3;
-    border: 1px solid #ddd;
-    width: 90%;
-    margin: 0 auto 50px auto;
-    -moz-border-radius: 8px;
-    -webkit-border-radius: 8px;
-    border-radius: 8px;
-}
 #footerLinks {
     text-align: center;
     font-size: .9em;
@@ -96,8 +72,14 @@ body.portalBody {
 
 /* PART 2 - HEADER BLOCKS (BRANDING,LOGIN) */
 #headerMax, #headerMin {
-    background: #5999d2;
-    border-bottom: 1px solid #000;
+    background: #ffffff;
+    border-bottom: 1px solid #dcdcdc;
+    background: -moz-linear-gradient(left, #ffffff 0%, #5999d2 100%);
+    background: -webkit-gradient(linear, left, right, color-stop(0%,#ffffff), color-stop(100%,#5999d2));
+    background: -webkit-linear-gradient(left, #ffffff 0%,#5999d2 100%);
+    background: -o-linear-gradient(left, #ffffff 0%,#5999d2 100%);
+    background: -ms-linear-gradient(left, #ffffff 0%,#5999d2 100%);
+    background: linear-gradient(left, #ffffff 0%,#5999d2 100%);    
 }
 #headerMin {
     overflow: hidden;
@@ -323,7 +305,8 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
     padding: 36px 0 5px 290px; /* matches the width of the toolMenu*/
     margin: 0;
     width: 100%;
-    background: url(images/logo_inst.jpg) #5999d2 top left no-repeat; 
+    background: url(images/logo_inst.jpg) transparent top left no-repeat;
+    background-position: 5px 5px; 
 }
 /* the individual containers for the site links, tool menu control, tool menu*/
 ul.topnav li {
@@ -415,10 +398,13 @@ ul.topnav li ul.subnav li:hover, ul.topnav li ul.subnav li a:focus,
 ul.topnav li a {
     padding: 8px 7px 8px 8px;
     font-size: 13px;
-    color: #fff;
+    color:#444444;
     text-decoration: none;
     float: left;
     display: block;
+}
+ul.topnav li.nav-selected a{
+    color: #FFF !important;
 }
 /* Note:not needed? tool submenu for sites in site list
 span.topnav li ul.subnav li {
@@ -840,18 +826,6 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 
 /* PART 7 - PORTLETS - children of #content
 /* a page may display portlets in one column or two columns - the next three id selectors address the three possiblities - sole child of column is the .portlet   */
-#col1 {
-    padding-right: 1em
-}
-#col1of2 {
-    width: 49%;
-    float: left;
-    margin: 0;
-}
-#col2of2 {
-    width: 49%;
-    float: right;
-}
 .portletTitle {
     width: 100%;
     height: 100%;
@@ -890,12 +864,6 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 .portletTitle .action a:hover, .portletTitle .action a:focus {
     background: url(images/help_h.gif) center right no-repeat
-}
-.portletTitle .title {
-    padding: 2px 4px 6px 0;
-    height: 1em;
-    float: left;
-    color: #000;
 }
 .portletTitle .title img {
     margin: 0;
@@ -1673,3 +1641,98 @@ a.qtipLinkButton:hover {
 	width:250px;
 	display:block;
 }
+
+
+#container{
+	background: url("images/background_gray2.jpg") repeat scroll left top transparent;
+}
+
+#col1 {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px 4px 4px 4px;
+    margin: 12px 10px 12px 5px;
+    min-height: 483px;
+    padding: 10px 10px 10px 17px;
+}
+#col1of2 {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px 4px 4px 4px;
+    float: left;
+    margin: 12px 10px 12px 5px;
+    min-height: 483px;
+    padding: 10px 10px 10px 17px;
+    width: 45%;
+}
+#col2of2 {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px 4px 4px 4px;
+    float: right;
+    margin: 12px 10px 12px 5px;
+    min-height: 483px;
+    padding: 10px 10px 10px 17px;
+    width: 45%;
+}
+
+#col1of2 .portletTitleWrap, #col2of2 .portletTitleWrap {
+    width: 98.5%;
+    background: #f3f3f3; /* Old browsers */
+    background: -moz-linear-gradient(top, #f3f3f3 0%, #e7e7e7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(100%,#e7e7e7)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #f3f3f3 0%,#e7e7e7 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#e7e7e7',GradientType=0 ); /* IE6-9 */
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#col1 .portletTitleWrap {
+    width: 99%;
+    background: #f3f3f3; /* Old browsers */
+    background: -moz-linear-gradient(top, #f3f3f3 0%, #e7e7e7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(100%,#e7e7e7)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #f3f3f3 0%,#e7e7e7 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#e7e7e7',GradientType=0 ); /* IE6-9 */
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.portletTitle .title {
+    padding: 5px 10px 6px 6px;
+    height: 1em; 
+    float: left;
+    color: #000;
+}
+
+#footer {
+    clear: both;
+   /* background: #444;
+ *     */
+    padding: 10px;
+    text-align: center;
+    /*background: #f3f3f3;
+ *     border: 1px solid #ddd;
+ *         */
+    width: 90%; 
+    margin: 0 auto 50px auto;
+    -moz-border-radius: 8px; 
+    -webkit-border-radius: 8px; 
+    /*border-radius: 8px;
+ *         */
+}
+
+html {
+        background: url("images/background_gray2.jpg") repeat scroll left top transparent;
+        min-height: 100%;
+}
+
+

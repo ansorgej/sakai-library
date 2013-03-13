@@ -5,7 +5,7 @@
 /*SECTION 1 GENERIC SELECTORS*/
 body{
 	font-family: Arial,Helvetica,sans-serif;
-    font-size: 80%;
+    font-size: 12px;
 }
 /* stub in tool_base.css - skinned here */
 hr.itemSeparator {
