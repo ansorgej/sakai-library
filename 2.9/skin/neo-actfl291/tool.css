@@ -1227,3 +1227,20 @@ input[type="checkbox"][disabled="disabled"], input[type="checkbox"][disabled="tr
 .listNav input[type="submit"], .listNav input[type="button"] {
     height: 20px !important
 }
+
+
+img[src*="/sakai-lessonbuildertool-tool/images/available.png"] {
+    background-image: url("images/available.png");
+    display: inline-block;
+    height: 0 !important;
+    padding: 21px 3px 0;
+}
+
+
+img[src*="/sakai-lessonbuildertool-tool/images/checkmark.png"] {
+    background-image: url("images/checkmark.png");
+    display: inline-block;
+    height: 0 !important;
+    padding: 21px 3px 0;
+}
+
