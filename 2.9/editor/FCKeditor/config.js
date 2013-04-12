@@ -49,6 +49,7 @@ FCKConfig.PluginsPath = FCKConfig.BasePath + 'plugins/' ;
 
 FCKConfig.Plugins.Add( 'attachments' ) ;
 FCKConfig.Plugins.Add( 'movieplayer', 'en,pt' ) ;
+FCKConfig.Plugins.Add( 'sakaientitybrowser' ) ;
 
 // FCKConfig.Plugins.Add( 'autogrow' ) ;
 // FCKConfig.Plugins.Add( 'dragresizetable' );
@@ -106,7 +107,7 @@ FCKConfig.ToolbarSets["Default"] = [
         ['OrderedList','UnorderedList','Outdent','Indent'],
         ['JustifyLeft','JustifyCenter','JustifyRight','JustifyFull','TextColor','BGColor'],
         ['Link','Unlink','Anchor'],
-        ['Image','Movie','Flash','Table','Rule','Smiley','SpecialChar'],['Style'],
+        ['Sakai_Entity_Link','Image','Movie','Flash','Table','Rule','Smiley','SpecialChar'],['Style'],
         ['FontFormat','FontName','FontSize'],
         ['About']
 ] ;
@@ -119,7 +120,7 @@ FCKConfig.ToolbarSets["large"] = [
         ['OrderedList','UnorderedList','Outdent','Indent'],
         ['JustifyLeft','JustifyCenter','JustifyRight','JustifyFull','TextColor','BGColor'],
         ['Link','Unlink','Anchor'],
-        ['Image','Movie','Flash','Table','Rule','Smiley','SpecialChar'],['Style'],
+        ['Sakai_Entity_Link','Image','Movie','Flash','Table','Rule','Smiley','SpecialChar'],['Style'],
         ['FontFormat','FontName','FontSize'],
 ] ;
 
@@ -129,7 +130,7 @@ FCKConfig.ToolbarSets["largecompressed"] = [
         ['Bold','Italic','Underline','StrikeThrough','Subscript','Superscript'],
         ['OrderedList','UnorderedList','Outdent','Indent','JustifyLeft','JustifyCenter','JustifyRight','JustifyFull'],
         ['TextColor','BGColor','Link','Unlink','Anchor'],
-        ['Image','Movie','Flash','Table','Rule','Smiley','SpecialChar'],
+        ['Sakai_Entity_Link','Image','Movie','Flash','Table','Rule','Smiley','SpecialChar'],
         ['FontFormat','FontName'],['Style','FontSize'],
 ] ;
 
@@ -138,7 +139,7 @@ FCKConfig.ToolbarSets["medium"] = [
 	      ['Cut','Copy','Paste','PasteText','PasteWord'],
         ['Undo','Redo','-','Find','Replace'],
         ['Bold','Italic','Underline','TextColor','BGColor','OrderedList','UnorderedList','Outdent','Indent','JustifyLeft','JustifyCenter','JustifyRight','JustifyFull'],
-        ['Image','Table','Link','Unlink','-','FontFormat','Style']        
+        ['Sakai_Entity_Link','Image','Table','Link','Unlink','-','FontFormat','Style']        
 ] ;
 
 FCKConfig.ToolbarSets["small"] = [
