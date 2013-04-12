@@ -39,7 +39,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
     }
 
     if (collectionId) {
-        folder = "&CurrentFolder=" + collectionId
+        folder = "CurrentFolder=" + collectionId
     }
 
     var language = sakai.locale && sakai.locale.userLanguage || '';
@@ -50,9 +50,10 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
         defaultLanguage: 'en',
         language: language + (country ? '-' + country.toLowerCase() : ''),
         height: 310,
-        filebrowserBrowseUrl :'/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + collectionId + folder,
-        filebrowserImageBrowseUrl : '/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Type=Image&Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + collectionId + folder,
-        filebrowserFlashBrowseUrl :'/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Type=Flash&Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + collectionId + folder,
+        fileConnectorUrl : '/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + collectionId + '?' + folder,
+        filebrowserBrowseUrl :'/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + collectionId + '&' + folder,
+        filebrowserImageBrowseUrl : '/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Type=Image&Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + collectionId + '&' + folder,
+        filebrowserFlashBrowseUrl :'/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Type=Flash&Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + collectionId + '&' + folder,
 	extraPlugins: (sakai.editor.enableResourceSearch ? 'resourcesearch,' : '')+'',
 
 
@@ -85,8 +86,8 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
             ['JustifyLeft','JustifyCenter','JustifyRight'],
             ['Link','Unlink','Anchor'],
             (sakai.editor.enableResourceSearch
-                ? ['ResourceSearch', 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak']
-                : ['Image','Table']),
+                ? ['ResourceSearch', 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak','fmath_formula']
+                : ['Image','Table','fmath_formula']),
             '/',
             ['Format','Font','FontSize'],
             ['Maximize','Templates','-','Source']
@@ -133,7 +134,8 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
 		//To add extra plugins outside the plugins directory, add them here! (And in the variable)
 		(function() { 
 		   CKEDITOR.plugins.addExternal('movieplayer',basePath+'movieplayer/', 'plugin.js'); 
-		   CKEDITOR.plugins.addExternal('wordcount',basePath+'wordcount/', 'plugin.js'); 
+		   CKEDITOR.plugins.addExternal('wordcount',basePath+'wordcount/', 'plugin.js');
+		   CKEDITOR.plugins.addExternal('fmath_formula',basePath+'fmath_formula/', 'plugin.js');
 			 /*
 			  To enable after the deadline uncomment these two lines and add atd-ckeditor to toolbar
 			  and to extraPlugins. This also needs extra stylesheets.
@@ -143,7 +145,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
 			 */
 			 CKEDITOR.plugins.addExternal('atd-ckeditor',basePath+'atd-ckeditor/', 'plugin.js'); 
 			 ckconfig.atd_rpc='/proxy/atd';
-			 ckconfig.extraPlugins+="movieplayer,wordcount,atd-ckeditor,stylesheetparser";
+			 ckconfig.extraPlugins+="movieplayer,wordcount,atd-ckeditor,stylesheetparser,fmath_formula";
 			 ckconfig.contentsCss = basePath+'/atd-ckeditor/atd.css';
 
 			 //ckconfig.extraPlugins+="movieplayer,wordcount";
