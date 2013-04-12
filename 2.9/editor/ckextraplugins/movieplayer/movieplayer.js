@@ -87,8 +87,10 @@ function loadMovieSelection() {
                 for ( var fv = 0; fv < vars.length; fv++) {
                     var varsT = vars[fv].split('=');
                     name = varsT[0];
+                    // If the text was escaped, we split on & and left amp; 
+                    name = name.replace('amp;', '');
                     value = varsT[1];
-                    if (name == 'flv') {
+                    if (name == 'flv' || name == 'src') {
                         oMovie.setAttribute('url', decodeURI(value));
                     } else {
                         oMovie.setAttribute(name, value);
