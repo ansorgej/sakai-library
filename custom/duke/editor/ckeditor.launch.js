@@ -87,8 +87,8 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
             ['BidiLtr', 'BidiRtl' ],
             ['Link','Unlink','Anchor'],
             (sakai.editor.enableResourceSearch
-	     ? ['ResourceSearch','kaltura','Image','Movie','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak','fmath_formula','ckeditor_wiris_formulaEditor']
-	     : ['kaltura','Image','Movie','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak','fmath_formula','ckeditor_wiris_formulaEditor']),
+	     ? ['ResourceSearch','kaltura','Image','Movie','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak','ckeditor_wiris_formulaEditor']
+	     : ['kaltura','Image','Movie','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak','ckeditor_wiris_formulaEditor']),
             '/',
             ['Styles','Format','Font','FontSize'],
             ['TextColor','BGColor'],
@@ -137,7 +137,6 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
 		(function() { 
 		   CKEDITOR.plugins.addExternal('movieplayer',basePath+'movieplayer/', 'plugin.js'); 
 		   CKEDITOR.plugins.addExternal('wordcount',basePath+'wordcount/', 'plugin.js'); 
-		   CKEDITOR.plugins.addExternal('fmath_formula',basePath+'fmath_formula/', 'plugin.js'); 
 			 /*
 			  To enable after the deadline uncomment these two lines and add atd-ckeditor to toolbar
 			  and to extraPlugins. This also needs extra stylesheets.
@@ -150,7 +149,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
 			 //ckconfig.extraPlugins+="movieplayer,wordcount,atd-ckeditor,stylesheetparser";
 			 //ckconfig.contentsCss = basePath+'/atd-ckeditor/atd.css';
 
-			 ckconfig.extraPlugins+="movieplayer,wordcount,fmath_formula";
+			 ckconfig.extraPlugins+="movieplayer,wordcount";
     })();
 
 	  CKEDITOR.replace(targetId, ckconfig);
