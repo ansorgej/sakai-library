@@ -104,8 +104,9 @@ body.portalBody {
 }
 /* PART 2 - HEADER BLOCKS (BRANDING,LOGIN) */
 #headerMax, #headerMin {
-    background: #0736a4;
-    border-bottom: 1px solid #003366;
+    /*background: #0736a4;*/
+    background: #001A57;
+    border-bottom: 1px solid #802414;
 
 }
 #headerMin {
@@ -129,8 +130,9 @@ body.portalBody {
     clear: both;
     display: block;
     height: 70px;
-    background: #0736a4;
-    border-bottom: 1px solid #003366;
+    /*background: #0736a4;*/
+    background: #001A57;
+    border-bottom: 1px solid #222;
     }
 /*mastHead smaller when logged in, to display logos, affiliation, but half the size */
 #headerMax #mastHead {
@@ -262,6 +264,7 @@ guests, for example */
     text-align: center;
     text-decoration: none;
     /*background: #0844cf;*/
+    
     background: #046cf9;
     border: 1px solid #003366;
 
@@ -376,8 +379,9 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
     font-size: 100%;
     line-height: normal;
     padding: 0;
-    background: #0736a4;
-    border-top: 1px solid #003366;
+    /*background: #0736a4;*/
+    background: #af3f23;
+    border-top: 1px solid #802414;
 
 }
 /* wrapper for the site links, link to the 'more sites' tray, logout controls - children are #mastLogin and #linkNav*/
@@ -409,18 +413,20 @@ ul.topnav li {
 }
 /* hover treatment for site links*/
 ul.topnav li.nav-menu:hover, ul.topnav li.more-tab:hover {
-    border: 1px solid #003366;
-    /*background: #0844cf;*/
-    background: #046cf9;
+    
+    background: #88311b;
+    border: 1px solid #802414;
+    
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
 }
 /* current site control rendering */
  ul.topnav li.nav-selected {
-	/*background: #0844cf;*/
-	background: #046cf9;
-    border: 1px solid #003366;
+	
+	background: #88311b;
+    border: 1px solid #802414;
+	
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
@@ -695,10 +701,10 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 #otherSitesCategorWrap h4 {
     float: none;
     clear: both;
-    color: #555;
+    color: /*#555;*/ #777;
     font-size: 90%;
     text-transform: uppercase;
-    padding: 4px 10px 0 7px;
+    padding: /*4px*/ 24px 10px 0 7px;
     margin: 0 0 0 0;
 }
 /* tool submenu for sites in the "More sites" tray (both flat and categorized)*
@@ -872,6 +878,51 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     padding-right: 0;
 }
 
+
+/* PART 6 - SITE AFFILIATION,SITE TYPE/STATUS - children of #toolMenuWrap */
+/* site logo wrapper  */
+#worksiteLogo {
+    height: auto;
+    overflow: hidden;
+    display: block;
+}
+/* setting the max-width by percentage to avoid crops and permit scaling when tool menu is minimized*/
+#worksiteLogo img {
+    display: block;
+    margin: 5px auto;
+    max-width: 90%
+}
+/* wrapper for the string that Sakai will output based on site type (ie. project,course) this is open ended and institution specific. Not sure what good this is so hiding it. */
+#siteType {
+    text-align: center;
+    text-transform: capitalize;
+    display: none;
+}
+/* wrapper for the string that Sakai will output based on site status when status is "Unpublished"  */
+#siteStatus {
+    text-transform: capitalize;
+    clear: both;
+    color: #009dce;
+    font-size: small;
+    font-weight: bold;
+    line-height: 130%;
+    padding: 10px 3px;
+    border: 1px solid #ccc;
+    border-width: 0 0 1px 0;
+    text-align: center;
+    margin: 0;
+}
+/* link to inmediately publish the site */
+#siteStatus a {
+    text-decoration: none;
+    display: block;
+    padding: 3px;
+    font-size: 80%;
+    width: auto;
+    margin: 10px 20px;
+}
+
+
 /* PART 7 - PORTLETS - children of #content
 /* a page may display portlets in one column or two columns - the next three id selectors address the three possiblities - sole child of column is the .portlet   */
 #col1 {
@@ -879,14 +930,17 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     padding: 1em;
 }
 #col1of2 {
-    width: 49%;
+    width: 48%;
     float: left;
     margin: 0;
+    padding: 13px 0 0 13px;
 }
 #col2of2 {
-    width: 49%;
+    width: 48%;
     float: right;
+    padding: 13px 0 0 0;
 }
+
 .portletTitle {
     width: 100%;
     height: 100%;
