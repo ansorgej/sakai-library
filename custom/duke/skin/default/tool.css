@@ -20,22 +20,22 @@ hr.itemSeparator{
 /*SECTION 2 LINKS*/
 a:link{
 	color: #35b;
-	text-decoration: underline !important;
+	text-decoration: underline;
 }
 
 a:visited{
 	color: #53b;
-	text-decoration: underline !important;
+	text-decoration: underline;
 }
 
 a:hover,a:active{
 	color: #33f;
-	text-decoration: underline !important;
+	text-decoration: underline;
 }
 
 a:focus{
 	color: #33f;
-	text-decoration: underline !important;
+	text-decoration: underline;
 }
 
 /*links inside the calendar tool tables*/
@@ -302,10 +302,11 @@ table.calendar th{
 }
 
 .borderTodayWithoutActivity{
-	background-color: #FFF;
+	background-color: #777;
 	border: 1px solid #000;
 	text-align: right;
 }
+.borderTodayWithoutActivity a{color:#fff}
 
 .borderTopLeft{
 	background-color: #ffc;
@@ -719,7 +720,7 @@ textarea:focus{
 /*inline blob used to indicate progress (see: upload a resource say)
 visibility gets toggled*/
 #submitnotif{
-	background: #fff url(../images/warn-a.gif) .3em .3em no-repeat;
+	background: #fff url(images/warn-a.gif) .3em .3em no-repeat;
 	border: 1px solid #b11;
 	font-family: Verdana,Arial,Helvetica,sans-serif;
 	clear: none;
@@ -739,7 +740,7 @@ visibility gets toggled*/
 you loose the native buttonishness affordance of the os/browser */
 /*create any item - like an announcement*/
 .act .active {
-	color:#27d
+	color:#15a
 }
 .act .active[disabled="disabled"] {
 	color:gray
@@ -984,62 +985,8 @@ width:auto !important
 
 
 
-/*SECTION 12 TOOL TITLE SELECTORS and other PORTAL THINGS*/
-.portletTitle{
-	width: 100%;
-}
+/*PORTAL THINGS*/
 
-.portletTitle .title img{
-	margin: 0;
-/*	vertical-align: text-bottom;*/
-	width: 18px;
-	height: 16px;
-}
-
-.portletTitle .title{
-	padding: 2px 4px 6px 4px;
-	height: 1em;
-	font-size: 120%;
-	float: left;
-	color: #000;
-}
-
-.portletTitle .title h2{
-	display: inline;
-	margin: 0 0 0 .2em;
-	padding: 0;
-	color: #555;
-	font-weight: bold;
-	font-size: 1em;
-}
-
-.portletTitle .title a{
-	background: url(images/reload.gif) center left no-repeat;
-}
-
-.portletTitle .title a:hover{
-	background: url(images/reload_h.gif) center left no-repeat;
-}
-
-.portletTitle .action{
-	padding: 2px 4px 6px 2px;
-	text-align: right;
-	vertical-align: middle;
-}
-
-.portletTitle .action img{
-	margin: 0;
-	vertical-align: text-bottom;
-	width: 16px !important;
-}
-
-.portletTitle .action a{
-	background: url(images/help.gif) center right no-repeat;
-}
-
-.portletTitle .action a:hover{
-	background: url(images/help_h.gif) center right no-repeat;
-}
 /*below for "presence in chat" functionality*/
 .presenceBody{
 	background:#fff
@@ -1069,32 +1016,6 @@ width:auto !important
 	width: 11em;
 	background:#fff url(images/logo_inst.gif) 1em 1em no-repeat
 }
-/*temp work for mneme - will incorporate later to the rest 
-tables will be of various types according to their function and meaning - tableFlat, tableAction, tableHierarchical, tableItemSummary 
-right now "namespaced" for mneme only to avoid any possible conflicts*/
-.samSection .tableAction td {
-	vertical-align:middle
-}
-.samSection .tableAction td input{
-	margin: 0 5px 1px 1px;
-	vertical-align:top;
-}
-.samSection .tableAction td label{
-	border:1px solid #bbb;
-	padding:0 3px;
-	background: #ddd;
-}
-.samSection{
-	margin-left: 4em;
-	margin-right: 4em;
-	margin-top:2em;
-	margin-bottom:2em;
-}
-.samSectionHeader{
-	margin-left: -2em;
-	margin-right: -2em;
-}
-
 
 /* Make a list based css menu */
 ul.makeMenu, ul.makeMenu ul {
@@ -1136,7 +1057,7 @@ ul.makeMenu li {
 
 ul.makeMenu li > ul {
   display: none;
-  	width: 14em;
+  	width: auto;
 	background-color:#ffffff;
 	background-image:none;
 	position:absolute;
@@ -1194,4 +1115,35 @@ ul.makeMenu li.menuClose a:hover {
 }
 .menuOpen{
 	cursor:pointer;
+}
+
+
+#davdocs_step1{
+        border: 3px solid #eee;
+        padding: 1em;
+        background-color: #FFFCE9;
+
+}
+
+#davdocs_step2{
+        margin-top: 1.2em;
+        border: 3px solid #eee;
+        padding: 1em;
+        background-color: #EBFFE8;
+
+}
+
+#davdocs_step2 ul{
+               list-style-type: none;
+}
+
+#davdocs_step2 ul li{
+               display: inline;
+               margin-right: 1.5em;
+}
+
+.webdav_os{
+                margin-top: 4em;
+                border: 3px solid #eee;
+                padding: 2em;
 }

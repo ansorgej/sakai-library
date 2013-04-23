@@ -85,3 +85,24 @@ body, td, input, select
 .fullHeight {
 	height: 100%;
 }
+
+.ListHeading {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.grpCollapsed {
+	display: none;
+}
+
+.grpExpanded {
+	display: ;
+}
+
+.optHide {
+       display: none;
+}
+
+.optShow {
+       display: ;
+}

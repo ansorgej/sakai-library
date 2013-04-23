@@ -31,12 +31,12 @@ a:visited{
 
 a:hover,a:active{
 	color: #33f;
-	text-decoration: underline !important;
+	text-decoration: underline;
 }
 
 a:focus{
 	color: #33f;
-	text-decoration: underline !important;
+	text-decoration: underline;
 }
 
 /*links inside the calendar tool tables*/
@@ -302,10 +302,11 @@ table.calendar th{
 }
 
 .borderTodayWithoutActivity{
-	background-color: #FFF;
+	background-color: #777;
 	border: 1px solid #000;
 	text-align: right;
 }
+.borderTodayWithoutActivity a{color:#fff}
 
 .borderTopLeft{
 	background-color: #ffc;
@@ -631,7 +632,7 @@ textarea:focus{
 /*inline blob used to indicate progress (see: upload a resource say)
 visibility gets toggled*/
 #submitnotif, .portlet-msg-status{
-	background: #fff url(../images/warn.gif) .3em .3em no-repeat;
+	background: #fff url(images/warn-a.gif) .3em .3em no-repeat;
 	border: 1px solid #b11;
 	font-family: Verdana,Arial,Helvetica,sans-serif;
 	clear: none;
