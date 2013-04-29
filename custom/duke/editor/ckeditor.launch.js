@@ -92,10 +92,11 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
             '/',
             ['Styles','Format','Font','FontSize'],
             ['TextColor','BGColor'],
+            ['atd-ckeditor'],
             ['Maximize', 'ShowBlocks']
         ],
         toolbar: 'Full',
-        resize_dir: 'vertical'
+        resize_dir: 'both'
     };
 
     //NOTE: The height and width properties are handled discretely here.
@@ -144,12 +145,12 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
 			  You have to actually setup a server or get an API key
 			  Hopefully this will get easier to configure soon.
 			 */
-			 //CKEDITOR.plugins.addExternal('atd-ckeditor',basePath+'atd-ckeditor/', 'plugin.js'); 
-			 //ckconfig.atd_rpc='/proxy/atd';
-			 //ckconfig.extraPlugins+="movieplayer,wordcount,atd-ckeditor,stylesheetparser";
-			 //ckconfig.contentsCss = basePath+'/atd-ckeditor/atd.css';
+			 CKEDITOR.plugins.addExternal('atd-ckeditor',basePath+'atd-ckeditor/', 'plugin.js'); 
+			 ckconfig.atd_rpc='/proxy/atd';
+			 ckconfig.extraPlugins+="movieplayer,wordcount,atd-ckeditor,stylesheetparser";
+			 ckconfig.contentsCss = basePath+'/atd-ckeditor/atd.css';
 
-			 ckconfig.extraPlugins+="movieplayer,wordcount";
+			 //ckconfig.extraPlugins+="movieplayer,wordcount";
     })();
 
 	  CKEDITOR.replace(targetId, ckconfig);
