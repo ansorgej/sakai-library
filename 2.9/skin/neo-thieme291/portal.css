@@ -3,7 +3,7 @@
 body.portalBody {
     width: 100%;
     padding: 0;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: Verdana,'Helvetica Neue', Arial, sans-serif;
     font-size: .8em;
     margin: 0;
     background-repeat: repeat-x;
@@ -16,6 +16,7 @@ body.portalBody {
  * this allows you to provide different user experiences for both states */
 #headerMax, #headerMin {
     width: 100%
+	height: 140px;
 }
 /* accessibility links wrapper   */
 #skipNav {}
@@ -52,7 +53,7 @@ body.portalBody {
     width: 98.5%;
     /* border-bottom: 2px solid #009DCE; */
     padding-bottom: 1px;
-    background: url(images/sample-gradient.png) right 22px no-repeat;
+    background: url(images/sample-gradient.png) left 22px no-repeat;
 }
 #col1of2 .portletMainWrap, #col2of2 .portletMainWrap {
     width: 98.5%;
@@ -68,7 +69,7 @@ body.portalBody {
     width: 99%
 }
 /* wrapper for footer blocks  */
-#footer {
+/*#footer {
     clear: both;
     background: #444;
     padding: 10px;
@@ -80,7 +81,7 @@ body.portalBody {
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
     border-radius: 8px;
-}
+}*/
 #footerLinks {
     text-align: center;
     font-size: .9em;
@@ -108,7 +109,7 @@ body.portalBody {
     background: -ms-linear-gradient(top, #009DCE 0%,#007EA5 100%);
     background: linear-gradient(top, #009DCE 0%,#007EA5 100%); */
     background: url(images/header_gray_top.png) bottom left no-repeat;
-    border-bottom: 1px solid #ddd; 
+    /*border-bottom: 1px solid #ddd;*/ 
 }
 #headerMin {
     overflow: hidden;
@@ -140,12 +141,10 @@ that can be used or hidden,can also use a background: url(images/<image name>.<e
 in this skin is rendered via ul.topnav, which a anon user does not see)*/
 #headerMin #mastLogo {
     display: block; 
-    background-image: url(images/logo-header.png);
-    background-repeat: no-repeat;
-    background-position: 50px 0;
+	background: url("images/Thieme-MyCourse-logo.png") no-repeat scroll 62px 0 transparent;
     float: left;
-    width: 180px;
-    height: 110px;
+    width: 380px;
+    height: 140px;
 }
 /* another container wrapping branding images - portal outputs one /library/skin/<skin name>/images/banner_inst.gif
 that can be used or hidden,can also use a background: url(images/<image name>.<ext>) in this block,or both superimposing them  */
@@ -958,7 +957,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 .portletTitle .title a {
     background: url(images/reload.gif) center left no-repeat;
     text-decoration: none !important;
-    border: 1px solid #fff;
+   /* border: 1px solid #fff;*/
     height: 1.5em;
     outline: none;
 }
@@ -1712,3 +1711,269 @@ a.qtipLinkButton:hover {
 	width:250px;
 	display:block;
 }
+
+
+/*===============================================================================================*/
+/*THIEME MyCourse - Branding revisions*/
+/*eProduct Department - contact: Roberto Alvarez - roberto.alvarez@thieme.com*/
+/*1st Round of CSS revisions - April 15th, 2013*/
+/*===============================================================================================*/
+
+/*************************************************************************************************/
+/*************************************************************************************************/
+
+
+/*===============================================================================================*/
+/*ADD THIS ADJUSTMENT*/
+/*body text should default to: Verdana first.*/
+/*===============================================================================================*/
+html{ font-family: Verdana,'Helvetica Neue',Arial,sans-serif;}
+body{ font-family: Verdana,'Helvetica Neue',Arial,sans-serif;}
+
+/*===============================================================================================*/
+/*ADD THESE ADJUSTMENT*/
+/*Blue bar in the header - background-color: #013476*/
+/*Main container left margin should be reset to 40px*/
+/*Top Nav left margin should be reset to 22px to adjust Thieme Logo;*/
+/*Change logo image to reflect Product name*/
+/*Change text color for buttons text*/
+/*===============================================================================================*/
+#headerMax{ height: 140px;}
+
+#container{ margin-left: 40px;}
+
+ul.topnav { margin-left: 22px;}
+
+#linkNav ul.topnav {
+    background: url("images/Thieme-MyCourse-logo.png") no-repeat scroll 62px 0 transparent;
+    list-style: none outside none;
+    margin: 0;
+    padding: 35px 0 35px 350px;
+    width: 90%;
+}
+
+.navIntraTool a, .navIntraTool a:link {
+    color: #013476;
+    display: inline-block;
+    margin-right: 1em;
+    text-decoration: underline;
+    white-space: nowrap;
+}
+/*===============================================================================================*/
+/*ADD THIS ADJUSTMENT*/
+/*toggleClose Image background-color: #013476;*/
+/*===============================================================================================*/
+#togglebar #toggleToolMax {
+    background: url("images/toggleClose.png") no-repeat scroll -2px 0 transparent;
+    display: block;
+    height: 50px;
+    padding: 4px;
+}
+/*===============================================================================================*/
+/*ADD THESE ADJUSTMENT*/
+/*arrow image should be 9px by 9px
+ * background color: #D1D1D1
+ * */
+/*===============================================================================================*/
+#toolMenu {
+	-webkit-box-shadow:  -4px 6px 4px 2px rgba(102, 102, 102, 0.3);
+	-moz-box-shadow:  -4px 6px 4px 2px rgba(102, 102, 102, 0.3);
+	box-shadow:  -3px 5px 5px 2px rgba(102, 102, 102, 0.3);
+}
+
+#toolMenu li, #subSites li {
+    border-bottom: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+#toolMenu li span, #subSites li span {
+    background-image: url("images/left-tree-arrow.png") !important;
+    background-position: left center;
+    background-repeat: no-repeat;
+    line-height: 1.4;
+    padding-left: 22px;
+}
+
+/*===============================================================================================*/
+/*ADD THIS ADJUSTMENT*/
+/*All Buttons should follow this gradient style - includes all major desktop browsers*/
+/*===============================================================================================*/
+.button {
+	color:#013476;
+	font-size: 11px;
+	font-weight:600;
+	margin-bottom: 10px 0px;
+	height: 24px;
+	line-height:22px;
+	text-align:center;
+	cursor: pointer;
+	border: 1px solid #CCCCCC;
+	-webkit-border-radius: 3px;			
+	border-radius: 3px;
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(206,216,226,1) 50%, rgba(171,188,210,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(206,216,226,1)), color-stop(100%,rgba(171,188,210,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(206,216,226,1) 50%,rgba(171,188,210,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(206,216,226,1) 50%,rgba(171,188,210,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(206,216,226,1) 50%,rgba(171,188,210,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(206,216,226,1) 50%,rgba(171,188,210,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#abbcd2',GradientType=0 ); /* IE6-9 */
+}
+
+.button:hover {
+	color:#013476;
+	font-size: 11px;
+	font-weight:600;
+	margin-bottom: 10px 0px;
+	height: 24px;
+	line-height:22px;
+	text-align:center;
+	border: 1px solid #CCCCCC;
+	-webkit-border-radius: 3px;			
+	border-radius: 3px;
+	background: rgb(171,188,210); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(171,188,210,1) 0%, rgba(206,216,226,1) 50%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(171,188,210,1)), color-stop(50%,rgba(206,216,226,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(171,188,210,1) 0%,rgba(206,216,226,1) 50%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(171,188,210,1) 0%,rgba(206,216,226,1) 50%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(171,188,210,1) 0%,rgba(206,216,226,1) 50%,rgba(255,255,255,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(171,188,210,1) 0%,rgba(206,216,226,1) 50%,rgba(255,255,255,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#abbcd2', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}		
+input[type="submit"], input[type="button"], input[type="reset"] {
+	background: rgb(255,255,255) !important; /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(206,216,226,1) 50%, rgba(171,188,210,1) 100%) !important; /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(206,216,226,1)), color-stop(100%,rgba(171,188,210,1))) !important; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(206,216,226,1) 50%,rgba(171,188,210,1) 100%) !important; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(206,216,226,1) 50%,rgba(171,188,210,1) 100%) !important; /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(206,216,226,1) 50%,rgba(171,188,210,1) 100%) !important; /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(206,216,226,1) 50%,rgba(171,188,210,1) 100%) !important; /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#abbcd2',GradientType=0 ) !important; /* IE6-9 */
+
+    border: 1px solid #E0E3E5 !important;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 1px 0 #999999 !important;
+    color: #2683BC !important;
+    font-size: 11px !important;
+    font-weight: bold !important;
+    height: 24px !important;
+    margin-left: 0 !important;
+    margin-right: 3px;
+    text-shadow: 0 2px 3px #FFFFFF !important;
+}
+input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover {
+	background: rgb(171,188,210) !important; /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(171,188,210,1) 0%, rgba(206,216,226,1) 50%, rgba(255,255,255,1) 100%) !important; /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(171,188,210,1)), color-stop(50%,rgba(206,216,226,1)), color-stop(100%,rgba(255,255,255,1))) !important; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(171,188,210,1) 0%,rgba(206,216,226,1) 50%,rgba(255,255,255,1) 100%) !important; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(171,188,210,1) 0%,rgba(206,216,226,1) 50%,rgba(255,255,255,1) 100%) !important; /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(171,188,210,1) 0%,rgba(206,216,226,1) 50%,rgba(255,255,255,1) 100%) !important; /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(171,188,210,1) 0%,rgba(206,216,226,1) 50%,rgba(255,255,255,1) 100%) !important; /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#abbcd2', endColorstr='#ffffff',GradientType=0 ) !important; /* IE6-9 */
+}
+
+/*===============================================================================================*/
+/*ADD THIS ADJUSTMENT*/
+/*add these properties to this class definition*/
+/*===============================================================================================*/
+.portletTitleWrap {
+	border:1px solid #CCC;
+	-webkit-box-shadow:  -4px 6px 4px 2px rgba(102, 102, 102, 0.3);
+	-moz-box-shadow:  -4px 6px 4px 2px rgba(102, 102, 102, 0.3);
+	box-shadow:  -3px 5px 5px 2px rgba(102, 102, 102, 0.3);
+}
+
+/*===============================================================================================*/
+/*ADD THESE ADJUSTMENT*/
+/*add these properties to the classes pertaining to the footer*/
+/*===============================================================================================*/
+
+#footer {
+	background: url("images/logo_footer.gif") no-repeat scroll left transparent;
+	color: #013476;
+	font-family:Verdana,'Helvetica Neue',Arial,sans-serif;
+	font-size: 10px;
+    /*background: none repeat scroll 0 0 #F3F3F3;*/
+	/*border: 1px solid #DDDDDD;*/
+    border-left: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    border-top: none;
+    border-right: none;
+    /*border-radius: 8px 8px 8px 8px;*/
+    clear: both;
+    margin: 50px 0px;
+    padding: 10px;
+    text-align: left;
+    width: 97%;
+}
+.footerExtNav {
+    padding-top: 5px;
+    padding-left: 112px;
+}
+.footerExtNav a, .footerExtNav a:link, .footerExtNav A:visited {
+    color: #013476;
+    font-size: 10px;
+    margin: 1em;
+    text-decoration: none;
+}
+#footerLinks {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.sakaiCopyrightInfo {
+    color: #013476;
+    font-size: 10px;
+    padding: 0px 0px 5px 122px;
+}
+
+#headerMax, #headerMin {
+    background: url("images/header_gray_top.png") no-repeat scroll left bottom transparent;
+    /*border-bottom: 1px solid #DDDDDD;*/
+}
+
+.navIntraTool li {
+    color: #013476;
+    display: inline;
+    list-style: none outside none;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.actionToolBar *, .navIntraTool * {
+    border: medium none !important;
+    color: #013476 !important;
+    font-size: 12px !important;
+    letter-spacing: normal !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-decoration: none !important;
+	background: rgb(255,255,255) !important; /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(206,216,226,1) 50%, rgba(171,188,210,1) 100%) !important; /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(206,216,226,1)), color-stop(100%,rgba(171,188,210,1))) !important; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(206,216,226,1) 50%,rgba(171,188,210,1) 100%) !important; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(206,216,226,1) 50%,rgba(171,188,210,1) 100%) !important; /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(206,216,226,1) 50%,rgba(171,188,210,1) 100%) !important; /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(206,216,226,1) 50%,rgba(171,188,210,1) 100%) !important; /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#abbcd2',GradientType=0 ) !important; /* IE6-9 */	
+}
+
+#content {
+    padding: 0 0 0 13.2em;
+}
+.portletTitle .title {
+    color: #013476;
+    float: left;
+    height: 15px;
+    padding: 5px 4px 6px 5px;
+}
+.portletTitle .title h2 .siteTitle {
+    color: #013476;
+}
+/*************************************************************************************************/
+/*************************************************************************************************/
+
+
