@@ -68,14 +68,14 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 }
 .cke_skin_v2 .cke_top, .cke_skin_v2 .cke_bottom, .cke_shared .cke_skin_v2 {
 	/*background-color:#efefde;*/
-	background: #c5c6c8; /* Old browsers */
-	background: -moz-linear-gradient(top,  #c5c6c8 0%, #f3f3f3 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c5c6c8), color-stop(100%,#f3f3f3)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #c5c6c8 0%,#f3f3f3 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #c5c6c8 0%,#f3f3f3 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #c5c6c8 0%,#f3f3f3 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #c5c6c8 0%,#f3f3f3 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5c6c8', endColorstr='#f3f3f3',GradientType=0 ); /* IE6-9 */	
+	background: #f3f3f3; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f3f3f3 0%, #c5c6c8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(100%,#c5c6c8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f3f3f3 0%,#c5c6c8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f3f3f3 0%,#c5c6c8 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f3f3f3 0%,#c5c6c8 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #f3f3f3 0%,#c5c6c8 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#c5c6c8',GradientType=0 ); /* IE6-9 */	
 }
 .cke_skin_v2 .cke_top {
 	/*border-top:solid 1px #fafaf5;
@@ -429,7 +429,7 @@ a:hover.cke_colorauto, a:hover.cke_colormore, a:focus.cke_colorauto, a:focus.cke
 	/*background-color:#D1D1D1;*/
 	filter:alpha(opacity=70);
 	opacity:.70;
-	border:1px solid #CCC;
+	border:1px solid #696969;
 	margin:2px;
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
@@ -750,7 +750,7 @@ filter:;
 	padding-right:5px;
 	filter:alpha(opacity=70);
 	opacity:.70;
-	background-color:#f1f1e3;
+	/*background-color:#f1f1e3;*/
 	cursor:default;
 }
 .cke_skin_v2 .cke_rtl .cke_rcombo .cke_label {
@@ -929,8 +929,8 @@ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale'),
 .cke_skin_v2 .cke_path a, .cke_skin_v2 .cke_path .cke_empty {
 	display:inline-block;
 	float:left;
-	border:solid 1px #efefde;
-	background-color:#efefde;
+	/*border:solid 1px #efefde;
+	background-color:#efefde;*/
 	padding-top:1px;
 	padding-bottom:1px;
 	padding-left:4px;
@@ -1205,4 +1205,58 @@ html .cke_skin_v2 {
 }
 html.cke_skin_v2_container {
 	visibility:visible;
+}
+/*Editor Dialog boxes*/
+.cke_skin_v2 .cke_dialog_title {
+    background-color: #CCCCCC;
+    color: #696969;
+    cursor: move;
+    font-size: 14pt;
+    font-weight: bold;
+    padding: 3px 10px 26px;
+    position: relative;
+}
+.cke_skin_v2 .cke_dialog_contents {
+    background-color: #F3F3F3;
+    border: 1px solid #696969;
+    overflow: auto;
+    padding: 5px 10px;
+}
+.cke_skin_v2 .cke_dialog_footer {
+    background-color: #CCCCCC;
+    text-align: right;
+}
+.cke_skin_v2 span.cke_dialog_ui_button {
+    background-color: #F9F9F9;
+    border: 1px solid #696969;
+    color: #696969;
+    cursor: default;
+    display: inline-block;
+    padding: 2px 10px;
+    text-align: center;
+}
+.cke_skin_v2 a.cke_dialog_tab_selected, .cke_skin_v2 a.cke_dialog_tab_selected:link, .cke_skin_v2 a.cke_dialog_tab_selected:active, .cke_skin_v2 a.cke_dialog_tab_selected:hover, .cke_skin_v2 a.cke_dialog_tab_selected:visited {
+    background-color: #F3F3F3;
+    border-bottom: 1px solid #F3F3F3;
+    cursor: default;
+    font-weight: bold;
+}
+.cke_skin_v2 a.cke_dialog_tab, .cke_skin_v2 a.cke_dialog_tab:link, .cke_skin_v2 a.cke_dialog_tab:active, .cke_skin_v2 a.cke_dialog_tab:hover, .cke_skin_v2 a.cke_dialog_tab:visited {
+    border-left: 1px solid #696969;
+    border-right: 1px solid #696969;
+    border-top: 1px solid #696969;
+    color: #696969;
+    cursor: pointer;
+    display: inline-block;
+    height: 14px;
+    padding: 4px 5px;
+}
+a.cke_dialog_tab {
+    background-color: #999;
+	color: #696969;
+}
+.cke_skin_v2 .cke_dialog .cke_dark_background {
+    background-color: #CCCCCC;
+    font-size: 14px;
+    text-align: center;
 }
