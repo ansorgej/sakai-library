@@ -50,7 +50,7 @@ body.portalBody {
 }
 #col1of2 .portletTitleWrap, #col2of2 .portletTitleWrap {
     width: 98.5%;
-    border-bottom: 2px solid #9B0000;
+    border-bottom: 2px solid #ccc;
 }
 #col1of2 .portletMainWrap, #col2of2 .portletMainWrap {
     width: 98.5%;
@@ -388,7 +388,7 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
 /* wrapper for the site link list and link to the 'more sites' tray - since the logo is displayed here on left, it is padded.*/
 #linkNav {
     display: block;
-    padding-right: 300px;
+    padding-right: 170px;
 }
 /* site tab navigation: a list right padding makes room for logo and matches width of tool menu
  * if you do not have a logo you can eliminate it to save some room */
@@ -889,7 +889,8 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 #worksiteLogo img {
     display: block;
     margin: 5px auto;
-    max-width: 90%
+    max-width: 90%;
+    display: none !important;
 }
 /* wrapper for the string that Sakai will output based on site type (ie. project,course) this is open ended and institution specific. Not sure what good this is so hiding it. */
 #siteType {
@@ -1015,20 +1016,20 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     color: #444;
     font-weight: bold;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 1.2em !important;
+    font-size: 1.3em !important;
 }
 .portletTitle .title h2 .siteTitle {
     color: #333
 }
 .portletTitle .title a {
-    background: url(images/reload.png) center left no-repeat;
+    background: url(images/reload.gif) center left no-repeat;
     text-decoration: none !important;
     border: 1px solid #fff;
     height: 1.5em;
     outline: none;
 }
 .portletTitle .title a:hover, .portletTitle .title a:focus {
-    background: url(images/reload_h.png) center left no-repeat
+    background: url(images/reload_h.gif) center left no-repeat
 }
 .portletMainIframe {
     text-align: left;
@@ -1597,16 +1598,18 @@ div#privacy_overlay {
 }
 /* hover effect for control */
 #togglebar .toggleToolMenuHover {
-    background-position: 0 0 !important;
+    background-position: -4px 0 !important;
 }
+
+
 #togglebar #toggleToolMax {
-    background: url(images/toggleClose.png) -2px 0 no-repeat;
+    background: url(images/toggleClose.png) -18px 0 no-repeat;
     padding: 4px;
     display: block;
     height: 50px;
 }
 #togglebar #toggleNormal {
-    background: url(images/toggleOpen.png) -2px 0 no-repeat;
+    background: url(images/toggleOpen.png) -18px 0 no-repeat;
     padding: 4px;
     display: block;
     height: 50px;
