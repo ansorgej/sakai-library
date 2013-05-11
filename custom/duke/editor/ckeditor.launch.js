@@ -82,7 +82,6 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
             ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote','CreateDiv'],
             '/',
             ['Bold','Italic','Underline','Strike','-','Subscript','Superscript'],
-						['atd-ckeditor'],
             ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
             ['BidiLtr', 'BidiRtl' ],
             ['Link','Unlink','Anchor'],
