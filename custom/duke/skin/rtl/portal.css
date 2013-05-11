@@ -4,6 +4,7 @@ body{
 	padding: 0;
 	font-family: 'Trebuchet MS',Verdana,sans-serif;
 	margin: 0;
+	font-size:1em;
 	background: #fff;
 }
 
@@ -17,6 +18,13 @@ body{
 #portalContainer{
 	direction: rtl;
 
+}
+
+#portal_js_warn {
+    font-size: 1.2em;
+    background:#c00;
+    color:#fff;
+    padding:10px;
 }
 
 #headerMax,#headerMin{
@@ -46,7 +54,7 @@ can set display:none if needed because the list-style is taking care of it*/
         display:inline;
 }
 #siteHierarchy li a, #siteHierarchy li a:visited{
-        color:#07b;
+        color:#BB7711;
         text-decoration:none
 }
 
@@ -110,12 +118,12 @@ site types are a local setting - adjust */
 }
 #footerLinks li{
 	margin:0;
-	border-right:1px solid #ccc;
+	border-left:1px solid #ccc;
 	display: inline;
 	list-style-type: none;
 	padding:0;
 }
-#footerLinks li:last-child{
+#footerLinks li:first-child{
 	border:none;
 }
 
@@ -250,12 +258,11 @@ that can be used or hidden,can also use a background:url(images/<image name>.<ex
 	display:block;
 	color:#fff;
 	font-weight: bold;
-	padding-top: 2em;
 	padding-right: 1em;
 }
 
 #headerMax #mastLogin a,#headerMax #mastLogin a:visited{
-padding-top:1em
+
 }
 
 #mastLogin a:hover{
@@ -298,17 +305,20 @@ padding-top:1em
 
 /*block for login/logout links */
 #loginLinks{
+    padding-top: 1em;
 	margin: 0;
 }
 
 /*main CAS link*/
 #loginLink1{
+    float:left;
 }
 
 /*secondary CAS link*/
 #loginLink2{
 }
-
+#loginUser{
+}
 /*PART 4 - SITE NAVIGATION - children of #siteNavBlock*/
 /*outer wrapper for the site navigation blocks - it is a class,not an id because it can be overloaded with other values having to do with site type
 so for example <div class="tabHolder workspace"> so that different site types can be treated differently via inheritance - children are #siteNavWrap and #navBottom*/
@@ -325,7 +335,7 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 	width:100%;
 	height:100%;
 	overflow:hidden;
-	padding-bottom:3px;
+	padding-bottom:5px;
 	border-bottom: 5px solid silver;
 }
 
@@ -336,16 +346,14 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 
 /*wrapper for the site <select> that is displayed when more than x sites are in the link list*/
 #selectNav{
-/*	float:left;*/
-	text-align: right;
-	
+	float:left;
+	text-align: right;	
 }
 
 /*the <select> contextually defined*/
 #selectNav select{
 	display:inline;
-	font-size: .8em;
-	margin: 3px;
+	margin:  0 10px;
 	padding: 0;
 }
 
@@ -354,24 +362,16 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 }
 
 #roleSwitch{
-	position:absolute;
-	top:3px;
-	left:200px;
+    float:left;
+    font-size: .8em;
 }
 #roleSwitch label, #roleSwitch  a#roleSwitchAnchor{
 	color:#fff;
-	font-weight:bold;
 }
 #roleSwitch a#roleSwitchAnchor{
-	margin:10px 5px 0 0;
 	display:block;
-		font-size:0.8em;
 }	
 #roleSwitch select{
-	border:2px solid #0077B5;
-	display:inline;
-	font-size:0.9em;
-	margin:10px 2px 0 0;
 	padding:0;
 }	
 /*a ul - the li below are outer wrappers for the links to sites */
@@ -575,7 +575,7 @@ html>body .dhtml_more_tabs {
 
 /*PART 5 - SITE TOOL LINKS  - children of #toolMenuWrap	*/
 /*wrapper for ul that lists the links to tools*/
-#toolMenu{
+#toolMenu, #subSites{
 	width: 12em;
 	padding: 0;
 	margin:  0;
@@ -583,14 +583,14 @@ html>body .dhtml_more_tabs {
 	color: #000;
 }
 
-#toolMenu ul{
+#toolMenu ul, #subSites ul{
 	width:auto;
 	list-style: none;
 	margin: 0;
 	padding-right: 0;
 }
 
-#toolMenu li{
+#toolMenu li, #subSites li{
 
 	margin: 0;
 	width: auto;
@@ -600,30 +600,35 @@ html>body .dhtml_more_tabs {
 }
 
 
-#toolMenu li span{
+#toolMenu li span, #subSites li span{
 
 }
 
 
 
-#toolMenu li a:link,#toolMenu li a{
+#toolMenu li a:link,#toolMenu li a,
+#subSites li a:link,#subSites li a{    
 	display: block;
 	text-decoration: none;
 	color: #448833;
 	padding: 2px 0px 2px 4px;
 
 }
-#toolMenu li a:hover{
+#toolMenu li a:hover,#subSites li a:hover{
 	text-decoration: underline;
 }
 
-#toolMenu li.selectedTool span{
+#toolMenu li.selectedTool span,
+#subSites li a:selected{
 	display: block;
 	text-decoration: none;
 	padding: 2px 0px 2px 4px;
 	color: #BB7711;
 }
 
+#subSites{
+    margin-top:2em;
+}
 .course #toolMenu li.selectedTool span{
 	color: #E8B900;
 }
@@ -636,19 +641,81 @@ html>body .dhtml_more_tabs {
 	color: #BB7711;
 }
 
+#toolMenu .hidden { 
+	font-style: italic;
+	filter: alpha(opacity=70); /* opacity for IE */
+	opacity: 0.7; /* CSS3 standard */
+} 
+
+/*
+set of special selectors when a user has chosen to minimize navigation and maximize real
+page estate
+*/
+#toggleToolMax, #toggleNormal{
+	height:16px;
+	border:1px solid #fff;
+}
+.toggleToolstoggleNav img#toggleToolMax{
+    background:#fff url(images/toggler-back.png) 0 0 no-repeat
+ }
+.toggleToolstoggleNav #toggleNormal{
+	background:#fff url(images/toggler-back.png) -16px 0 no-repeat
+ }
+.toggleNav #toggleToolMax{
+	background:#fff url(images/toggler-back.png) -32px 0 no-repeat
+ }
+.toggleNav #toggleNormal{
+	background:#fff url(images/toggler-back.png) -48px 0 no-repeat
+ }  
+ .toggleTools #toggleToolMax{
+	background:#fff url(images/toggler-back.png) -64px 0 no-repeat
+ }
+.toggleTools #toggleNormal{
+	background:#fff url(images/toggler-back.png) -80px 0 no-repeat
+}
+.sakaiMinimizePageNavigation #toolMenuWrap, .sakaiMinimizePageNavigation #toolMenuWrap:hover{
+	width:0px;
+	margin-right:0;
+	border-right:none;
+}
+.sakaiMinimizePageNavigation #toolMenuWrap li,.sakaiMinimizePageNavigation #worksiteLogo, .sakaiMinimizePageNavigation #presenceWrapper{
+    position:absolute;
+    top:-1000px;
+    left:-1000px;
+}
+.sakaiMinimizePageNavigation #content{
+	padding-right:2em;
+	margin-right:0;
+}
+.sakaiMinimizeSiteNavigation #siteNavWrapper{
+	display:none
+}
+.sakaiMinimizeSiteNavigation #headerMax{
+	padding:0;
+	margin:0; 
+}
+
+#toolMenuWrap #toggler {
+	display:block;
+	float:left;
+}
+.sakaiMinimizePageNavigation #toggler {
+	display:block;
+	float:right !important;
+}
+
 /*PART 6 - SITE AFFILIATION,SITE TYPE/STATUS AND PRESENCE - children of #toolMenuWrap	*/
 /*site logo wrapper*/
 #worksiteLogo{
-	width: 9.7em;
-	height: auto;
-	overflow: hidden;
-	display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
 }
-
 /*site logo image - Sakai may output,depending on installation,an image here based in site affiliation. Site owner may also point to a url - overriding the Sakai provided image*/
-#worksiteLogo img{
-	display: block;
-	margin: .5em auto;
+#worksiteLogo img{ 
+    width:95%;
+    margin:.5em auto;
 }
 
 /*wrapper for the string that Sakai will output based on site type (ie. project,course) this is open ended and institution specific*/
@@ -671,7 +738,7 @@ html>body .dhtml_more_tabs {
 
 /*wrapper for all elements of presence display */
 #presenceWrapper{
-	width: 9.65em;
+	width: 100%;
 	margin-top: .5em;
 }
 
@@ -687,7 +754,8 @@ html>body .dhtml_more_tabs {
 	height: 100px;
 	border-top:1px solid #aaa;
 	margin: .3em;
-	width: 8.8em;
+	width: 100%;
+	overflow:auto
 }
 
 /*PART 7 - PORTLETS - children of #content*/
@@ -859,12 +927,132 @@ below they are contextually defined depending on the column as an example,as you
 
 /*PART 8 - CONVENIENCE*/
 /*used to hide various blocks from sighted users that are in the source to help with accessibility*/
-.skip{
-	display: inline;
-	position: absolute;
-	top: -999px;
-	left: -999px;
-	height: 0;
+.portalBody .skip{
+    display: inline !important; 
+    position: fixed !important; 
+    height: 1px !important; 
+    width: 1px !important; 
+    overflow: hidden !important;
+    top:0px !important;
+    left:0px;
+        padding:0px 0px 0px 0px !important;
+} 
 
+/*jump-to links, tabbing into  */
+#skipNav a.internalSkip:focus, #skipNav a.internalSkip:active {
+    text-decoration:none;
+    font-size:90%;
+    position:fixed !important;
+    background:#fff;
+    border-color:#000;
+    border-width: 0 1px 1px 1px;
+    border-style:solid;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    vertical-align:middle;
+    padding:6px 10px !important;
+    outline:none;
+    z-index:200000;
+    box-shadow:0px 0px 10px #000;
+    -webkit-box-shadow:0px 0px 10px #000;
+    -moz-box-shadow:0px 0px 10px #000000;
+    top:0 !important;
+    left:25%  !important;
+    height:auto  !important;
+    color:#000;
+    width: auto  !important;
+}
+/*append the value of the accesskey attr to the text*/
+.internalSkip:after {content:' [' attr(accesskey) ']'}
+
+
+/*back to mobile link*/
+#mobile-portal-link{
+	display:block;
+	position:absolute;
+	top:0px;
+	left:30%;
+	background: #0077B5;
+	padding:1px 9px 4px 9px;
+	-webkit-border-radius:0 0 10px 10px;
+}
+#mobile-portal-link a,#mobile-portal-link a:visited{
+	color:#fff;
+	font: normal 120% Verdana, Geneva, Arial, Helvetica, sans-serif;
+	text-decoration:none;
 }
 
+/* portal messages and alerts styles - not needed
+ * if not using tool from
+ * https://source.sakaiproject.org/contrib/umich/global-alert/
+ */
+#portalMessageContainer1_2{
+    z-index:3000;
+    height:auto;
+    position:fixed;
+    top:0;
+    left:30%;
+    right:30%;
+}
+#portalMessageContainer3{
+    z-index:3000;
+    height:auto;
+    position:fixed;
+    bottom:0;
+    left:30%;
+    right:30%;
+}
+.portalMessage{
+    padding:10px;
+    color:#fff;
+    margin-top:1px;
+    position:relative;
+    font-weight:bold;
+	-moz-box-shadow: 3px 3px 4px #000;
+	-webkit-box-shadow: 3px 3px 4px #000;
+	box-shadow: 3px 3px 4px #000;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+.firstPortalMessage{
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.lastPortalMessage{
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}    
+.portalMessagePriority1{
+    background:#c00;
+}
+.portalMessagePriority2{
+    background:#888;
+    padding:10px 25px 10px 10px;
+}
+.portalMessagePriority3{
+    background:green;
+    padding:10px 25px 10px 10px;
+}
+.portalMessage .dismissLink{
+    display:block;
+    padding:0 4px;
+    position:absolute;
+    top:3px;
+    right:3px;
+    cursor:pointer;
+    font-size:130%;
+    color:#fff;
+}

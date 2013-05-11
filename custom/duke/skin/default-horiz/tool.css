@@ -20,22 +20,22 @@ hr.itemSeparator{
 /*SECTION 2 LINKS*/
 a:link{
 	color: #35b;
-	text-decoration: underline !important;
+	text-decoration: underline;
 }
 
 a:visited{
 	color: #53b;
-	text-decoration: underline !important;
+	text-decoration: underline;
 }
 
 a:hover,a:active{
 	color: #33f;
-	text-decoration: underline !important;
+	text-decoration: underline;
 }
 
 a:focus{
 	color: #33f;
-	text-decoration: underline !important;
+	text-decoration: underline;
 }
 
 /*links inside the calendar tool tables*/
@@ -302,10 +302,11 @@ table.calendar th{
 }
 
 .borderTodayWithoutActivity{
-	background-color: #FFF;
+	background-color: #777;
 	border: 1px solid #000;
 	text-align: right;
 }
+.borderTodayWithoutActivity a{color:#fff}
 
 .borderTopLeft{
 	background-color: #ffc;
@@ -711,7 +712,7 @@ textarea:focus{
 /*inline blob used to indicate progress (see: upload a resource say)
 visibility gets toggled*/
 #submitnotif{
-	background: #fff url(../images/warn-a.gif) .3em .3em no-repeat;
+	background: #fff url(images/warn-a.gif) .3em .3em no-repeat;
 	border: 1px solid #b11;
 	font-family: Verdana,Arial,Helvetica,sans-serif;
 	clear: none;
@@ -1104,7 +1105,7 @@ ul.makeMenu li {
 
 ul.makeMenu li > ul {
   display: none;
-  	width: 14em;
+  	width: auto;
 	background-color:#ffffff;
 	background-image:none;
 	position:absolute;

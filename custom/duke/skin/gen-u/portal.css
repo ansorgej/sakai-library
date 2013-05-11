@@ -16,6 +16,13 @@ body{
 #portalContainer{
 }
 
+#portal_js_warn {
+    font-size: 1.2em;
+    background:#c00;
+    color:#fff;
+    padding:10px;
+}
+
 /*wrapper for masthead  and site navigation  as well as accessibility links wrapper #skipNav 
  two possible states - logged in headerMax, not logged in - headerMin*/
 #headerMax,#headerMin{
@@ -26,7 +33,34 @@ body{
 /*accessibility links wrapper */
 #skipNav{
 }
-
+/*site hierarchy breadcrumb*/
+#siteHierarchy{
+        clear:both;
+        float:none;
+        margin:0;
+        list-style: none;
+        padding:.5em;
+	    background-color: #eeeeee;
+	    border-bottom: 1px solid #C3C3C3;
+}
+/*style the standard breadcrumbseparator
+can set display:none if needed because the list-style is taking care of it*/
+.breadSeparator{
+}
+a.lastBreadCrumb{
+	color: black !important;
+	text-decoration: none;
+}
+a.lastBreadCrumb:hover{
+    cursor:text
+}    
+#siteHierarchy li{
+        display:inline;
+}
+#siteHierarchy li a, #siteHierarchy li a:visited{
+    color:#005386;
+    text-decoration: none;
+}
 /*wrapper for site content (includes as children #toolMenuWrap,#content and #footer)*/
 #container{
 	clear:both;
@@ -73,12 +107,12 @@ body{
 }
 #footerLinks li{
 	margin:0;
-	border-right:1px solid #ccc;
+	border-left:1px solid #ccc;
 	display: inline;
 	list-style-type: none;
 	padding:0;
 }
-#footerLinks li:last-child{
+#footerLinks li:first-child{
 	border:none;
 }
 
@@ -256,35 +290,31 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 }
 
 /*the <select> contextually defined*/
+#selectNav, #roleSwitch{
+	padding: .5em .4em .2em .2em;
+	text-align: right;
+	vertical-align: middle;
+	float:right;
+}
+
+/*the <select> contextually defined*/
 #selectNav select{
 	display:inline;
-	font-size: .8em;
-	margin: 0 0 0 3px;
-	padding: 0;
-}
-
-#selectNav select option{
-	background: #fff;
-}
-
-#roleSwitch{
-	float:right;
+	font-size: .9em;
+	margin: 0 3px;
 }
 #roleSwitch label, #roleSwitch  a#roleSwitchAnchor{
 	color:#fff;
 	font-weight:bold;
 }
 #roleSwitch a#roleSwitchAnchor{
-	margin:10px 5px 0 0;
-	display:block;
 }	
 #roleSwitch select{
-	border:2px solid #0077B5;
 	display:inline;
 	font-size:0.9em;
-	margin:10px 2px 0 0;
 	padding:0;
-}	
+}
+
 /*a ul - the li below are outer wrappers for the links to sites */
 #siteLinkList{
 /*	white-space: nowrap;*/
@@ -354,7 +384,7 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 
 /*PART 5 - SITE TOOL LINKS  - children of #toolMenuWrap	*/
 /*wrapper for ul that lists the links to tools*/
-#toolMenu{
+#toolMenu, #subSites{
 	width: 12em;
 	padding: 0;
 	margin: 1em 0 0 2px;
@@ -365,7 +395,7 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 
 }
 
-#toolMenu ul{
+#toolMenu ul, #subSites ul{
 	width:auto;
 	list-style: none;
 	margin: 0;
@@ -373,7 +403,7 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 	padding-left: 0;
 }
 
-#toolMenu li{
+#toolMenu li, #subSites li{
 	margin: 0;
 	width: auto;
 	padding: 0;
@@ -384,14 +414,12 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 also hide if are going to be using icon links (as background of <a> nad <li>
 */
 
-#toolMenu li span{
-/*comment this line for a return to sanity
-display:none*/
+#toolMenu li span, #subSites li span{
 }
 
 
-
-#toolMenu li a:link,#toolMenu li a{
+#toolMenu li a:link,#toolMenu li a,
+#subSites li a:link,#subSites li a{
 	display: block;
 	width:100%;
 	font-weight: bold;
@@ -403,7 +431,8 @@ display:none*/
 	margin:1px
 
 }
-#toolMenu li a:hover{
+#toolMenu li a:hover,
+#subSites li a:hover{
 	background: #DDDDFF;
 	text-decoration: none;
 	color: #702200;
@@ -421,20 +450,82 @@ display:none*/
 	color: #000;
 	cursor: text;
 }
+#toolMenu .hidden { 
+	font-style: italic;
+    color: #000;
+	filter: alpha(opacity=70); /* opacity for IE */
+	opacity: 0.7; /* CSS3 standard */
+} 
+/*
+set of special selectors when a user has chosen to minimize navigation and maximize real
+page estate
+*/
+#toggleToolMax, #toggleNormal{
+	height:16px;
+	border:1px solid #fff;
+}
+.toggleToolstoggleNav img#toggleToolMax{
+    background:#fff url(images/toggler-back.png) 0 0 no-repeat
+ }
+.toggleToolstoggleNav #toggleNormal{
+	background:#fff url(images/toggler-back.png) -16px 0 no-repeat
+ }
+.toggleNav #toggleToolMax{
+	background:#fff url(images/toggler-back.png) -32px 0 no-repeat
+ }
+.toggleNav #toggleNormal{
+	background:#fff url(images/toggler-back.png) -48px 0 no-repeat
+ }  
+ .toggleTools #toggleToolMax{
+	background:#fff url(images/toggler-back.png) -64px 0 no-repeat
+ }
+.toggleTools #toggleNormal{
+	background:#fff url(images/toggler-back.png) -80px 0 no-repeat
+ }
+.sakaiMinimizePageNavigation #worksiteLogo,.sakaiMinimizePageNavigation #subSites, .sakaiMinimizePageNavigation #toolMenu, .sakaiMinimizePageNavigation #toolMenu li span, .sakaiMinimizePageNavigation #presenceWrapper{
+	position:absolute;
+    top:-1000px;
+    left:-1000px;
+}
+.sakaiMinimizePageNavigation #toolMenuWrap, .sakaiMinimizePageNavigation #toolMenuWrap:hover{
+	width:0px;
+	margin-right:1em;
+	border-right:none;
+}
+.sakaiMinimizePageNavigation #content{
+	padding-left:2em;
+	margin-left:0;
+}
+.sakaiMinimizeSiteNavigation #siteNavWrapper{
+	display:none
+}
+.sakaiMinimizeSiteNavigation #headerMax{
+	padding:0;
+	margin:0; 
+}
+
+#toolMenuWrap #toggler {
+	display:block;
+	float:right;
+}
+.sakaiMinimizePageNavigation #toggler {
+	display:block;
+	float:none !important;
+}
+
 
 /*PART 6 - SITE AFFILIATION,SITE TYPE/STATUS AND PRESENCE - children of #toolMenuWrap	*/
 /*site logo wrapper*/
 #worksiteLogo{
-	width: 9.7em;
-	height: auto;
-	overflow: hidden;
-	display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
 }
-
 /*site logo image - Sakai may output,depending on installation,an image here based in site affiliation. Site owner may also point to a url - overriding the Sakai provided image*/
-#worksiteLogo img{
-	display: block;
-	margin: .5em auto;
+#worksiteLogo img{ 
+    width:95%;
+    margin:.5em auto;
 }
 
 /*wrapper for the string that Sakai will output based on site type (ie. project,course) this is open ended and institution specific*/
@@ -457,7 +548,7 @@ display:none*/
 
 /*wrapper for all elements of presence display */
 #presenceWrapper{
-	width: 9.65em;
+	width: 100%;
 	margin-top: .5em;
 }
 
@@ -472,7 +563,8 @@ display:none*/
 #presenceIframe{
 	height: 100px;
 	margin: .3em;
-	width: 8.8em;
+	width: 100%;
+	overflow:auto
 }
 
 /*PART 7 - PORTLETS - children of #content*/
@@ -659,12 +751,133 @@ below they are contextually defined depending on the column as an example,as you
 
 /*PART 8 - CONVENIENCE*/
 /*used to hide various blocks from sighted users that are in the source to help with accessibility*/
-.skip{
-	display: inline;
-	position: absolute;
-	top: -999px;
-	left: -999px;
-	height: 0;
+.portalBody .skip{
+    display: inline !important; 
+    position: fixed !important; 
+    height: 1px !important; 
+    width: 1px !important; 
+    overflow: hidden !important;
+    top:0px !important;
+    left:0px;
+        padding:0px 0px 0px 0px !important;
+} 
 
+/*jump-to links, tabbing into  */
+#skipNav a.internalSkip:focus, #skipNav a.internalSkip:active {
+    text-decoration:none;
+    font-size:90%;
+    position:fixed !important;
+    background:#0077b5;
+    border-color:#000;
+    border-width: 0 1px 1px 1px;
+    border-style:solid;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    vertical-align:middle;
+    padding:6px 10px !important;
+    outline:none;
+    z-index:200000;
+    box-shadow:0px 0px 10px #000;
+    -webkit-box-shadow:0px 0px 10px #000;
+    -moz-box-shadow:0px 0px 10px #000000;
+    top:0 !important;
+    left:25%  !important;
+    height:auto  !important;
+    color:#fff;
+    width: auto  !important;
+}
+/*append the value of the accesskey attr to the text*/
+.internalSkip:after {content:' [' attr(accesskey) ']'}
+
+
+
+/*back to mobile link*/
+#mobile-portal-link{
+	display:block;
+	position:absolute;
+	top:0px;
+	left:30%;
+	background: #0077B5;
+	padding:1px 9px 4px 9px;
+	-webkit-border-radius:0 0 10px 10px;
+}
+#mobile-portal-link a,#mobile-portal-link a:visited{
+	color:#fff;
+	font: normal 120% Verdana, Geneva, Arial, Helvetica, sans-serif;
+	text-decoration:none;
 }
 
+/* portal messages and alerts styles - not needed
+ * if not using tool from
+ * https://source.sakaiproject.org/contrib/umich/global-alert/
+ */
+#portalMessageContainer1_2{
+    z-index:3000;
+    height:auto;
+    position:fixed;
+    top:0;
+    left:30%;
+    right:30%;
+}
+#portalMessageContainer3{
+    z-index:3000;
+    height:auto;
+    position:fixed;
+    bottom:0;
+    left:30%;
+    right:30%;
+}
+.portalMessage{
+    padding:10px;
+    color:#fff;
+    margin-top:1px;
+    position:relative;
+    font-weight:bold;
+	-moz-box-shadow: 3px 3px 4px #000;
+	-webkit-box-shadow: 3px 3px 4px #000;
+	box-shadow: 3px 3px 4px #000;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+.firstPortalMessage{
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.lastPortalMessage{
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}    
+.portalMessagePriority1{
+    background:#c00;
+}
+.portalMessagePriority2{
+    background:#888;
+    padding:10px 25px 10px 10px;
+}
+.portalMessagePriority3{
+    background:green;
+    padding:10px 25px 10px 10px;
+}
+.portalMessage .dismissLink{
+    display:block;
+    padding:0 4px;
+    position:absolute;
+    top:3px;
+    right:3px;
+    cursor:pointer;
+    font-size:130%;
+    color:#fff;
+}

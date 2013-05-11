@@ -20,22 +20,22 @@ hr.itemSeparator{
 /*SECTION 2 LINKS*/
 a:link{
 	color: #35b;
-	text-decoration: underline !important;
+	text-decoration: underline;
 }
 
 a:visited{
 	color: #53b;
-	text-decoration: underline !important;
+	text-decoration: underline;
 }
 
 a:hover,a:active{
 	color: #33f;
-	text-decoration: underline !important;
+	text-decoration: underline;
 }
 
 a:focus{
 	color: #33f;
-	text-decoration: underline !important;
+	text-decoration: underline;
 }
 
 /*links inside the calendar tool tables*/
@@ -301,10 +301,11 @@ table.calendar th{
 }
 
 .borderTodayWithoutActivity{
-	background-color: #FFF;
+	background-color: #777;
 	border: 1px solid #000;
 	text-align: right;
 }
+.borderTodayWithoutActivity a{color:#fff}
 
 .borderTopLeft{
 	background-color: #ffc;
@@ -448,15 +449,10 @@ tr.selectedFound{
 	background: #cff;
 }
 
-
-
-/*when a row contained a searched for item has been found*/
-
-/*see: discussion*/
-
-tr.selectedFound{
-	background: #cff;
+tr.selectedSelected{
+    background:#F7F7D4;
 }
+
 /*a row that is being sorted - see resources in Sakai 2.3*/
 tr#selectedReorder{
 	color: #000;
@@ -710,7 +706,7 @@ textarea:focus{
 /*inline blob used to indicate progress (see: upload a resource say)
 visibility gets toggled*/
 #submitnotif{
-	background: #fff url(../images/warn-a.gif) .3em .3em no-repeat;
+	background: #fff url(images/warn-a.gif) .3em .3em no-repeat;
 	border: 1px solid #b11;
 	font-family: Verdana,Arial,Helvetica,sans-serif;
 	clear: none;
@@ -1013,7 +1009,7 @@ width:auto !important
 	background:#fff
 }
 .presenceList{
-	font-size: .8em;
+	font-size: .9em;
 	list-style: none;
 	margin: 0;
 	padding-left: .1em;
@@ -1104,7 +1100,7 @@ ul.makeMenu li {
 
 ul.makeMenu li > ul {
   display: none;
-  	width: 14em;
+  	width: auto;
 	background-color:#ffffff;
 	background-image:none;
 	position:absolute;
