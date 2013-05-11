@@ -40,7 +40,6 @@ html {
     font-size: 16px;
     font-family: Helvetica, Arial, sans-serif;
     width: 100%;
-    background: #001A57;
     list-style: none;
     color: #fff;
     margin: 0;
@@ -48,6 +47,9 @@ html {
     overflow:  hidden;
     line-height: 23px;
     padding: 0;
+} 
+#pda-portlet-menu, #pda-footer {
+    background: #001A57;
 }
 #pda-portlet-menu li {
     margin-left: 0;
@@ -82,7 +84,7 @@ html {
     background: url(images/pda-back-r.png) top right no-repeat;
 }
 #pda-portlet-menu li.loginLink,#pda-portlet-menu li.logoutLink, #switch-link-w,.helpLink {
-    background: #0844CF;
+background: #0844CF;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -218,7 +220,6 @@ html {
 #pda-footer {
     padding: 3px;
     text-align: center;
-    background: #001A57;
     overflow: hidden;
 }
 .skip {
@@ -245,7 +246,6 @@ html {
     height: 38px;
     font-size: 14px !important;
     width: 100%;
-    background: #001A57;
     border-bottom: 1px solid #003366;
     line-height: 23px;
 }
@@ -331,7 +331,6 @@ html {
 #pda-footer {
     padding: 2px;
     height: 100%;
-    background: #001A57;
     overflow: hidden;
 }
 .switch-link, .switch-link:visited {

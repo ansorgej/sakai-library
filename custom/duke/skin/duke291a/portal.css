@@ -93,17 +93,28 @@ body.portalBody {
 #footerLinks li:first-child {
     border: none
 }
-
+/* Time in the portal footer */
+#footer .server-time-container {
+    right: 0px;
+    font-size: 0.9em;
+    text-align: right;
+}
+#footer .server-time {
+    font-weight: bold;
+}
 /* PART 2 - HEADER BLOCKS (BRANDING,LOGIN) */
 #headerMax, #headerMin {
     /*background: #0736a4;*/
     background: #001A57;
-    /*border-bottom: 1px solid #003366;*/
+    background: #001a57;
     border-bottom: 1px solid #222;
+
 }
 #headerMin {
     overflow: hidden;
+    height:120px;
 }
+
 /* outermost block containing mast head elements and site navigation. Block also has a class = site type name, in case you need to 
  * do something special to either mast head elements or site navigation depending on the site type (i.e. a site type='collab') may get a banner with a 
  * graphic denoting so: .collaboration .mastHead .mastBanner{url to the 'collaboration' image}*/
@@ -115,31 +126,88 @@ body.portalBody {
     clear: both;
     display: block;
 }
+/*mastHead large when not logged in, to display logos, affiliation LARGE*/
+#headerMin #mastHead {
+    clear: both;
+    display: block;
+    height: 70px;
+    /*background: #0736a4;*/
+    background: #001a57;
+    border-bottom: 1px solid #222;
+    }
+/*mastHead smaller when logged in, to display logos, affiliation, but half the size */
+#headerMax #mastHead {
+    clear: both;
+    display: block;
+    height: 90px;
+    background: /*#cbbf8e*/ #001757;
+    background: url(images/duke_bg.jpg) no-repeat #14256a;
+}
+
 /* container wrapping branding images - portal outputs one /library/skin/<skin name>/images/logo_inst.gif
 that can be used or hidden,can also use a background: url(images/<image name>.<ext>) in this block,or both superimposing them  */
-#mastLogo {
-    display: none;
+#headerMin #mastHead  #mastLogo {
+    margin-top:5px;
+    margin-left:0;
+    /*
+    width:150px;
+    height:120px;
+    */
 }
-#mastLogo img {
-    display: none
-}
-/* show #mastLogo if the user is not logged in so that we can display the logo in the usual place (the logo
+/* show #mastHead and #mastLogo if the user is not logged in so that we can display the logo in the usual place (the logo
 in this skin is rendered via ul.topnav, which a anon user does not see)*/
+#headerMin #mastHead {
+    display: block
+}
 #headerMin #mastLogo {
-    display: block; 
+    display: none;
+    /*display: block; 
     background-image: url(images/logo.png);
     background-repeat: no-repeat;
-    background-position: 8px 8px;
+    background-position: 30px 5px;
     float: left;
+    width: 200px;
+    height: 100px;*/
+}
+/* container wrapping branding images - portal outputs one /library/skin/<skin name>/images/logo_inst.gif
+that can be used or hidden,can also use a background: url(images/<image name>.<ext>) in this block,or both superimposing them  */
+
+#headerMax #mastLogo {
+    display: none;
+    /*display: block;
+    background: transparent url(images/logo.png) 4px 0px no-repeat;
+    position:absolute;
+    top:10px;
+    left:20px;
     width: 100px;
-    height: 50px;
+    height: 100px;*/
+}
+
+#mastLogo img {
+    display: none
 }
 /* another container wrapping branding images - portal outputs one /library/skin/<skin name>/images/banner_inst.gif
 that can be used or hidden,can also use a background: url(images/<image name>.<ext>) in this block,or both superimposing them  */
 #mastBanner {
-    display: none;
+    width: 450px;
+    height: 100px;
+    float: left;
+    margin-left: /*153px;*/ 10px;
+    background-image: url(images/logo_big.png);
+    background-repeat: no-repeat;
+    background-position: 0 15px;
 }
-#mastBanner img {
+
+#headerMax #mastBanner {
+    width: 450px;
+    height: 90px;
+    float: left;
+    margin-left: /*153px;*/ 10px;
+    background-image: url(images/logo_big.png);
+    background-repeat: no-repeat;
+    background-position: 0 8px;    
+}    
+ #mastBanner img {
     display: none;
 }
 /* #mastLogin is a sibling of #mastLogo and #mastBanner when user is not logged in. It is located at #headerMax > #siteNavWrapper > .siteNavWrap > #siteNav when 
@@ -193,10 +261,14 @@ guests, for example */
     display: block;
     border-radius: 5px;
     padding: 4px 6px;
+    color: #fff !important;
     text-align: center;
     text-decoration: none;
-    background: #0844cf;
+    /*background: #0844cf;*/
+    
+    background: #046cf9;
     border: 1px solid #003366;
+
 }
 #headerMin #loginLink1, #headerMin #loginLink2 {
     margin-top: -2px;
@@ -246,6 +318,7 @@ guests, for example */
     width: 100%;
     white-space: nowrap;
     z-index: 100;
+    top: 80px !important;
 }
 #mastLogin ul.subnav li.submenuitem {
     margin: 0;
@@ -308,22 +381,24 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
     font-size: 100%;
     line-height: normal;
     padding: 0;
+    /*background: #0736a4;*/
+    background: #001757;
+
 }
 /* wrapper for the site links, link to the 'more sites' tray, logout controls - children are #mastLogin and #linkNav*/
 #siteNav {}
 /* wrapper for the site link list and link to the 'more sites' tray - since the logo is displayed here on left, it is padded.*/
 #linkNav {
     display: block;
-    padding-right: 300px;
+    padding-right: 170px;
 }
 /* site tab navigation: a list right padding makes room for logo and matches width of tool menu
  * if you do not have a logo you can eliminate it to save some room */
 #linkNav ul.topnav {
     list-style: none;
-    padding: 8px 0 5px 155px; /* matches the width of the toolMenu*/
+    padding: 8px 0 5px /*155px*/ 10px; /* matches the width of the toolMenu*/
     margin: 0;
     width: 100%;
-    background: transparent url(images/logo.png) 8px 4px no-repeat;
 }
 /* the individual containers for the site links, tool menu control, tool menu*/
 ul.topnav li {
@@ -339,18 +414,20 @@ ul.topnav li {
 }
 /* hover treatment for site links*/
 ul.topnav li.nav-menu:hover, ul.topnav li.more-tab:hover {
-    border: 1px solid #728302;
-    /*background: #046cf9;*/
+    
     background: #a1b70d;
+    border: 1px solid #728302;
+    
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
 }
 /* current site control rendering */
  ul.topnav li.nav-selected {
-	/*background: #046cf9;*/
+	
 	background: #728302;
     border: 1px solid #5f6d01;
+	
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
@@ -403,10 +480,10 @@ ul.topnav li ul.subnav li, #mastLogin ul.subnav li, .otherSiteTool {
 }
 /* treatment for focus and hover in the site and user sub-menus, as well as submenus in other sites */
 ul.topnav li ul.subnav li:hover, ul.topnav li ul.subnav li a:focus,
-    #mastLogin li.submenuitem:hover, #mastLogin ul.subnav li.submenuitem a:focus, #otherSiteTools li:hover {
+    #mastLogin ul.subnav li:hover, #mastLogin ul.subnav li a:focus, #otherSiteTools li:hover {
     text-decoration: none;
     color: #000;
-    background: #e1e1e1;
+    background: #ccc;
 }
 /* link to site */
 ul.topnav li a {
@@ -523,7 +600,7 @@ ul#otherSitesMenu li, #siteStatus a {
 }
 /* since the publish site link is the same, doubled up here */ 
 #otherSitesMenu li a:hover, #siteStatus a:hover, #siteStatus a:focus {
-    color: #009dce;
+    color: #333;
 }
 /*container and control to close the "Other sites tray"*/
 #otherSitesMenu #otherSiteCloseW {
@@ -555,12 +632,10 @@ ul.otherSitesCategorList {
  *  ul.otherSitesCategorList. This last one will appear once per each category
  */
 ul#otherSiteList li, ul.otherSitesCategorList li {
-    
-    /*background: #ddd;
-    border: 1px solid #aaa;*/
-    
-    
     border: 1px solid #ccc;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
     background: #e7e7e7;
     background: -moz-linear-gradient(top, #f7f7f7 0%, #e7e7e7 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#e7e7e7));
@@ -568,15 +643,13 @@ ul#otherSiteList li, ul.otherSitesCategorList li {
     background: -o-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%);
     background: -ms-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%);
     background: linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%);
-    
-    
+    box-shadow: 0 0 5px rgba(200, 200, 200, .2);
+    -moz-box-shadow:    0 0 5px rgba(200, 200, 200, .2);
+    -webkit-box-shadow: 0 0 5px rgba(200, 200, 200, .2);
     font-weight: bold;
     position: relative;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
     overflow: hidden;
-    margin: 6px 6px 0 0;; /*Note: check uncategorized */
+    margin: 6px 6px 0 0;
     line-height: 1.1em;
     width: 18em;
     float: left;
@@ -586,14 +659,19 @@ ul#otherSiteList li a, ul.otherSitesCategorList li a {
     display: block;
     padding: 8px;
     text-decoration: none;
-    color: #444;
+    color: #666;
     white-space: nowrap;
 }
 ul#otherSiteList li a:focus span, ul.otherSitesCategorList li a:focus span {
     outline: 1px dotted #fff;
+    color: #333;
+}
+ul#otherSiteList li a:hover span, ul.otherSitesCategorList li a:hover span {
+    color: #333;
 }
 ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     width: 14em;
+
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -641,8 +719,8 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     padding-left: 25px;
     display: block;
 }
-#otherSiteTools li a:focus {
-    color: #009DCE;
+#otherSiteTools li a:focus, #otherSiteTools li a:hover {
+    color: #333;
 }
 /* trigger that retrieves from entity broker the tool menu for a site in the "More sites" tray*/
 .toolMenus {
@@ -654,7 +732,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     right: 1px;
     top: 2px;
     height: 11px;
-    border-left: thin solid #FFFFFF;
+    border-left: thin solid #ccc;
 }
 .toolMenus:hover {
     background: url(images/subnav_btn.png) no-repeat  10px -38px;
@@ -683,7 +761,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     padding: 0 1px 0 0;
 }
 #siteHierarchy li a, #siteHierarchy li a:visited {
-    color: #009DCE;
+    color: #333;
     font-size: 1.2em;
     text-decoration: none;
 }
@@ -801,6 +879,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     padding-right: 0;
 }
 
+
 /* PART 6 - SITE AFFILIATION,SITE TYPE/STATUS - children of #toolMenuWrap */
 /* site logo wrapper  */
 #worksiteLogo {
@@ -812,7 +891,8 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 #worksiteLogo img {
     display: block;
     margin: 5px auto;
-    max-width: 90%
+    max-width: 90%;
+    display: none !important;
 }
 /* wrapper for the string that Sakai will output based on site type (ie. project,course) this is open ended and institution specific. Not sure what good this is so hiding it. */
 #siteType {
@@ -844,9 +924,11 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     margin: 10px 20px;
 }
 
+
 /* PART 7 - PORTLETS - children of #content
 /* a page may display portlets in one column or two columns - the next three id selectors address the three possiblities - sole child of column is the .portlet   */
 #col1 {
+    /*padding-right: 1em*/
     padding: 1em;
 }
 #col1of2 {
@@ -899,9 +981,26 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 .portletTitle .action a:hover, .portletTitle .action a:focus {
     background: url(images/help_h.gif) center right no-repeat
 }
+.portletTitle .action a.tool-directurl{
+    padding:2px;
+    background: url(/library/image/silk/link.png) center right no-repeat;
+}
+.portletTitle .action a.tool-directurl:hover{
+    background: url(/library/image/silk/link_go.png) center right no-repeat;
+}
+.direct-url-wrap {
+    font-size: 85%;
+    color: #555;
+}
+.direct-url-wrap textarea {
+    color: #000;
+    overflow:auto;
+    width:250px;
+    display:block;
+}
 .portletTitle .title {
     padding: 2px 4px 6px 0;
-    /*height: 1em;*/
+    height: 1em;
     float: left;
     color: #000;
 }
@@ -919,11 +1018,10 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     color: #444;
     font-weight: bold;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 1.6em !important;
+    font-size: 1.3em !important;
 }
 .portletTitle .title h2 .siteTitle {
-    color: #333;
-    margin-bottom: .3em;
+    color: #333
 }
 .portletTitle .title a {
     background: url(images/reload.gif) center left no-repeat;
@@ -1325,7 +1423,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 /* list item when the user is an a chat room is a link to that chat room */
 .presenceList li a {
-    color: #009DCE;
+    color: #333;
     text-decoration: none;
 }
 
@@ -1501,8 +1599,6 @@ div#privacy_overlay {
     padding-top: 2em;
 }
 /* hover effect for control */
-
-
 #togglebar .toggleToolMenuHover {
     background-position: -4px 0 !important;
 }
@@ -1570,7 +1666,6 @@ everything except the tool icon is gone it is still distincts as the current too
 	background: rgba(0,0,0,.05);
 
 }
-
 .sakaiMinimizePageNavigation #togglebar {
     padding-left: 0em;
     margin-top: 0em;
@@ -1675,25 +1770,4 @@ a.qtipLinkButton:hover {
     -moz-border-radius-topright: 5px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-}
-
-.portletTitle .action a.tool-directurl{
-	padding:2px;
-	background: url(/library/image/silk/link.png) center right no-repeat;
-}
-        
-.portletTitle .action a.tool-directurl:hover{
-	background: url(/library/image/silk/link.png) center right no-repeat;
-}
-
-.direct-url-wrap {
-	font-size: 85%;
-	color: #555;
-}
-
-.direct-url-wrap textarea {
-	color: #000;
-	overflow:auto;
-	width:250px;
-	display:block;
 }
