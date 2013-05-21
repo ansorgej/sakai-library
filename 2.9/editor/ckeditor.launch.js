@@ -92,7 +92,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
             ['Maximize','Templates','-','Source']
         ],
         toolbar: 'Full',
-        resize_dir: 'vertical'
+        resize_dir: 'both'
     };
 
     //NOTE: The height and width properties are handled discretely here.
@@ -124,6 +124,11 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
         if (config && config.toolbarSet && ckconfig['toolbar_' + config.toolbarSet]) {
             ckconfig.toolbar = config.toolbarSet;
         }
+    }
+
+    // Sam Longsight toolbar too narrow
+    if(typeof ckconfig.width === 'undefined') {
+      ckconfig.width = 600;
     }
 
 		//get path of directory ckeditor 
