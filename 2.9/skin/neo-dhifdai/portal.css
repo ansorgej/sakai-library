@@ -72,14 +72,14 @@ body.portalBody {
 
 /* PART 2 - HEADER BLOCKS (BRANDING,LOGIN) */
 #headerMax, #headerMin {
-    background: #ffffff;
+    background: #000;
     border-bottom: 1px solid #000;
-    background: -moz-linear-gradient(left, #ffffff 0%, #000000 100%);
-    background: -webkit-gradient(linear, left, right, color-stop(0%,#ffffff), color-stop(100%,#000000));
-    background: -webkit-linear-gradient(left, #ffffff 0%,#000000 100%);
-    background: -o-linear-gradient(left, #ffffff 0%,#000000 100%);
-    background: -ms-linear-gradient(left, #ffffff 0%,#000000 100%);
-    background: linear-gradient(left, #ffffff 0%,#000000 100%);
+    background: -moz-linear-gradient(left, #000 0%, #000000 100%);
+    background: -webkit-gradient(linear, left, right, color-stop(0%,#000), color-stop(100%,#000000));
+    background: -webkit-linear-gradient(left, #000 0%,#000000 100%);
+    background: -o-linear-gradient(left, #000 0%,#000000 100%);
+    background: -ms-linear-gradient(left, #000 0%,#000000 100%);
+    background: linear-gradient(left, #000 0%,#000000 100%);
 }
 #headerMin {
     overflow: hidden;
@@ -323,7 +323,7 @@ ul.topnav li {
 }
 /* hover treatment for site links*/
 ul.topnav li.nav-menu:hover, ul.topnav li.more-tab:hover {
-    border: 1px solid #333333;
+    border: 1px solid #fff;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
