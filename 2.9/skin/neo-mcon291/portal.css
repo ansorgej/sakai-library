@@ -439,6 +439,9 @@ ul.topnav li a {
 ul.topnav li.nav-selected a{
     color: #fff;
 }
+ul.topnav li.nav-selected li.submenuitem a{
+    color: #2E509D;
+}
 .nav-submenu .subnav{
     color: #000;
 }
