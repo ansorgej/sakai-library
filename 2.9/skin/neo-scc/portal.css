@@ -96,13 +96,13 @@ body.portalBody {
 
 /* PART 2 - HEADER BLOCKS (BRANDING,LOGIN) */
 #headerMax, #headerMin {
-    background: #7F4382;
-    background: -moz-linear-gradient(top, #7F4382 0%, #4D294F 100%);
+    background: #4D294F;
+    /* background: -moz-linear-gradient(top, #7F4382 0%, #4D294F 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7F4382), color-stop(100%,#4D294F));
     background: -webkit-linear-gradient(top, #7F4382 0%, #4D294F 100%);
     background: -o-linear-gradient(top, #7F4382 0%, #4D294F 100%);
     background: -ms-linear-gradient(top, #7F4382 0%, #4D294F 100%);
-    background: linear-gradient(top, #7F4382 0%, #4D294F 100%);
+    background: linear-gradient(top, #7F4382 0%, #4D294F 100%); */
     border-bottom: 1px solid #7F4382;
     /* background: #009DCE;
     background: -moz-linear-gradient(top, #009DCE 0%, #007EA5 100%);
@@ -339,10 +339,11 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
  * if you do not have a logo you can eliminate it to save some room */
 #linkNav ul.topnav {
     list-style: none;
-    padding: 8px 0 5px 155px; /* matches the width of the toolMenu*/
+    padding: 8px 0 5px 300px; /* matches the width of the toolMenu*/
     margin: 0;
     width: 100%;
-    background: transparent url(images/scc-logo.jpg) 8px 4px no-repeat;
+    min-height: 50px;
+    background: transparent url(images/scc-logo.png) 8px 4px no-repeat;
 }
 /* the individual containers for the site links, tool menu control, tool menu*/
 ul.topnav li {
