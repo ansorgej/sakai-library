@@ -41,7 +41,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
         filebrowserImageBrowseUrl : '/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Type=Image&Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + folder,
         filebrowserFlashBrowseUrl :'/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Type=Flash&Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + folder,
         //extraPlugins: (sakai.editor.enableResourceSearch ? 'resourcesearch' : '')+'atd-ckeditor',
-        extraPlugins: 'ckeditor_wiris',
+        extraPlugins: 'ckeditor_wiris,symbol',
 	//atd_rpc: '/proxy/atd',
 
         // These two settings enable the browser's native spell checking and context menus.
@@ -70,7 +70,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
             '/',
             ['Font','FontSize'],
             ['Link','Unlink',],
-            ['Image','-','Table','-','HorizontalRule','-','SpecialChar'],
+            ['Image','-','Table','-','HorizontalRule','-','SpecialChar','Symbol'],
             ['Cut','Copy','Paste','PasteText'],['ckeditor_wiris_formulaEditor'],
             ['Source']
         ],
