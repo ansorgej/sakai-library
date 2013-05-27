@@ -800,7 +800,6 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     background: -o-linear-gradient(top, #5D0D0D 0%, #A62B2B 100%);
     background: -ms-linear-gradient(top, #5D0D0D 0%, #A62B2B 100%);
     background: linear-gradient(top, #5D0D0D 0%, #A62B2B 100%);
-    border: 1px solid #5D0D0D;
     /* background: #009DCE;
     background: -moz-linear-gradient(top, #009DCE 0%, #007EA5 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#009DCE), color-stop(100%,#007EA5));
@@ -841,9 +840,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 /* setting the max-width by percentage to avoid crops and permit scaling when tool menu is minimized*/
 #worksiteLogo img {
-    display: block;
-    margin: 5px auto;
-    max-width: 90%
+  display: none;
 }
 /* wrapper for the string that Sakai will output based on site type (ie. project,course) this is open ended and institution specific. Not sure what good this is so hiding it. */
 #siteType {
