@@ -333,7 +333,7 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
     margin: 0;
     width: 100%;
     min-height: 67px;
-    background: transparent url(images/SI_logo_184x80.jpg) 0 0 no-repeat;
+    background: transparent url(images/USAID.jpg) -10px 0 no-repeat;
 }
 /* the individual containers for the site links, tool menu control, tool menu*/
 ul.topnav li {
@@ -425,7 +425,7 @@ ul.topnav li ul.subnav li:hover, ul.topnav li ul.subnav li a:focus,
 ul.topnav li a {
     padding: 8px 7px 8px 8px;
     font-size: 13px;
-    color: #9073BF;
+    color: #00004B;
     text-decoration: none;
     float: left;
     display: block;
