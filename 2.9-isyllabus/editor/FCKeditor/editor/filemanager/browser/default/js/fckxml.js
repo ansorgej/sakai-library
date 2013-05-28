@@ -58,7 +58,7 @@ FCKXml.prototype.LoadUrl = function( urlToCall, asyncFunctionPointer )
         // fix for IE 10
         try {
                 oXmlHttp.responseType = 'msxml-document';
-        } 
+        }
         catch(e) {}
 
 	if ( bAsync )
