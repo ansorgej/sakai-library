@@ -837,9 +837,7 @@ background: linear-gradient(top, #A80532 0%, #8F042A 100%);
 }
 /* setting the max-width by percentage to avoid crops and permit scaling when tool menu is minimized*/
 #worksiteLogo img {
-    display: block;
-    margin: 5px auto;
-    max-width: 90%
+  display: none;
 }
 /* wrapper for the string that Sakai will output based on site type (ie. project,course) this is open ended and institution specific. Not sure what good this is so hiding it. */
 #siteType {

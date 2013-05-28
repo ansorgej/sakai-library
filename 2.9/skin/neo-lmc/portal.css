@@ -341,7 +341,7 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
     margin: 0;
     width: 100%;
     min-height: 75px;
-    background: transparent url(images/LMC_logo_color_white.gif) 8px 4px no-repeat;
+    background: transparent url(images/lmc-logo-white-300px.png) 8px 4px no-repeat;
 }
 /* the individual containers for the site links, tool menu control, tool menu*/
 ul.topnav li {
@@ -855,9 +855,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 /* setting the max-width by percentage to avoid crops and permit scaling when tool menu is minimized*/
 #worksiteLogo img {
-    display: block;
-    margin: 5px auto;
-    max-width: 90%
+  display: none;
 }
 /* wrapper for the string that Sakai will output based on site type (ie. project,course) this is open ended and institution specific. Not sure what good this is so hiding it. */
 #siteType {
