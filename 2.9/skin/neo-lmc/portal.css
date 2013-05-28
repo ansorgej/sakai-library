@@ -341,7 +341,7 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
     margin: 0;
     width: 100%;
     min-height: 75px;
-    background: transparent url(images/LMC_logo_color_white.gif) 8px 4px no-repeat;
+    background: transparent url(images/lmc-logo-white-300px.png) 8px 4px no-repeat;
 }
 /* the individual containers for the site links, tool menu control, tool menu*/
 ul.topnav li {
