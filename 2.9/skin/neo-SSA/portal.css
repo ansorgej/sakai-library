@@ -350,6 +350,7 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
     padding: 8px 0 5px 155px; /* matches the width of the toolMenu*/
     margin: 0;
     width: 100%;
+    min-height: 70px;
     background: transparent url(images/LogotipoPlain80x76.jpg) 8px 4px no-repeat;
 }
 /* the individual containers for the site links, tool menu control, tool menu*/
