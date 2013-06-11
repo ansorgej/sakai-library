@@ -863,7 +863,7 @@ background: linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
 }
 /* setting the max-width by percentage to avoid crops and permit scaling when tool menu is minimized*/
 #worksiteLogo img {
-    display: block;
+    display: none;
     margin: 5px auto;
     max-width: 90%
 }

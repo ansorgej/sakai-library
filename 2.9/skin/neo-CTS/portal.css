@@ -834,7 +834,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 /* setting the max-width by percentage to avoid crops and permit scaling when tool menu is minimized*/
 #worksiteLogo img {
-    display: block;
+    display: none;
     margin: 5px auto;
     max-width: 90%
 }
