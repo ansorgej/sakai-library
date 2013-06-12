@@ -96,7 +96,7 @@ body.portalBody {
 
 /* PART 2 - HEADER BLOCKS (BRANDING,LOGIN) */
 #headerMax, #headerMin {
-    background: #003766;
+    background: rgb(0, 55, 103);
     /* background: -moz-linear-gradient(top, #009DCE 0%, #007EA5 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#009DCE), color-stop(100%,#007EA5));
     background: -webkit-linear-gradient(top, #009DCE 0%,#007EA5 100%);
@@ -329,11 +329,11 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
  * if you do not have a logo you can eliminate it to save some room */
 #linkNav ul.topnav {
     list-style: none;
-    padding: 8px 0 5px 540px; /* matches the width of the toolMenu*/
+    padding: 8px 0 5px 300px; /* matches the width of the toolMenu*/
     margin: 0;
     width: 100%;
-    min-height: 85px;
-    background: transparent url(images/logo_inst.gif) -40px -45px no-repeat;
+    min-height: 70px;
+    background: transparent url(images/TWC.LAMP.Banner.Graphic.2013.jpg) 0 0  no-repeat;
 }
 /* the individual containers for the site links, tool menu control, tool menu*/
 ul.topnav li {
@@ -345,28 +345,37 @@ ul.topnav li {
     padding: 0;
     position: relative; /*--Declare X and Y axis base for sub navigation--*/
     font-weight: bold;
+    background: rgb(168, 153, 110);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
     border: 1px solid transparent;
 }
 /* hover treatment for site links*/
 ul.topnav li.nav-menu:hover, ul.topnav li.more-tab:hover {
-    border: 1px solid #005A76;
+    /* border: 1px solid #005A76;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
-    border-radius: 3px;
+    border-radius: 3px; */
+    background: rgb(186, 135, 72);
+}
+ul.topnav li.nav-menu:hover a, ul.topnav li.more-tab:hover a {
+    color: #fff;
 }
 /* current site control rendering */
  ul.topnav li.nav-selected {
      background: #008DB9;
-    background: -moz-linear-gradient(top, #008DB9 0%, #007194 100%);
+    /* background: -moz-linear-gradient(top, #008DB9 0%, #007194 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#008DB9), color-stop(100%,#007194));
     background: -webkit-linear-gradient(top, #008DB9 0%,#007194 100%);
     background: -o-linear-gradient(top, #008DB9 0%,#007194 100%);
     background: -ms-linear-gradient(top, #008DB9 0%,#007194 100%);
     background: linear-gradient(top, #008DB9 0%,#007194 100%);
-    border: 1px solid #005A76;
+    border: 1px solid #005A76; 
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
-    border-radius: 3px;
+    border-radius: 3px; */
+    background: rgb(168, 153, 110);
  }
 /* site submenu trigger */
 ul.topnav li span.drop {
@@ -425,7 +434,7 @@ ul.topnav li ul.subnav li:hover, ul.topnav li ul.subnav li a:focus,
 ul.topnav li a {
     padding: 8px 7px 8px 8px;
     font-size: 13px;
-    color: #fff;
+    color: rgb(0, 55, 103);
     text-decoration: none;
     float: left;
     display: block;
@@ -723,19 +732,27 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     margin: 0;
     width: auto;
     padding: 0;
-    border-bottom: 1px solid #ccc;
-    text-align: right;
-    background: #f3f3f3;
+    border-bottom: 1px solid rgb(168, 153, 110);
+    text-align: left;
+    /* background: #f3f3f3;
     background: -moz-linear-gradient(top, #f3f3f3 0%, #e7e7e7 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(100%,#e7e7e7));
     background: -webkit-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
     background: -o-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
     background: -ms-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
-    background: linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
+    background: linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%); */
+    background: rgb(209, 198, 161);
+}
+#toolMenu li a, #subSites li a {
+  color: rgb(0, 55, 103);
+  font-weight: bold;
 }
 /* the current tool */
+#toolMenu li.selectedTool {
+  background: rgb(255, 255, 255);
+}
 #toolMenu li.selectedTool a {
-    color: #009DCE !important;
+    color: rgb(0, 55, 103) !important;
     cursor: default;
 }
 /* eliminate the normal hover effect when it is current tool */
@@ -746,9 +763,9 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 /* span holds the tool icon bkgnd image - here a default is provided */
 #toolMenu li span, #subSites li span {
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: left;
     background-image: url(../../image/silk/application.png);
-    padding-right: 22px;
+    padding-left: 22px;
     line-height: 1.4;
 }
 /* adjusting rendering of last item in the tool menu */
@@ -764,7 +781,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 #toolMenu li a:link, #toolMenu li a, #subSites li a:link, #subSites li a {
     display: block;
     text-decoration: none;
-    color: #444;
+    color: rgb(0, 55, 103);
     padding: 7px 6px 6px;
     margin-bottom: 0px;
     margin-left: 0px;
@@ -774,14 +791,16 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 #toolMenu li a:hover, #subSites li a:hover, #toolMenu li a:focus, #subSites li a:focus {
     text-decoration: none;
-    background: #009DCE;
+    /* background: #009DCE;
     background: -moz-linear-gradient(top, #009DCE 0%, #007EA5 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#009DCE), color-stop(100%,#007EA5));
     background: -webkit-linear-gradient(top, #009DCE 0%,#007EA5 100%);
     background: -o-linear-gradient(top, #009DCE 0%,#007EA5 100%);
     background: -ms-linear-gradient(top, #009DCE 0%,#007EA5 100%);
     background: linear-gradient(top, #009DCE 0%,#007EA5 100%);
-    color: #fff;
+    color: #fff; */
+    background: rgb(209, 198, 161);
+    color: rgb(0, 55, 103);
 }
 /* link in tool menu that allows adding one more tool, may be disabled */
 #toolMenu li.moreTools {
