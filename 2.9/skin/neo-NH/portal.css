@@ -337,11 +337,12 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
  * if you do not have a logo you can eliminate it to save some room */
 #linkNav ul.topnav {
     list-style: none;
-    padding: 8px 0 5px 255px; /* matches the width of the toolMenu*/
+    padding: 8px 0 5px 180px; /* matches the width of the toolMenu*/
     margin: 0;
     width: 100%;
-    min-height: 75px;
-    background: transparent url(images/Logo-Header.jpg) 8px 4px no-repeat;
+    min-height: 150px;
+    /* background: transparent url(images/Logo-Header.jpg) 8px 4px no-repeat; */
+    background: transparent url(images/NH-Seal-White.gif) -20px -25px no-repeat;
 }
 /* the individual containers for the site links, tool menu control, tool menu*/
 ul.topnav li {
