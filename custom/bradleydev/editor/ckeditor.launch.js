@@ -63,7 +63,6 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
         disableNativeSpellChecker: false,
         browserContextMenuOnCtrl: true,
 
-        // DTCC custom!
         font_names: 'Arial/Arial, sans-serif;Courier New/Courier New, Courier, Fixed, monospace;Times New Roman/Times New Roman, Times, serif;Trebuchet MS/Trebuchet MS, trebuchet, arial, helvetica, sans-serif;Verdana',
         toolbarCanCollapse: false,
 
@@ -85,14 +84,14 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
             ['JustifyLeft','JustifyCenter','JustifyRight'],
             ['Link','Unlink',],
             (sakai.editor.enableResourceSearch
-                ? ['ResourceSearch', 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak']
-                : ['Image','Table','HorizontalRule','SpecialChar']),
+                ? ['ResourceSearch', 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak','ckeditor_wiris_formulaEditor']
+                : ['Image','Table','HorizontalRule','SpecialChar','ckeditor_wiris_formulaEditor']),
             '/',
             ['Format','Font','FontSize'],
             ['Maximize','Templates','-','Source']
         ],
         toolbar: 'Full',
-        resize_dir: 'vertical'
+        resize_dir: 'both'
     };
 
     //NOTE: The height and width properties are handled discretely here.
@@ -143,10 +142,8 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
 			 */
 			 CKEDITOR.plugins.addExternal('atd-ckeditor',basePath+'atd-ckeditor/', 'plugin.js'); 
 			 ckconfig.atd_rpc='/proxy/atd';
-			 ckconfig.extraPlugins+="movieplayer,wordcount,atd-ckeditor,stylesheetparser";
+			 ckconfig.extraPlugins+="movieplayer,wordcount,atd-ckeditor,stylesheetparser,ckeditor_wiris";
 			 ckconfig.contentsCss = basePath+'/atd-ckeditor/atd.css';
-
-			 //ckconfig.extraPlugins+="movieplayer,wordcount";
     })();
 
 	  CKEDITOR.replace(targetId, ckconfig);
