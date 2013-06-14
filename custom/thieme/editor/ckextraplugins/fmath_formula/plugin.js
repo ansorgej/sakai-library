@@ -26,7 +26,7 @@
 				{
 					label:'Add MathML Formula',
 					command: 'fmath_formula',
-					icon: this.path + 'fmath_formula.jpg'
+					icon: this.path + 'thieme_fmath_formula.png'
 				});
 
 			editor.on( 'selectionChange', function( evt )
