@@ -137,7 +137,7 @@ that can be used or hidden,can also use a background: url(images/<image name>.<e
 in this skin is rendered via ul.topnav, which a anon user does not see)*/
 #headerMin #mastLogo {
     display: block; 
-    background-image: url(images/MethodistCollege.jpg);
+    background-image: url(images/UnityPointMethodistCollege-Logo.png);
     background-repeat: no-repeat;
     background-position: 8px 4px;
     float: left;
@@ -166,7 +166,7 @@ that can be used or hidden,can also use a background: url(images/<image name>.<e
 }
 #loginForm label {
     padding: 0 6px;
-    color: #2E509D;
+    color: #fff;
 }
 #eid, #pw {
     border: 1px solid #ccc;
