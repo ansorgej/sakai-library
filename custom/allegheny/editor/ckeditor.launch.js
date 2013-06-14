@@ -86,7 +86,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
             ['Link','Unlink',],
             (sakai.editor.enableResourceSearch
                 ? ['ResourceSearch', 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak']
-                : ['Image','Table','HorizontalRule','SpecialChar']),
+                : ['Image','Table','HorizontalRule','SpecialChar','Symbol']),
             '/',
             ['Format','Font','FontSize'],
             ['Maximize','Templates','-','ckeditor_wiris_formulaEditor','-','Source']
@@ -147,8 +147,10 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
 			  Hopefully this will get easier to configure soon.
 			 */
 			 CKEDITOR.plugins.addExternal('atd-ckeditor',basePath+'atd-ckeditor/', 'plugin.js'); 
+			 CKEDITOR.plugins.addExternal('symbol',basePath+'symbol/', 'plugin.js'); 
+			 ckconfig.extraPlugins+="movieplayer,wordcount,atd-ckeditor,stylesheetparser,ckeditor_wiris,symbol";
+
 			 ckconfig.atd_rpc='/proxy/atd';
-			 ckconfig.extraPlugins+="movieplayer,wordcount,atd-ckeditor,stylesheetparser,ckeditor_wiris";
 			 ckconfig.contentsCss = basePath+'/atd-ckeditor/atd.css';
 
 			 //ckconfig.extraPlugins+="movieplayer,wordcount";
