@@ -70,7 +70,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
             '/',
             ['Font','FontSize'],
             ['Link','Unlink',],
-            ['Image','-','Table','-','HorizontalRule','-','SpecialChar','Symbol'],
+            ['Image','-','Table','-','HorizontalRule','-','Symbol'],
             ['Cut','Copy','Paste','PasteText'],['ckeditor_wiris_formulaEditor'],
             ['Source']
         ],
