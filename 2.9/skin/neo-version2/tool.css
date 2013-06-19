@@ -322,7 +322,7 @@ table.calendar .event {
 /* skinned cell of standard tab. data table */
 .listHier td {
     vertical-align: top;
-    padding: .3em .4em !important;
+    padding: .3em .4em; /* !important removed by ansorgej to fix forums */
 }
 /* lines - provides rules and hover effects on some tables */
 table.lines {
@@ -986,6 +986,7 @@ tr.selectedFound td {
 }
 .login td.logo {
     width: 200px;
+	height: 180px;
 	min-height: 180px; 
     background: #fff url(images/logo_login.gif) no-repeat;
     background-position: 20px 0;
@@ -1240,3 +1241,12 @@ input[type="checkbox"][disabled="disabled"], input[type="checkbox"][disabled="tr
 div.portletBody form#listmodulesform ul.navIntraTool li:last-child a:after {
     content: "Print All Modules";
 }
+
+/* fix button weirdness around Melete's button icons by removing borders, etc. */
+#listauthmodulesform li span, #listmodulesform li span, #listmodulesStudentform li span {
+    background: none repeat scroll 0 0 transparent !important;
+    border: medium none !important;
+    box-shadow: none !important;
+    padding: 3px 4px !important;
+}
+

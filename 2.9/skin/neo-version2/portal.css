@@ -61,7 +61,8 @@ body.portalBody {
     border-bottom: 2px solid #046CB6 !important;
 }
 #col1 .portletMainWrap {
-    width: 99%
+    width: 99%;
+	float: left; /* fix wrapping issue in Web Content Link and BLTI settings screens, hopefully */
 }
 /* wrapper for footer blocks  */
 #footer {
@@ -861,7 +862,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 #siteStatus {
     text-transform: capitalize;
     clear: both;
-    color: #046CB6;
+    color: red;
     font-size: small;
     font-weight: bold;
     line-height: 130%;
@@ -988,7 +989,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     color: #333;
     font-size: 1em;
     text-decoration: none;
-    margin: 1em;
+    margin: .1em;
 }
 .footerExtNav a:hover {
     color: #444;
@@ -1223,10 +1224,10 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     background-image: url(../../image/silk/group.png) !important
 }
 .icon-sakai-melete {
-    background-image: url(../../image/sakai/tool-icons/sakai.melete.png);
+    background-image: url(../../image/sakai/tool-icons/sakai.melete.png) !important;
 }
 .icon-sakai-blogwow {
-    background-image: url(../../image/silk/application_view_gallery.png) !important
+    background-image: url(../../image/silk/book_edit.png) !important
 }
 .icon-sakai-scormcloud {
     background-image: url(../../image/silk/script.png) !important
@@ -1279,6 +1280,9 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 .icon-sakai-createuser {
     background-image: url(/library/image/silk/user_add.png) !important
+}
+.icon-sakai-scorm-tool {
+	background-image: url(../../image/silk/page_go.png) !important;
 }
 
 /* PART 10: specific functionality: presence, chat */
