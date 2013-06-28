@@ -1236,4 +1236,8 @@ input[type="checkbox"][disabled="disabled"], input[type="checkbox"][disabled="tr
 }
 .listNav input[type="submit"], .listNav input[type="button"] {
     height: 20px !important
+} 
+
+div.searchTabsContainer div#tags {
+  display: none;
 }
