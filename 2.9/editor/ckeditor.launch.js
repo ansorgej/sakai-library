@@ -24,6 +24,9 @@ sakai.editor = sakai.editor || {};
 sakai.editor.editors = sakai.editor.editors || {};
 
 sakai.editor.editors.ckeditor = {};
+
+//SAK-22862
+sakai.editor.enableResourceSearch = false;
 // Please note that no more parameters should be added to this signature.
 // The config object allows for name-based config options to be passed.
 // The w and h parameters should be removed as soon as their uses can be migrated.
