@@ -989,8 +989,8 @@ tr.selectedFound td {
 }
 .login td.logo {
     width: 175px;
-    background: #fff url(images/x-login-logo.png) no-repeat;
-    background-position: 20px 0;
+    background: #A40000 url(images/logo_inst.gif) no-repeat;
+    background-position: 15px 15px;
     border-width: 1px 0 1px 1px;
     border-style: solid;
     border-color: #ccc;
@@ -1228,4 +1228,7 @@ input[type="checkbox"][disabled="disabled"], input[type="checkbox"][disabled="tr
 }
 .listNav input[type="submit"], .listNav input[type="button"] {
     height: 20px !important
+}
+ul.navIntraTool li a[title=Edit Class Roster(s)] {
+  display: none;
 }
