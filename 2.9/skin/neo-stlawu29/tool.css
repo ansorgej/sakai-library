@@ -1009,11 +1009,11 @@ table.login td.form form table.loginform input.loginsubmit {
     border: 1px solid black;
 }
 .login th {
-    background: #333 url(images/logo_inst.png) 2px 8px no-repeat;
+    background: #4B2B23 url(images/logo_inst.png) 2px 8px no-repeat;
     border: 1px solid #000;
     height: 60px;
     text-align: right;
-    color: white;
+    color: transparent;
     width: 394px;
 }
 .login {
