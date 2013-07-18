@@ -80,19 +80,19 @@ html {
     height: 32px;
 }
 #pda-portlet-menu li.backLink span {
-    background: url(images/pda-back-m.png) 0 0 repeat;
+    background: url(images/pda-back-r.png) top right no-repeat;
     display: block;
     height: 32px;
-    padding: 0 !important;
+    padding: 0 5px 0 0 !important;
     overflow: hidden;
 }
 #pda-portlet-menu a {
     text-decoration: none !important
 }
 #pda-portlet-menu li.backLink span a {
-    padding: 5px 10px 5px 5px !important;
+    padding: 5px 5px 5px 5px !important;
     display: block;
-    background: url(images/pda-back-r.png) top right no-repeat;
+    background: url(images/pda-back-m.png) top left repeat;
 }
 #pda-portlet-menu li.loginLink,#pda-portlet-menu li.logoutLink, #switch-link-w,.helpLink {
     background: rgb(0,157,206);
