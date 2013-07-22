@@ -96,7 +96,7 @@ body.portalBody {
 
 /* PART 2 - HEADER BLOCKS (BRANDING,LOGIN) */
 #headerMax, #headerMin {
-    background: #A22006;
+    background: #002C75;
     /* background: -moz-linear-gradient(top, #009DCE 0%, #007EA5 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#009DCE), color-stop(100%,#007EA5));
     background: -webkit-linear-gradient(top, #009DCE 0%,#007EA5 100%);
@@ -199,20 +199,28 @@ guests, for example */
     padding: 4px 6px;
     text-align: center;
     text-decoration: none;
-    background: #008DB9;
+    /* background: #008DB9;
     background: -moz-linear-gradient(top, #008DB9 0%, #007194 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#008DB9), color-stop(100%,#007194));
     background: -webkit-linear-gradient(top, #008DB9 0%,#007194 100%);
     background: -o-linear-gradient(top, #008DB9 0%,#007194 100%);
     background: -ms-linear-gradient(top, #008DB9 0%,#007194 100%);
     background: linear-gradient(top, #008DB9 0%,#007194 100%);
-    border: 1px solid #005A76;
+    border: 1px solid #005A76; */
+    background: #6384BA;
+    background: -moz-linear-gradient(top, #6384BA 0%, #113B7D 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6384BA), color-stop(100%,#113B7D));
+    background: -webkit-linear-gradient(top, #6384BA 0%, #113B7D 100%);
+    background: -o-linear-gradient(top, #6384BA 0%, #113B7D 100%);    
+    background: -ms-linear-gradient(top, #6384BA 0%, #113B7D 100%); 
+    background: linear-gradient(top, #6384BA 0%, #113B7D 100%);
+    border: 1px solid #00163B;
 }
 #headerMin #loginLink1, #headerMin #loginLink2 {
     margin-top: -2px;
 }
 #loginLink1:hover, #loginLink2:hover, form#loginForm input#submit:hover {
-    background: #007194;
+    background: #416194;
     text-decoration: none;
 }
 /*make secondary CAS login link (ie. Guest Login) different*/ 
@@ -333,7 +341,7 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
     margin: 0;
     width: 100%;
     min-height: 65px;
-    background: transparent url(images/logo_inst.gif) 8px 4px no-repeat;
+    background: transparent url(images/OVU-Logo_on-Blue_280x80.png) top left no-repeat;
 }
 /* the individual containers for the site links, tool menu control, tool menu*/
 ul.topnav li {
@@ -347,26 +355,44 @@ ul.topnav li {
     font-weight: bold;
     border: 1px solid transparent;
 }
+ul.topnav li.nav-menu, ul.topnav li.more-tab {
+  background: #6384BA;
+  background: -moz-linear-gradient(top, #6384BA 0%, #113B7D 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6384BA), color-stop(100%,#113B7D));
+  background: -webkit-linear-gradient(top, #6384BA 0%, #113B7D 100%);
+  background: -o-linear-gradient(top, #6384BA 0%, #113B7D 100%);
+  background: -ms-linear-gradient(top, #6384BA 0%, #113B7D 100%);
+  background: linear-gradient(top, #6384BA 0%, #113B7D 100%);
+  border: 1px solid #00163B;
+}
 /* hover treatment for site links*/
 ul.topnav li.nav-menu:hover, ul.topnav li.more-tab:hover {
-    border: 1px solid #005A76;
+    /* border: 1px solid #005A76;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
-    border-radius: 3px;
+    border-radius: 3px; */
+    background: #8FA7D3;
+    background: -moz-linear-gradient(top, #8FA7D3 0%, #416194 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8FA7D3), color-stop(100%,#416194));
+    background: -webkit-linear-gradient(top, #8FA7D3 0%, #416194 100%);
+    background: -o-linear-gradient(top, #8FA7D3 0%, #416194 100%);
+    background: -ms-linear-gradient(top, #8FA7D3 0%, #416194 100%);
+    background: linear-gradient(top, #8FA7D3 0%, #416194 100%);
+    border: 1px solid #00163B;
 }
 /* current site control rendering */
  ul.topnav li.nav-selected {
-     background: #008DB9;
-    background: -moz-linear-gradient(top, #008DB9 0%, #007194 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#008DB9), color-stop(100%,#007194));
-    background: -webkit-linear-gradient(top, #008DB9 0%,#007194 100%);
-    background: -o-linear-gradient(top, #008DB9 0%,#007194 100%);
-    background: -ms-linear-gradient(top, #008DB9 0%,#007194 100%);
-    background: linear-gradient(top, #008DB9 0%,#007194 100%);
-    border: 1px solid #005A76;
-    -moz-border-radius: 3px;
+    background: #595959;
+    background: -moz-linear-gradient(top, #595959 0%, #7F7F7F 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#595959), color-stop(100%,#7F7F7F));
+    background: -webkit-linear-gradient(top, #595959 0%,#7F7F7F 100%);
+    background: -o-linear-gradient(top, #595959 0%,#7F7F7F 100%);
+    background: -ms-linear-gradient(top, #595959 0%,#7F7F7F 100%);
+    background: linear-gradient(top, #595959 0%,#7F7F7F 100%);
+    border: 1px solid #7F7F7F;
+    /* -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
-    border-radius: 3px;
+    border-radius: 3px; */
  }
 /* site submenu trigger */
 ul.topnav li span.drop {
@@ -735,13 +761,14 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 /* the current tool */
 #toolMenu li.selectedTool a {
-    color: #009DCE !important;
+    color: #fff !important;
+    background: #002C75;
     cursor: default;
 }
 /* eliminate the normal hover effect when it is current tool */
 #toolMenu li.selectedTool a:hover {
-    background: inherit !important;
-    *background: #f3f3f3 !important;
+    background: #002C75 !important; 
+    *background: #002C75 !important; 
 }
 /* span holds the tool icon bkgnd image - here a default is provided */
 #toolMenu li span, #subSites li span {
@@ -774,13 +801,13 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 #toolMenu li a:hover, #subSites li a:hover, #toolMenu li a:focus, #subSites li a:focus {
     text-decoration: none;
-    background: #009DCE;
-    background: -moz-linear-gradient(top, #009DCE 0%, #007EA5 100%);
+    background: #333333;
+    /* background: -moz-linear-gradient(top, #009DCE 0%, #007EA5 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#009DCE), color-stop(100%,#007EA5));
     background: -webkit-linear-gradient(top, #009DCE 0%,#007EA5 100%);
     background: -o-linear-gradient(top, #009DCE 0%,#007EA5 100%);
     background: -ms-linear-gradient(top, #009DCE 0%,#007EA5 100%);
-    background: linear-gradient(top, #009DCE 0%,#007EA5 100%);
+    background: linear-gradient(top, #009DCE 0%,#007EA5 100%); */
     color: #fff;
 }
 /* link in tool menu that allows adding one more tool, may be disabled */
