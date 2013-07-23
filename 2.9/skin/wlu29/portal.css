@@ -55,7 +55,7 @@ body.portalBody {
 }
 #col1of2 .portletTitleWrap, #col2of2 .portletTitleWrap {
     width: 98.5%;
-    border-bottom: 2px solid #2E509D;
+    border-bottom: 2px solid #0D1A37;
 }
 #col1of2 .portletMainWrap, #col2of2 .portletMainWrap {
     width: 98.5%;
@@ -63,7 +63,7 @@ body.portalBody {
 }
 #col1 .portletTitleWrap {
     width: 99%;
-    border-bottom: 2px solid #2E509D !important;
+    border-bottom: 2px solid #0D1A37 !important;
 }
 #col1 .portletMainWrap {
     width: 99%
@@ -101,15 +101,15 @@ body.portalBody {
 
 /* PART 2 - HEADER BLOCKS (BRANDING,LOGIN) */
 #headerMax, #headerMin {
-    background: #00529B;
-/*    background: -moz-linear-gradient(top, #2E509D 0%, #007EA5 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2E509D), color-stop(100%,#007EA5));
-    background: -webkit-linear-gradient(top, #2E509D 0%,#007EA5 100%);
-    background: -o-linear-gradient(top, #2E509D 0%,#007EA5 100%);
-    background: -ms-linear-gradient(top, #2E509D 0%,#007EA5 100%);
-    background: linear-gradient(top, #2E509D 0%,#007EA5 100%);
+    background: #0D1A37;
+    /*background: -moz-linear-gradient(top, #009DCE 0%, #007EA5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#009DCE), color-stop(100%,#007EA5));
+    background: -webkit-linear-gradient(top, #009DCE 0%,#007EA5 100%);
+    background: -o-linear-gradient(top, #009DCE 0%,#007EA5 100%);
+    background: -ms-linear-gradient(top, #009DCE 0%,#007EA5 100%);
+    background: linear-gradient(top, #009DCE 0%,#007EA5 100%);
 */
-    border-bottom: 1px solid #2E509D;
+    border-bottom: 1px solid #0D1A37;
 }
 #headerMin {
     overflow: hidden;
@@ -124,6 +124,8 @@ body.portalBody {
 #mastHead {
     clear: both;
     display: block;
+    background: none repeat scroll 0 0 #0D1A37;
+    height: 60px;
 }
 /* container wrapping branding images - portal outputs one /library/skin/<skin name>/images/logo_inst.gif
 that can be used or hidden,can also use a background: url(images/<image name>.<ext>) in this block,or both superimposing them  */
@@ -136,18 +138,22 @@ that can be used or hidden,can also use a background: url(images/<image name>.<e
 /* show #mastLogo if the user is not logged in so that we can display the logo in the usual place (the logo
 in this skin is rendered via ul.topnav, which a anon user does not see)*/
 #headerMin #mastLogo {
-    display: block; 
-    background-image: url(images/UnityPointMethodistCollege-Logo.png);
+    /*display: block; 
+    background-image: url(images/logo_inst.gif);
     background-repeat: no-repeat;
     background-position: 8px 4px;
     float: left;
-    width: 340px;
-    height: 70px;
+    width: 310px;
+    height: 60px;
+*/
 }
 /* another container wrapping branding images - portal outputs one /library/skin/<skin name>/images/banner_inst.gif
 that can be used or hidden,can also use a background: url(images/<image name>.<ext>) in this block,or both superimposing them  */
 #mastBanner {
-    display: none;
+    background: url("images/logo_inst.gif") no-repeat scroll 5px 5px transparent;
+    float: left;
+    height: 60px;
+    width: 300px;
 }
 #mastBanner img {
     display: none;
@@ -205,20 +211,20 @@ guests, for example */
     padding: 4px 6px;
     text-align: center;
     text-decoration: none;
-     background: #2E509D;
-    background: -moz-linear-gradient(top, #2E509D 0%, #416AC8 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2E509D), color-stop(100%,#416AC8));
-    background: -webkit-linear-gradient(top, #2E509D 0%,#416AC8 100%);
-    background: -o-linear-gradient(top, #2E509D 0%,#416AC8 100%);
-    background: -ms-linear-gradient(top, #2E509D 0%,#416AC8 100%);
-    background: linear-gradient(top, #2E509D 0%,#416AC8 100%);
-    border: 1px solid #416AC8;
+    background: #008DB9;
+    background: -moz-linear-gradient(top, #008DB9 0%, #007194 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#008DB9), color-stop(100%,#007194));
+    background: -webkit-linear-gradient(top, #008DB9 0%,#007194 100%);
+    background: -o-linear-gradient(top, #008DB9 0%,#007194 100%);
+    background: -ms-linear-gradient(top, #008DB9 0%,#007194 100%);
+    background: linear-gradient(top, #008DB9 0%,#007194 100%);
+    border: 1px solid #005A76;
 }
 #headerMin #loginLink1, #headerMin #loginLink2 {
     margin-top: -2px;
 }
 #loginLink1:hover, #loginLink2:hover, form#loginForm input#submit:hover {
-    background: #2E509D;
+    background: #007194;
     text-decoration: none;
 }
 /*make secondary CAS login link (ie. Guest Login) different*/ 
@@ -323,22 +329,24 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
     font-size: 100%;
     line-height: normal;
     padding: 0;
+    border-top: 2px solid #B9BFD5 !important;
 }
 /* wrapper for the site links, link to the 'more sites' tray, logout controls - children are #mastLogin and #linkNav*/
 #siteNav {}
 /* wrapper for the site link list and link to the 'more sites' tray - since the logo is displayed here on left, it is padded.*/
 #linkNav {
     display: block;
-    padding-right: 300px;
+    padding-right: 15px;
 }
 /* site tab navigation: a list right padding makes room for logo and matches width of tool menu
  * if you do not have a logo you can eliminate it to save some room */
 #linkNav ul.topnav {
     list-style: none;
-    padding: 24px 0 5px 330px; /* matches the width of the toolMenu*/
+    padding: 5px 0 0 15px; /* matches the width of the toolMenu*/
     margin: 0;
     width: 100%;
-    background: transparent url(images/UnityPointMethodistCollege-Logo.png) 8px 4px no-repeat;
+/*    background: transparent url(images/logo_inst.gif) 8px 4px no-repeat;
+*/
 }
 /* the individual containers for the site links, tool menu control, tool menu*/
 ul.topnav li {
@@ -350,34 +358,25 @@ ul.topnav li {
     padding: 0;
     position: relative; /*--Declare X and Y axis base for sub navigation--*/
     font-weight: bold;
-    border-left: 1px solid transparent;
-    border-right: 1px solid transparent;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
+    border: 1px solid transparent;
 }
 /* hover treatment for site links*/
 ul.topnav li.nav-menu:hover, ul.topnav li.more-tab:hover {
-    border: 1px solid #fff;
+    border: 1px solid #BCD398;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    background: #fff;
-}
-ul.topnav li.nav-menu:hover > a, ul.topnav li.more-tab:hover > a {
-    color: #00529B;
 }
 /* current site control rendering */
  ul.topnav li.nav-selected {
-    /* background: #2E509D;
-    background: -moz-linear-gradient(top, #2E509D 0%, #416AC8 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2E509D), color-stop(100%,#416AC8));
-    background: -webkit-linear-gradient(top, #2E509D 0%,#416AC8 100%);
-    background: -o-linear-gradient(top, #2E509D 0%,#416AC8 100%);
-    background: -ms-linear-gradient(top, #2E509D 0%,#416AC8 100%);
-    background: linear-gradient(top, #2E509D 0%,#416AC8 100%);
-    border: 1px solid #416AC8; */
-    background: #fff;
-    border: 1px solid #fff;
+     background: #BCD398;
+    background: -moz-linear-gradient(top, #BCD398 0%, #D1E0B8 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#BCD398), color-stop(100%,#D1E0B8));
+    background: -webkit-linear-gradient(top, #BCD398 0%,#D1E0B8 100%);
+    background: -o-linear-gradient(top, #BCD398 0%,#D1E0B8 100%);
+    background: -ms-linear-gradient(top, #BCD398 0%,#D1E0B8 100%);
+    background: linear-gradient(top, #BCD398 0%,#D1E0B8 100%);
+    border: 1px solid #D1E0B8;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
@@ -401,7 +400,7 @@ in constructing menu for user links in #mastLogin, as well as the submenus for t
 ul.topnav li ul.subnav, #mastLogin ul.subnav, #otherSiteTools {
     list-style: none;
     position: absolute;
-    top: 31px;
+    top: 94px;
     background: #f3f3f3;
     font-size: .9em;
     margin: 0;
@@ -444,13 +443,10 @@ ul.topnav li a {
     float: left;
     display: block;
 }
+ul.topnav li.nav-selected a{
+    color: #0D1A37;
+}
 
-ul.topnav li.nav-selected > a {
-    color: #00529B;
-}
-.nav-submenu .subnav{
-    color: #000;
-}
 /* Note:not needed? tool submenu for sites in site list
 span.topnav li ul.subnav li {
     margin: 0;
@@ -557,7 +553,7 @@ ul#otherSitesMenu li, #siteStatus a {
 }
 /* since the publish site link is the same, doubled up here */ 
 #otherSitesMenu li a:hover, #siteStatus a:hover, #siteStatus a:focus {
-    color: #2E509D;
+    color: #0D1A37;
 }
 /*container and control to close the "Other sites tray"*/
 #otherSitesMenu #otherSiteCloseW {
@@ -589,14 +585,15 @@ ul.otherSitesCategorList {
  *  ul.otherSitesCategorList. This last one will appear once per each category
  */
 ul#otherSiteList li, ul.otherSitesCategorList li {
-    background: #2E509D;
-    background: -moz-linear-gradient(top, #2E509D 0%, #416AC8 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2E509D), color-stop(100%,#416AC8));
-    background: -webkit-linear-gradient(top, #2E509D 0%,#416AC8 100%);
-    background: -o-linear-gradient(top, #2E509D 0%,#416AC8 100%);
-    background: -ms-linear-gradient(top, #2E509D 0%,#416AC8 100%);
-    background: linear-gradient(top, #2E509D 0%,#416AC8 100%);
-    border: 1px solid #416AC8;
+    background: #0D1A37;
+    /*background: -moz-linear-gradient(top, #009DCE 0%, #007EA5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#009DCE), color-stop(100%,#007EA5));
+    background: -webkit-linear-gradient(top, #009DCE 0%,#007EA5 100%);
+    background: -o-linear-gradient(top, #009DCE 0%,#007EA5 100%);
+    background: -ms-linear-gradient(top, #009DCE 0%,#007EA5 100%);
+    background: linear-gradient(top, #009DCE 0%,#007EA5 100%);
+    border: 1px solid #005A76;
+    */
     font-weight: bold;
     position: relative;
     border-radius: 5px;
@@ -627,9 +624,8 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 /* search elements for flat other sites tray search */
 #otherSiteSearch {
-    position: absolute;
-    top: 15px;
-    left:10px;
+    margin: 15px;
+    float: left;
 }
 #otherSiteSearch span#noSearchResults {
     padding-left: 10px;
@@ -644,6 +640,8 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 /* specific to  categorized view */
 #otherSitesCategorWrap {
+    float: none;
+    clear: both;
     margin: 5px;
     max-height: 300px !important;
     overflow: auto;
@@ -669,7 +667,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     display: block;
 }
 #otherSiteTools li a:focus {
-    color: #2E509D;
+    color: #0D1A37;
     font-weight: bold;
 }
 /* trigger that retrieves from entity broker the tool menu for a site in the "More sites" tray*/
@@ -711,7 +709,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     padding: 0 1px 0 0;
 }
 #siteHierarchy li a, #siteHierarchy li a:visited {
-    color: #2E509D;
+    color: #009DCE;
     font-size: 1.2em;
     text-decoration: none;
 }
@@ -739,34 +737,32 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     margin: 0;
     padding-right: 0;
     padding-left: 0;
-    border-top: 1px solid #fff;
 }
 /* list element wrapper for all links in the tool menu list, and subsites list */
 #toolMenu li, #subSites li {
     margin: 0;
     width: auto;
     padding: 0;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #ccc;
     text-align: right;
-    background: #00529B;
-    /* background: -moz-linear-gradient(top, #f3f3f3 0%, #e7e7e7 100%);
+    background: #f3f3f3;
+    background: -moz-linear-gradient(top, #f3f3f3 0%, #e7e7e7 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(100%,#e7e7e7));
     background: -webkit-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
     background: -o-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
     background: -ms-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
-    background: linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%); */
+    background: linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
 }
 /* the current tool */
 #toolMenu li.selectedTool a {
-    color: #00529B !important;
-    background: #fff;
-    font-weight: bold;
+    color: #0D1A37 !important;
     cursor: default;
+    font-weight: bold;
 }
 /* eliminate the normal hover effect when it is current tool */
 #toolMenu li.selectedTool a:hover {
-    background: #fff !important;
-    *background: #fff !important;
+    background: inherit !important;
+    *background: #f3f3f3 !important;
 }
 /* span holds the tool icon bkgnd image for left hand menu 
  * and "a" the icon for tool pull downs - here a default is provided */
@@ -790,7 +786,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 #toolMenu li a:link, #toolMenu li a, #subSites li a:link, #subSites li a {
     display: block;
     text-decoration: none;
-    color: #fff;
+    color: #444;
     padding: 7px 6px 6px;
     margin-bottom: 0px;
     margin-left: 0px;
@@ -800,14 +796,16 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 #toolMenu li a:hover, #subSites li a:hover, #toolMenu li a:focus, #subSites li a:focus {
     text-decoration: none;
-     background: #fff;
-    /* background: -moz-linear-gradient(top, #2E509D 0%, #416AC8 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2E509D), color-stop(100%,#416AC8));
-    background: -webkit-linear-gradient(top, #2E509D 0%,#416AC8 100%);
-    background: -o-linear-gradient(top, #2E509D 0%,#416AC8 100%);
-    background: -ms-linear-gradient(top, #2E509D 0%,#416AC8 100%);
-    background: linear-gradient(top, #2E509D 0%,#416AC8 100%); */
-    color: #00529B;
+    background: #0D1A37;
+/*
+    background: -moz-linear-gradient(top, #009DCE 0%, #007EA5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#009DCE), color-stop(100%,#007EA5));
+    background: -webkit-linear-gradient(top, #009DCE 0%,#007EA5 100%);
+    background: -o-linear-gradient(top, #009DCE 0%,#007EA5 100%);
+    background: -ms-linear-gradient(top, #009DCE 0%,#007EA5 100%);
+    background: linear-gradient(top, #009DCE 0%,#007EA5 100%);
+*/
+    color: #fff;
 }
 /* link in tool menu that allows adding one more tool, may be disabled */
 #toolMenu li.moreTools {
@@ -1352,7 +1350,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 /* list item when the user is an a chat room is a link to that chat room */
 .presenceList li a {
-    color: #2E509D;
+    color: #009DCE;
     text-decoration: none;
 }
 
