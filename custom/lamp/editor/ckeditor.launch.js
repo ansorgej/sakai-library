@@ -90,7 +90,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
                 : ['Image','Table','fmath_formula']),
             '/',
             ['Format','Font','FontSize'],
-            ['Maximize','Templates','-','Source']
+            ['Maximize','Templates','Symbol','-','Source']
         ],
         toolbar: 'Full',
         resize_dir: 'both'
@@ -136,6 +136,8 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
 		   CKEDITOR.plugins.addExternal('movieplayer',basePath+'movieplayer/', 'plugin.js'); 
 		   CKEDITOR.plugins.addExternal('wordcount',basePath+'wordcount/', 'plugin.js');
 		   CKEDITOR.plugins.addExternal('fmath_formula',basePath+'fmath_formula/', 'plugin.js');
+		   CKEDITOR.plugins.addExternal('symbol',basePath+'symbol/', 'plugin.js');
+		   CKEDITOR.plugins.addExternal('oembed',basePath+'oembed/', 'plugin.js');
 			 /*
 			  To enable after the deadline uncomment these two lines and add atd-ckeditor to toolbar
 			  and to extraPlugins. This also needs extra stylesheets.
@@ -145,7 +147,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
 			 */
 			 CKEDITOR.plugins.addExternal('atd-ckeditor',basePath+'atd-ckeditor/', 'plugin.js'); 
 			 ckconfig.atd_rpc='/proxy/atd';
-			 ckconfig.extraPlugins+="movieplayer,wordcount,atd-ckeditor,stylesheetparser,fmath_formula";
+			 ckconfig.extraPlugins+="movieplayer,wordcount,atd-ckeditor,stylesheetparser,fmath_formula,symbol,oembed";
 			 ckconfig.contentsCss = basePath+'/atd-ckeditor/atd.css';
 
 			 //ckconfig.extraPlugins+="movieplayer,wordcount";
