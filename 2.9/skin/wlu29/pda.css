@@ -40,20 +40,13 @@ html {
     font-size: 16px;
     font-family: Helvetica, Arial, sans-serif;
     width: 100%;
-    /* background: #009DCE;
+    background: #009DCE;
     background: -moz-linear-gradient(top, #009DCE 0%, #007EA5 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#009DCE), color-stop(100%,#007EA5));
     background: -webkit-linear-gradient(top, #009DCE 0%,#007EA5 100%);
     background: -o-linear-gradient(top, #009DCE 0%,#007EA5 100%);
     background: -ms-linear-gradient(top, #009DCE 0%,#007EA5 100%);
-    background: linear-gradient(top, #009DCE 0%,#007EA5 100%); */
-    background: #4B2B23;
-    background: -moz-linear-gradient(top, #4B2B23 0%, #6F4034 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4B2B23), color-stop(100%,#6F4034));
-    background: -webkit-linear-gradient(top, #4B2B23 0%, #6F4034 100%);
-    background: -o-linear-gradient(top, #4B2B23 0%, #6F4034 100%);
-    background: -ms-linear-gradient(top, #4B2B23 0%, #6F4034 100%);
-    background: linear-gradient(top, #4B2B23 0%, #6F4034 100%);
+    background: linear-gradient(top, #009DCE 0%,#007EA5 100%);
     list-style: none;
     color: #fff;
     margin: 0;
@@ -80,19 +73,19 @@ html {
     height: 32px;
 }
 #pda-portlet-menu li.backLink span {
-    background: url(images/pda-back-r.png) top right no-repeat;
+    background: url(images/pda-back-m.png) 0 0 repeat;
     display: block;
     height: 32px;
-    padding: 0 5px 0 0 !important;
+    padding: 0 !important;
     overflow: hidden;
 }
 #pda-portlet-menu a {
     text-decoration: none !important
 }
 #pda-portlet-menu li.backLink span a {
-    padding: 5px 5px 5px 5px !important;
+    padding: 5px 10px 5px 5px !important;
     display: block;
-    background: url(images/pda-back-m.png) top left repeat;
+    background: url(images/pda-back-r.png) top right no-repeat;
 }
 #pda-portlet-menu li.loginLink,#pda-portlet-menu li.logoutLink, #switch-link-w,.helpLink {
     background: rgb(0,157,206);
@@ -237,20 +230,13 @@ html {
 #pda-footer {
     padding: 3px;
     text-align: center;
-    /* background: #009DCE;
+    background: #009DCE;
     background: -moz-linear-gradient(top, #009DCE 0%, #007EA5 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#009DCE), color-stop(100%,#007EA5));
     background: -webkit-linear-gradient(top, #009DCE 0%,#007EA5 100%);
     background: -o-linear-gradient(top, #009DCE 0%,#007EA5 100%);
     background: -ms-linear-gradient(top, #009DCE 0%,#007EA5 100%);
-    background: linear-gradient(top, #009DCE 0%,#007EA5 100%); */
-    background: #4B2B23;
-    background: -moz-linear-gradient(top, #4B2B23 0%, #6F4034 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4B2B23), color-stop(100%,#6F4034));
-    background: -webkit-linear-gradient(top, #4B2B23 0%, #6F4034 100%);
-    background: -o-linear-gradient(top, #4B2B23 0%, #6F4034 100%);
-    background: -ms-linear-gradient(top, #4B2B23 0%, #6F4034 100%);
-    background: linear-gradient(top, #4B2B23 0%, #6F4034 100%);
+    background: linear-gradient(top, #009DCE 0%,#007EA5 100%);
     overflow: hidden;
 }
 .skip {
@@ -277,20 +263,13 @@ html {
     height: 38px;
     font-size: 14px !important;
     width: 100%;
-    /* background: #009DCE;
+    background: #009DCE;
     background: -moz-linear-gradient(top, #009DCE 0%, #007EA5 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#009DCE), color-stop(100%,#007EA5));
     background: -webkit-linear-gradient(top, #009DCE 0%,#007EA5 100%);
     background: -o-linear-gradient(top, #009DCE 0%,#007EA5 100%);
     background: -ms-linear-gradient(top, #009DCE 0%,#007EA5 100%);
-    background: linear-gradient(top, #009DCE 0%,#007EA5 100%); */
-    background: #4B2B23;
-    background: -moz-linear-gradient(top, #4B2B23 0%, #6F4034 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4B2B23), color-stop(100%,#6F4034));
-    background: -webkit-linear-gradient(top, #4B2B23 0%, #6F4034 100%);
-    background: -o-linear-gradient(top, #4B2B23 0%, #6F4034 100%);
-    background: -ms-linear-gradient(top, #4B2B23 0%, #6F4034 100%);
-    background: linear-gradient(top, #4B2B23 0%, #6F4034 100%);
+    background: linear-gradient(top, #009DCE 0%,#007EA5 100%);
     border-bottom: 1px solid #222;
     line-height: 23px;
 }
@@ -376,21 +355,13 @@ html {
 #pda-footer {
     padding: 2px;
     height: 100%;
-    /* background: #009DCE;
+    background: #009DCE;
     background: -moz-linear-gradient(top, #009DCE 0%, #007EA5 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#009DCE), color-stop(100%,#007EA5));
     background: -webkit-linear-gradient(top, #009DCE 0%,#007EA5 100%);
     background: -o-linear-gradient(top, #009DCE 0%,#007EA5 100%);
     background: -ms-linear-gradient(top, #009DCE 0%,#007EA5 100%);
-    background: linear-gradient(top, #009DCE 0%,#007EA5 100%); */
-
-    background: #4B2B23;
-    background: -moz-linear-gradient(top, #4B2B23 0%, #6F4034 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4B2B23), color-stop(100%,#6F4034));
-    background: -webkit-linear-gradient(top, #4B2B23 0%, #6F4034 100%);
-    background: -o-linear-gradient(top, #4B2B23 0%, #6F4034 100%);
-    background: -ms-linear-gradient(top, #4B2B23 0%, #6F4034 100%);
-    background: linear-gradient(top, #4B2B23 0%, #6F4034 100%);
+    background: linear-gradient(top, #009DCE 0%,#007EA5 100%);
     overflow: hidden;
 }
 .switch-link, .switch-link:visited {

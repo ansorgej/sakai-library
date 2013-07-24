@@ -141,7 +141,7 @@ in this skin is rendered via ul.topnav, which a anon user does not see)*/
     background-repeat: no-repeat;
     background-position: 8px 4px;
     float: left;
-    width: 310px;
+    width: 340px;
     height: 70px;
 }
 /* another container wrapping branding images - portal outputs one /library/skin/<skin name>/images/banner_inst.gif
