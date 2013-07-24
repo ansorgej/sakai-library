@@ -48,7 +48,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
     var country = sakai.locale && sakai.locale.userCountry || null;
 
     var ckconfig = {
-        skin: 'moono',
+        skin: 'moonocolor',
         defaultLanguage: 'en',
         language: language + (country ? '-' + country.toLowerCase() : ''),
         height: 310,
@@ -84,7 +84,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
             ['Font','FontSize'],
             ['Link','Unlink',],
             ['Image','-','Table','-','HorizontalRule','-','Symbol'],
-            ['Cut','Copy','Paste','PasteText'],['ckeditor_wiris_formulaEditor'],
+            ['Cut','Copy','Paste','PasteText'],['fmath_formula'],
             ['Source']
         ],
         toolbar: 'Full',
@@ -146,7 +146,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
 			 //ckconfig.extraPlugins+="movieplayer,wordcount,atd-ckeditor,stylesheetparser";
 			 //ckconfig.contentsCss = basePath+'/atd-ckeditor/atd.css';
 
-			 //ckconfig.extraPlugins+="fmath_formula";
+			 ckconfig.extraPlugins+="fmath_formula";
     })();
 
 	  CKEDITOR.replace(targetId, ckconfig);
