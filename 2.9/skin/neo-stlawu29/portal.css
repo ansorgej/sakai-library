@@ -181,7 +181,11 @@ that can be used or hidden,can also use a background: url(images/<image name>.<e
 */
 #mastLogin {
     float: right;
-    padding: 17px 10px 22px 10px;
+    position: absolute;   
+    top: 25px;
+    right: 15px;
+    width: 340px;
+    height: 40px;
 }
 /* #mastLogin #loginForm is the form for login - contains children #eid #pw #submit as well as labels for these inputs*/
 #loginForm {
@@ -348,7 +352,7 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
 /* #mastLogin can also contain controls to toggle in/out of different roles #roleSwitch is the container for: a selct menu, links */
 #roleSwitch {
     float: left;
-    padding: 0 5px;
+    padding: 8px 5px 0;
 }
 #roleSwitch select {
     font-size: 0.9em;
@@ -492,7 +496,7 @@ ul.topnav li ul.subnav {
     background: #f3f3f3;
     font-size: .9em;
     /*margin: 20px 0 0 0;*/
-    top: 115px;
+    top: 30px;
     padding: 0 !important;
     display: none;
     float: left;
