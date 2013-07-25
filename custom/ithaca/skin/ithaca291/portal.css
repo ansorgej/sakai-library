@@ -337,10 +337,10 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
  * if you do not have a logo you can eliminate it to save some room */
 #linkNav ul.topnav {
     list-style: none;
-    padding: 8px 0 5px 225px; /* matches the width of the toolMenu*/
+    padding: 8px 0 5px 233px; /* matches the width of the toolMenu*/
     margin: 0;
     width: 100%;
-    background: transparent url(images/IC_Primary_White.png) 8px 8px no-repeat;
+    background: transparent url(images/IC_Primary_White.png) 18px 8px no-repeat;
 }
 /* the individual containers for the site links, tool menu control, tool menu*/
 ul.topnav li {
