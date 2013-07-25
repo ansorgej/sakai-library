@@ -143,7 +143,7 @@ div#portalContainer {
     clear: both;
     display: block;
     background: none repeat scroll 0 0;
-    height: 40px;
+    height: 70px;
 }
 /* container wrapping branding images - portal outputs one /library/skin/<skin name>/images/logo_inst.gif
 that can be used or hidden,can also use a background: url(images/<image name>.<ext>) in this block,or both superimposing them  */
@@ -167,9 +167,9 @@ in this skin is rendered via ul.topnav, which a anon user does not see)*/
 /* another container wrapping branding images - portal outputs one /library/skin/<skin name>/images/banner_inst.gif
 that can be used or hidden,can also use a background: url(images/<image name>.<ext>) in this block,or both superimposing them  */
 #mastBanner {
-    background: url("images/logo_inst.png") no-repeat scroll 0 0 transparent;
+    background: url("images/logo_inst.png") no-repeat scroll 15px 15px transparent;
     float: left;
-    height: 55px;
+    height: 85px;
     width: 390px;
 }
 #mastBanner img {
