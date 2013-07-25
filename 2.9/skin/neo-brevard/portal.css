@@ -31,7 +31,7 @@ body.portalBody {
     text-align: right;
     padding: 0;
     border: 1px solid #ccc;
-    border-width: 0 1px 1px 0;
+    border-width: 1px 1px 1px 0;
     -moz-border-radius: 0 0 5px 0;
     -webkit-border-radius: 0 0 5px 0;
     border-radius: 0 0 5px 0;
@@ -96,14 +96,14 @@ body.portalBody {
 
 /* PART 2 - HEADER BLOCKS (BRANDING,LOGIN) */
 #headerMax, #headerMin {
-    background: #fff;
-    /* background: -moz-linear-gradient(top, #009DCE 0%, #007EA5 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#009DCE), color-stop(100%,#007EA5));
-    background: -webkit-linear-gradient(top, #009DCE 0%,#007EA5 100%);
-    background: -o-linear-gradient(top, #009DCE 0%,#007EA5 100%);
-    background: -ms-linear-gradient(top, #009DCE 0%,#007EA5 100%);
-    background: linear-gradient(top, #009DCE 0%,#007EA5 100%); */
-    border-bottom: 1px solid #007194;
+    background: #001642;
+    background: -moz-linear-gradient(top, #001642 0%, #00319E 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#001642), color-stop(100%,#00319E));
+    background: -webkit-linear-gradient(top, #001642 0%,#00319E 100%);
+    background: -o-linear-gradient(top, #001642 0%,#00319E 100%);
+    background: -ms-linear-gradient(top, #001642 0%,#00319E 100%);
+    background: linear-gradient(top, #001642 0%,#00319E 100%); 
+    border-bottom: 1px solid #00319E;
 }
 #headerMin {
     overflow: hidden;
@@ -329,11 +329,11 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
  * if you do not have a logo you can eliminate it to save some room */
 #linkNav ul.topnav {
     list-style: none;
-    padding: 8px 0 5px 285px; /* matches the width of the toolMenu*/
+    padding: 15px 0 5px 160px; /* matches the width of the toolMenu*/
     margin: 0;
     width: 100%;
     min-height: 70px;
-    background: transparent url(images/logo_inst.gif) 0 0  no-repeat;
+    background: transparent url(images/logo_inst.gif) 5px 5px  no-repeat;
 }
 /* the individual containers for the site links, tool menu control, tool menu*/
 ul.topnav li {
@@ -345,18 +345,21 @@ ul.topnav li {
     padding: 0;
     position: relative; /*--Declare X and Y axis base for sub navigation--*/
     font-weight: bold;
-    border: 1px solid #fff;
+    border: 1px solid transparent;
+/*
     background: #00569D;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
+*/
 }
 /* hover treatment for site links*/
 ul.topnav li.nav-menu:hover, ul.topnav li.more-tab:hover {
-    border: 1px solid #005A76;
+    border: 1px solid #FFF;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
+    background: #E85100;
 }
 /* current site control rendering */
  ul.topnav li.nav-selected {
@@ -367,7 +370,7 @@ ul.topnav li.nav-menu:hover, ul.topnav li.more-tab:hover {
     background: -o-linear-gradient(top, #008DB9 0%,#007194 100%);
     background: -ms-linear-gradient(top, #008DB9 0%,#007194 100%);
     background: linear-gradient(top, #008DB9 0%,#007194 100%); */
-    border: 1px solid #5E663A;
+    border: 1px solid #FFF;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
@@ -572,7 +575,7 @@ ul.otherSitesCategorList {
  *  ul.otherSitesCategorList. This last one will appear once per each category
  */
 ul#otherSiteList li, ul.otherSitesCategorList li {
-    background: #00569D;
+    background: #00319E;
     /* background: -moz-linear-gradient(top, #009DCE 0%, #007EA5 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#009DCE), color-stop(100%,#007EA5));
     background: -webkit-linear-gradient(top, #009DCE 0%,#007EA5 100%);
@@ -727,33 +730,46 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     margin: 0;
     width: auto;
     padding: 0;
-    border-bottom: 1px solid #ccc;
-    text-align: right;
-    background: #f3f3f3;
+    border-bottom: 1px solid #FFF;
+    text-align: left;
+    background: #3A4F11;
+
+/*
     background: -moz-linear-gradient(top, #f3f3f3 0%, #e7e7e7 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(100%,#e7e7e7));
     background: -webkit-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
     background: -o-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
     background: -ms-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
     background: linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
+*/
 }
+
+#toolMenu li.selectedTool{
+	background: #00319E;
+}
+
+#toolMenu li:hover{
+    background: #E85100 !important;
+}
+
 /* the current tool */
 #toolMenu li.selectedTool a {
-    color: #5E663A !important;
-    font-weight: bold;
+    color: #FFF !important;
+    /*font-weight: bold;*/
     cursor: default;
 }
-/* eliminate the normal hover effect when it is current tool */
+/* eliminate the normal hover effect when it is current tool 
 #toolMenu li.selectedTool a:hover {
     background: inherit !important;
-    *background: #f3f3f3 !important;
+    *background: #E85100 !important;
 }
+*/
 /* span holds the tool icon bkgnd image - here a default is provided */
 #toolMenu li span, #subSites li span {
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: left;
     background-image: url(../../image/silk/application.png);
-    padding-right: 22px;
+    padding-left: 22px;
     line-height: 1.4;
 }
 /* adjusting rendering of last item in the tool menu */
@@ -769,7 +785,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 #toolMenu li a:link, #toolMenu li a, #subSites li a:link, #subSites li a {
     display: block;
     text-decoration: none;
-    color: #444;
+    color: #FFF;
     padding: 7px 6px 6px;
     margin-bottom: 0px;
     margin-left: 0px;
@@ -779,7 +795,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 #toolMenu li a:hover, #subSites li a:hover, #toolMenu li a:focus, #subSites li a:focus {
     text-decoration: none;
-    background: #5E663A;
+    background: #E85100;
     /* background: -moz-linear-gradient(top, #009DCE 0%, #007EA5 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#009DCE), color-stop(100%,#007EA5));
     background: -webkit-linear-gradient(top, #009DCE 0%,#007EA5 100%);
@@ -1559,6 +1575,7 @@ everything except the tool icon is gone it is still distincts as the current too
     background: -o-linear-gradient(top, #9cd1e8 0%,#7bc1e1 100%);
     background: -ms-linear-gradient(top, #9cd1e8 0%,#7bc1e1 100%);
     background: linear-gradient(top, #9cd1e8 0%,#7bc1e1 100%);
+
 }
 .sakaiMinimizePageNavigation #togglebar {
     padding-left: 0em;
