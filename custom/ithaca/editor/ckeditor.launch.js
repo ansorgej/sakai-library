@@ -51,7 +51,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
         skin: 'moonocolor',
         defaultLanguage: 'en',
         language: language + (country ? '-' + country.toLowerCase() : ''),
-        height: 310,
+        height: 300,
         fileConnectorUrl : '/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + collectionId + '?' + folder,
 
         filebrowserBrowseUrl :'/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + collectionId + '&' + folder,
@@ -73,19 +73,14 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
         ],
         toolbar_Full:
         [
-            ['Source','-','Templates'],
-            // Uncomment the next line and comment the following to enable the default spell checker.
-            // Note that it uses spellchecker.net, displays ads and sends content to remote servers without additional setup.
+            ['Source'],['Print', 'PasteText', 'PasteFromWord', 'Scayt'],
             //['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print', 'SpellChecker', 'Scayt'],
-            ['Bold','Italic','Underline','-','Strike','Subscript','Superscript'],['TextColor','BGColor'],
-            ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote','-','RemoveFormat'],
+            ['Bold','Italic','Underline','Strike','-','RemoveFormat'],
+            ['NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote'],
             ['JustifyLeft','JustifyCenter','JustifyRight'],
             '/',
-            ['Font','FontSize'],
-            ['Link','Unlink',],
-            ['Image','-','Table','-','HorizontalRule','-','Symbol'],
-            ['Cut','Copy','Paste','PasteText'],['fmath_formula'],
-            ['Source']
+            ['Link','Unlink','-','Image'],['Table','HorizontalRule'],['fmath_formula'],
+            ['Format','Font','FontSize','TextColor','BGColor']
         ],
         toolbar: 'Full',
         resize_dir: 'both',

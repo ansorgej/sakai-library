@@ -50,7 +50,7 @@ body.portalBody {
 }
 #col1of2 .portletTitleWrap, #col2of2 .portletTitleWrap {
     width: 98.5%;
-    border-bottom: 2px solid #FFB700;
+    border-bottom: 2px solid #d7e2ea;
 }
 #col1of2 .portletMainWrap, #col2of2 .portletMainWrap {
     width: 98.5%;
@@ -58,7 +58,7 @@ body.portalBody {
 }
 #col1 .portletTitleWrap {
     width: 99%;
-    border-bottom: 2px solid #FFB700 !important;
+    border-bottom: 2px solid #d7e2ea !important;
 }
 #col1 .portletMainWrap {
     width: 99%
@@ -103,7 +103,7 @@ body.portalBody {
     background: -o-linear-gradient(top, #145774 0%,#033357 100%);
     background: -ms-linear-gradient(top, #145774 0%,#033357 100%);
     background: linear-gradient(top, #145774 0%,#033357 100%); 
-    border-bottom: 1px solid #007194;
+    border-bottom: 1px solid #033357;
 }
 #headerMin {
     overflow: hidden;
@@ -211,7 +211,7 @@ guests, for example */
     background: -o-linear-gradient(top, #7EA5BF 0%,#3277A0 100%);
     background: -ms-linear-gradient(top, #7EA5BF 0%,#3277A0 100%);
     background: linear-gradient(top, #7EA5BF 0%,#3277A0 100%); */
-    border: 1px solid #00467F;
+    border: 1px solid #7B909E;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
@@ -351,7 +351,7 @@ ul.topnav li {
     margin: 0 5px 0 0;
     padding: 0;
     position: relative; /*--Declare X and Y axis base for sub navigation--*/
-    font-weight: bold;
+    font-weight: 500;
     border: 1px solid transparent;
 }
 /* hover treatment for site links*/
@@ -370,7 +370,7 @@ ul.topnav li.nav-menu:hover, ul.topnav li.more-tab:hover {
     background: -o-linear-gradient(top, #7EA5BF 0%,#3277A0 100%);
     background: -ms-linear-gradient(top, #7EA5BF 0%,#3277A0 100%);
     background: linear-gradient(top, #7EA5BF 0%,#3277A0 100%); */
-    border: 1px solid #00467F;
+    border: 1px solid #7B909E;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
@@ -588,11 +588,11 @@ ul#otherSiteList li, ul.otherSitesCategorList li {
     background: -o-linear-gradient(top, #7EA5BF 0%,#3277A0 100%);
     background: -ms-linear-gradient(top, #7EA5BF 0%,#3277A0 100%);
     background: linear-gradient(top, #7EA5BF 0%,#3277A0 100%); */
-    border: 1px solid #00467F;
+    border: 1px solid #7B909E;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    font-weight: bold;
+    font-weight: 500;
     position: relative;
     overflow: hidden;
     margin: 6px 6px 0 0;; /*Note: check uncategorized */
@@ -750,14 +750,14 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 #toolMenu li.selectedTool a {
     /* color: #013158 !important; */
     cursor: default;
-    background: #7EA5BF;
-    background: -moz-linear-gradient(top, #7EA5BF 0%, #3277A0 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7EA5BF), color-stop(100%,#3277A0));
-    background: -webkit-linear-gradient(top, #7EA5BF 0%,#3277A0 100%);
-    background: -o-linear-gradient(top, #7EA5BF 0%,#3277A0 100%);
-    background: -ms-linear-gradient(top, #7EA5BF 0%,#3277A0 100%);
-    background: linear-gradient(top, #7EA5BF 0%,#3277A0 100%); 
-    color: #fff;
+    background: #d7e2ea;
+    background: -moz-linear-gradient(top, #d7e2ea 0%, #c8d7df 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d7e2ea), color-stop(100%,#c8d7df));
+    background: -webkit-linear-gradient(top, #d7e2ea 0%,#c8d7df 100%);
+    background: -o-linear-gradient(top, #d7e2ea 0%,#c8d7df 100%);
+    background: -ms-linear-gradient(top, #d7e2ea 0%,#c8d7df 100%);
+    background: linear-gradient(top, #d7e2ea 0%,#c8d7df 100%);
+    color: #069;
 }
 /* eliminate the normal hover effect when it is current tool */
 /* #toolMenu li.selectedTool a:hover {
@@ -795,14 +795,14 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 #toolMenu li a:hover, #subSites li a:hover, #toolMenu li a:focus, #subSites li a:focus {
     text-decoration: none;
-    background: #7EA5BF;
-    background: -moz-linear-gradient(top, #7EA5BF 0%, #3277A0 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7EA5BF), color-stop(100%,#3277A0));
-    background: -webkit-linear-gradient(top, #7EA5BF 0%,#3277A0 100%);
-    background: -o-linear-gradient(top, #7EA5BF 0%,#3277A0 100%);
-    background: -ms-linear-gradient(top, #7EA5BF 0%,#3277A0 100%);
-    background: linear-gradient(top, #7EA5BF 0%,#3277A0 100%); 
-    color: #fff;
+    background: #d7e2ea;
+    background: -moz-linear-gradient(top, #d7e2ea 0%, #c8d7df 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d7e2ea), color-stop(100%,#c8d7df));
+    background: -webkit-linear-gradient(top, #d7e2ea 0%,#c8d7df 100%);
+    background: -o-linear-gradient(top, #d7e2ea 0%,#c8d7df 100%);
+    background: -ms-linear-gradient(top, #d7e2ea 0%,#c8d7df 100%);
+    background: linear-gradient(top, #d7e2ea 0%,#c8d7df 100%);
+    color: #069;
 }
 /* link in tool menu that allows adding one more tool, may be disabled */
 #toolMenu li.moreTools {

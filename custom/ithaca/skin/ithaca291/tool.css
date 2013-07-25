@@ -317,7 +317,7 @@ table.calendar .event {
     font-weight: bold !important;
 }
 .listHier th a:hover {
-    color: #009DCE
+    color: #d7e2ea
 }
 /* skinned cell of standard tab. data table */
 .listHier td {
@@ -629,7 +629,7 @@ ul.navIntraTool>li>span.separator, .navIntraTool>li>span:empty, span.navSeparato
     min-height: 15px;
     margin-left: 5px !important;
     padding: 1px !important;
-    background: #009DCE;
+    background: #d7e2ea;
     border: 2px solid white !important;
     border-radius: 20pt;
     color: #fff !important;
@@ -707,7 +707,7 @@ ul.navIntraTool>li>span.separator, .navIntraTool>li>span:empty, span.navSeparato
 }
 .neoPortletTitleWrap {
     width: 99%;
-    border-bottom: 2px solid #009DCE;
+    border-bottom: 2px solid #d7e2ea;
     border-radius: 3px;
 }
 /* SECTION 9 MESSAGES */
@@ -1136,7 +1136,7 @@ ul.makeMenu li.menuClose a:hover {
 /* ===[ Lessons ]=== */
 .lessonsHeader {
     width: 99%;
-    border-bottom: 2px solid #009DCE !important;
+    border-bottom: 2px solid #d7e2ea !important;
     border-radius: 3px !important;
     height: 25px;
 }
