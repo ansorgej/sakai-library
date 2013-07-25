@@ -187,6 +187,9 @@ that can be used or hidden,can also use a background: url(images/<image name>.<e
     width: 340px;
     height: 40px;
 }
+#headerMin #mastLogin {
+    width: 440px;
+}
 /* #mastLogin #loginForm is the form for login - contains children #eid #pw #submit as well as labels for these inputs*/
 #loginForm {
     color: #fff;
