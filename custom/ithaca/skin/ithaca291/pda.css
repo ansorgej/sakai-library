@@ -770,7 +770,10 @@ background-image: url(../../image/silk/comment.png);
     background-image: url(../../image/silk/drive_user.png);
 }
 .icon-sakai-motd {
-    background-image: url(../../image/silk/house.png);
+    background-image: url(../../image/silk/information.png);
+}
+.icon-sakai-turningtool {
+    background-image: url(../../image/silk/calculator.png);
 }
 .icon-sakai-sitebrowser {
     background-image: url(../../image/silk/world.png);
