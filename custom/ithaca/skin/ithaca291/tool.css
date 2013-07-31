@@ -1229,3 +1229,13 @@ input[type="checkbox"][disabled="disabled"], input[type="checkbox"][disabled="tr
 .listNav input[type="submit"], .listNav input[type="button"] {
     height: 20px !important
 }
+
+div.tier1 div:first-child img {
+  margin-left: 5px;
+}
+div.tier1 div:first-child a {
+  margin-left: 20px;
+}
+div.tier1 > div[align=right] a {
+  margin-right: 18px;
+}
