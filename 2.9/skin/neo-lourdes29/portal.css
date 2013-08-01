@@ -55,7 +55,7 @@ body.portalBody {
 }
 #col1of2 .portletTitleWrap, #col2of2 .portletTitleWrap {
     width: 98.5%;
-    border-bottom: 2px solid #009DCE;
+    border-bottom: 2px solid #5568B4;
 }
 #col1of2 .portletMainWrap, #col2of2 .portletMainWrap {
     width: 98.5%;
@@ -63,7 +63,7 @@ body.portalBody {
 }
 #col1 .portletTitleWrap {
     width: 99%;
-    border-bottom: 2px solid #009DCE !important;
+    border-bottom: 2px solid #5568B4 !important;
 }
 #col1 .portletMainWrap {
     width: 99%
@@ -665,7 +665,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     display: block;
 }
 #otherSiteTools li a:focus {
-    color: #009DCE;
+    color: #5568B4;
 }
 /* trigger that retrieves from entity broker the tool menu for a site in the "More sites" tray*/
 .toolMenus {
@@ -706,7 +706,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     padding: 0 1px 0 0;
 }
 #siteHierarchy li a, #siteHierarchy li a:visited {
-    color: #009DCE;
+    color: #5568B4;
     font-size: 1.2em;
     text-decoration: none;
 }
@@ -755,7 +755,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 /* the current tool */
 #toolMenu li.selectedTool a {
-    color: #009DCE !important;
+    color: #5568B4 !important;
     cursor: default;
 }
 /* eliminate the normal hover effect when it is current tool */
@@ -1347,7 +1347,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 /* list item when the user is an a chat room is a link to that chat room */
 .presenceList li a {
-    color: #009DCE;
+    color: #5568B4;
     text-decoration: none;
 }
 
