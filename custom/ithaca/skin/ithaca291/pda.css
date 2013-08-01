@@ -64,16 +64,17 @@ html {
     text-shadow: rgba(0, 0, 0, 0.597656) 0px -1px 0px;
 }
 #pda-portlet-menu li:first-child { 
-  padding-left: 85px;
-  background: url(images/sakai_mobile_logo.gif) -3px -6px no-repeat;
+  padding-left: 30px;
+  background: url(images/ICWhiteShield.png) 5px 0 no-repeat;
 }
 #pda-portlet-menu li.sitesLink {
-  padding-left: 80px !important;
-  background-position: -3px -6px;
+  padding-left: 30px !important;
+  background-position: 5px 5px;
 }
 
 #pda-portlet-menu li.instanceNote {
     padding-top: 7px;
+    background-position: 5px 5px;
 }
 #pda-portlet-menu li.backLink {
     /* background: url(images/pda-back-l.png) 0 0 no-repeat; */
