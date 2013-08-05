@@ -740,7 +740,8 @@ ul.navIntraTool>li>span.separator, .navIntraTool>li>span:empty, span.navSeparato
     float: left;
     border-top: 3px solid #fff;
 }
-/* the required marker for a longtext label/input pair */
+/* the required marker for a 
+text label/input pair */
 /* see: create any item with a textarea */
 .longtext .reqStar {
     color: #006699;
@@ -1009,7 +1010,7 @@ table.login td.form form table.loginform input.loginsubmit {
     border: 1px solid black;
 }
 .login th {
-    background: #333 url(images/logo_longsight_white5.png) 2px 8px no-repeat;
+    background: #333 url(images/logo_new.png) 2px 8px no-repeat;
     border: 1px solid #000;
     height: 50px;
     text-align: right;
