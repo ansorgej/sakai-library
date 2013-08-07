@@ -192,6 +192,9 @@ guests, for example */
 }
 #loginLink2 {
     margin: 0 5px;
+	box-shadow: none;
+    color: white;
+    text-shadow: none;
 }
 /* main rendering for all links and the submit button */
 #loginLink1, #loginLink2, form#loginForm input#submit {
