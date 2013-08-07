@@ -190,7 +190,7 @@ guests, for example */
     text-decoration: none;
     margin-top: -4px !important;
 }
-#loginLink2 {
+#loginLinks #loginLink2 {
     margin: 0 5px;
 	box-shadow: none;
     color: white;
