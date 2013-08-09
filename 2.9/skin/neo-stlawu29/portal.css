@@ -131,6 +131,7 @@ div#portalContainer {
 }
 #headerMin {
     overflow: hidden;
+    height: 95px;
 }
 /* outermost block containing mast head elements and site navigation. Block also has a class = site type name, in case you need to 
  * do something special to either mast head elements or site navigation depending on the site type (i.e. a site type='collab') may get a banner with a 
