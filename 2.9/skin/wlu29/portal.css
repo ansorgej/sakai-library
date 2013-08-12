@@ -1208,6 +1208,9 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 .icon-sakai-iclicker, .icon-sakai-turningtool {
     background-image: url(../../image/silk/calculator.png) !important
 }
+.icon-sakai-tegritylink {
+    background-image: url(../../image/silk/television.png) !important
+}
 .icon-sakai-bbb, .icon-sakai-rutgers-connect, .icon-portlet-\/sakai-elluminate-tool-sakai-elluminate {
     background-image: url(../../image/silk/group.png) !important
 }
