@@ -15,7 +15,7 @@ hr.itemSeparator {
 }
 /* SECTION 2 LINKS */
 a:link {
-    color: #0064cd;
+    color: #00447b;
     text-decoration: underline;
 }
 a:visited {
@@ -40,7 +40,7 @@ table.calendar td a:hover {
 /* some links are jscripted so the href is the same - cannot provide visited functionality - so make both the same */
 /* see: list of assignments - the cells are classed with "specialLink" */
 .specialLink a:link, .specialLink a:visited {
-    color: #0064cd;
+    color: #00447b;
     text-decoration: none;
 }
 .specialLink a:hover {
@@ -570,7 +570,7 @@ Turns the old links into buttons. The many different ways the tools have impleme
     background: -o-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%) !important;
     background: -ms-linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%) !important;
     background: linear-gradient(top, #f7f7f7 0%,#e7e7e7 100%) !important; */
-    background: #069;
+    background: #00457c;
     color: #fff;
     box-shadow: 0 0 5px rgba(200, 200, 200, .2);
 }

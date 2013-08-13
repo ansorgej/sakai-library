@@ -55,7 +55,7 @@ body.portalBody {
 }
 #col1of2 .portletTitleWrap, #col2of2 .portletTitleWrap {
     width: 98.5%;
-    border-bottom: 2px solid #009DCE;
+    border-bottom: 2px solid #00447b;
 }
 #col1of2 .portletMainWrap, #col2of2 .portletMainWrap {
     width: 98.5%;
@@ -63,7 +63,7 @@ body.portalBody {
 }
 #col1 .portletTitleWrap {
     width: 99%;
-    border-bottom: 2px solid #009DCE !important;
+    border-bottom: 2px solid #00447b !important;
 }
 #col1 .portletMainWrap {
     width: 99%
@@ -356,8 +356,8 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
     padding: 5px 0 5px 5px; /* matches the width of the toolMenu*/
     margin: 0;
     width: 100%;
-    background: #003 0 0 no-repeat;
-    border-top: #de5d22 solid 3px;
+    background: #002947 0 0 no-repeat;
+    border-top: #de5d22 solid 2px;
 }
 /* the individual containers for the site links, tool menu control, tool menu*/
 ul.topnav li {
@@ -369,7 +369,7 @@ ul.topnav li {
     padding: 0;
     position: relative; /*--Declare X and Y axis base for sub navigation--*/
     font-weight: bold;
-    border: 1px solid #333;
+    border: 1px solid #777;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
@@ -732,7 +732,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     padding: 0 1px 0 0;
 }
 #siteHierarchy li a, #siteHierarchy li a:visited {
-    color: #009DCE;
+    color: #00447b;
     font-size: 1.2em;
     text-decoration: none;
 }
@@ -778,12 +778,14 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 /* the current tool */
 #toolMenu li.selectedTool a {
-    color: #6385A4 !important;
+    color: #000000 !important;
     cursor: default;
+	font-weight: bold;
+	background: #ffffff;
 }
 /* eliminate the normal hover effect when it is current tool */
 #toolMenu li.selectedTool a:hover {
-    background: inherit !important;
+    background: #ffffff !important;
     *background: #f3f3f3 !important;
 }
 /* span holds the tool icon bkgnd image for left hand menu 
@@ -970,13 +972,13 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     display: inline;
     margin: 0;
     padding: 0;
-    color: #444;
+    color: #00457c;
     font-weight: bold;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 1.2em !important;
 }
 .portletTitle .title h2 .siteTitle {
-    color: #333
+    color: #888;
 }
 .portletTitle .title a {
     background: url(images/reload.gif) center left no-repeat;
@@ -1768,6 +1770,6 @@ a.qtipLinkButton:hover {
 }
 
 div#toolMenu ul li a[title='For showing worksite information and site participants'] {
-    background-color: #EE9152;
+    background-color: #de5d22;
     color: #fff;
 }
