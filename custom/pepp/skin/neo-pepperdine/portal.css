@@ -978,7 +978,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     font-size: 1.2em !important;
 }
 .portletTitle .title h2 .siteTitle {
-    color: #888;
+    display:none;
 }
 .portletTitle .title a {
     background: url(images/reload.gif) center left no-repeat;
