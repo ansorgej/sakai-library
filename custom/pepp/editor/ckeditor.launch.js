@@ -67,6 +67,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
         disableNativeSpellChecker: false,
         browserContextMenuOnCtrl: true,
 
+        toolbarCanCollapse: false,
         toolbar_Basic:
         [
             ['Source', '-', 'Bold', 'Italic', 'Link', 'Unlink']
@@ -95,7 +96,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
             ['Maximize', 'ShowBlocks']
         ],
         toolbar: 'Full',
-        resize_dir: 'vertical',
+        resize_dir: 'both',
         //SAK-23418
         pasteFromWordRemoveFontStyles : false,
         pasteFromWordRemoveStyles : false
