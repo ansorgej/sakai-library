@@ -103,7 +103,7 @@ body.portalBody {
     background: -o-linear-gradient(top, #009DCE 0%,#007EA5 100%);
     background: -ms-linear-gradient(top, #009DCE 0%,#007EA5 100%);
     background: linear-gradient(top, #009DCE 0%,#007EA5 100%); */
-    border-bottom: 1px solid #007194;
+    /* border-bottom: 1px solid #007194; */
 }
 #headerMin {
     overflow: hidden;
@@ -332,6 +332,7 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
     padding: 8px 0 5px 285px; /* matches the width of the toolMenu*/
     margin: 0;
     width: 100%;
+    min-height: 80px;
     background: transparent url(images/CorinthRC_logotypeWHITE-01.png) 8px 4px no-repeat;
 }
 /* the individual containers for the site links, tool menu control, tool menu*/
@@ -351,7 +352,7 @@ ul.topnav li {
     background: -o-linear-gradient(top, #6D6E70 0%, #231F20 100%);
     background: -ms-linear-gradient(top, #6D6E70 0%, #231F20 100%);
     background: linear-gradient(top, #6D6E70 0%, #231F20 100%);
-    border: 1px solid transparent;
+    /* border: 1px solid transparent; */
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
@@ -371,7 +372,7 @@ ul.topnav li.nav-menu:hover, ul.topnav li.more-tab:hover {
     background: -o-linear-gradient(top, #29ABE2 0%,#0E6385 100%);
     background: -ms-linear-gradient(top, #29ABE2 0%,#0E6385 100%);
     background: linear-gradient(top, #29ABE2 0%,#0E6385 100%);
-    border: 1px solid transparent;
+    /* border: 1px solid transparent; */
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
@@ -731,7 +732,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     margin: 0;
     width: auto;
     padding: 0;
-    border-bottom: 1px solid #ccc;
+    /* border-bottom: 1px solid #ccc; */
     text-align: left;
     background: #6D6E70;
     /* background: -moz-linear-gradient(top, #f3f3f3 0%, #e7e7e7 100%);
