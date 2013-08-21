@@ -400,7 +400,7 @@ in constructing menu for user links in #mastLogin, as well as the submenus for t
 ul.topnav li ul.subnav, #mastLogin ul.subnav, #otherSiteTools {
     list-style: none;
     position: absolute;
-    top: 94px;
+    top: 30px;
     background: #f3f3f3;
     font-size: .9em;
     margin: 0;
@@ -415,6 +415,11 @@ ul.topnav li ul.subnav, #mastLogin ul.subnav, #otherSiteTools {
     -webkit-box-shadow: 0 0 8px #444;
     box-shadow: 0 0 8px #444;
 }
+
+#mastLogin ul.subnav{
+    top: 96px !important;
+}
+
 /* each tool in the above menu as well as the one on #mastLogin and the submenus in the other sites tray */
 ul.topnav li ul.subnav li, #mastLogin ul.subnav li, .otherSiteTool {
     background: #f3f3f3;
