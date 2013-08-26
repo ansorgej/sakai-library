@@ -26,17 +26,31 @@ sakai.editor.editors = sakai.editor.editors || {};
 sakai.editor.editors.ckeditor = {};
 sakai.editor.editors.ckeditor.launch = function(targetId, config) {
     var folder = "";
-    if (sakai.editor.collectionId) {
-        folder = "&CurrentFolder=" + sakai.editor.collectionId;
+
+    var collectionId = "";
+    if (config != null && config.collectionId) {
+        collectionId=config.collectionId;
     }
+    else if (sakai.editor.collectionId) {
+        collectionId=sakai.editor.collectionId
+    }
+
+    if (collectionId) {
+        folder = "CurrentFolder=" + collectionId
+    }
+
     CKEDITOR.replace(targetId, {
         skin: 'v2',
         height: 310,
         enterMode : CKEDITOR.ENTER_BR,
-        filebrowserBrowseUrl :'/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + folder,
-        filebrowserImageBrowseUrl : '/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Type=Image&Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + folder,
-        filebrowserFlashBrowseUrl :'/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Type=Flash&Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + folder,
-        extraPlugins: (sakai.editor.enableResourceSearch ? 'resourcesearch,' : '') + 'ckeditor_wiris,wordcount,atd-ckeditor',
+        fileConnectorUrl : '/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + collectionId + '?' + folder,
+        //filebrowserBrowseUrl :'/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + folder,
+        //filebrowserImageBrowseUrl : '/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Type=Image&Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + folder,
+        //filebrowserFlashBrowseUrl :'/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Type=Flash&Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + folder,
+        filebrowserBrowseUrl :'/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + collectionId + '&' + folder,
+        filebrowserImageBrowseUrl : '/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Type=Image&Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + collectionId + '&' + folder,
+        filebrowserFlashBrowseUrl :'/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Type=Flash&Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + collectionId + '&' + folder,
+        extraPlugins: (sakai.editor.enableResourceSearch ? 'resourcesearch,' : '') + 'fmath_formula,wordcount,atd-ckeditor',
 	atd_rpc: '/proxy/atd',
 
         // These two settings enable the browser's native spell checking and context menus.
@@ -65,7 +79,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config) {
             '/',
             ['Format','Font','FontSize'],
             ['TextColor','BGColor'],
-            ['Maximize', '-','ckeditor_wiris_formulaEditor']
+            ['Maximize', '-', 'fmath_formula']
         ],
         resize_dir: 'vertical'
     });
