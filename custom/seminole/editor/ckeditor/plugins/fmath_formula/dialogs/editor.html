@@ -92,7 +92,7 @@
 			var mathml = getMathMLFromEditor();
 			var newId = parent.CKEDITOR.plugins.get('fmath_formula').addMathML(mathml);
 
-            ed.insertHtml("<img src='"+name+"' border='0' id='"+newId+"' data-mathml='" + escape(mathml) + "' />");
+            ed.insertHtml("<img src='"+name+"' border='0' id='"+newId+"' alt='" + escape(mathml) + "' />");
 
 
 			var dialog = parent.CKEDITOR.dialog.getCurrent();

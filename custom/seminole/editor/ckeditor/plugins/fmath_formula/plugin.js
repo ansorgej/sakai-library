@@ -41,7 +41,7 @@
 				
 				if(element!=null){
 					var id = element.getAttribute("id");
-                    var ml = element.getAttribute("data-mathml");
+                    var ml = element.getAttribute("alt");
 					if(id!=null && id.indexOf("MathMLEq")>=0){
 						fmath_currentElement = id;
                         if (ml!=null) {
