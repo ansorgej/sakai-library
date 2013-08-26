@@ -328,7 +328,7 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
     list-style: none;
     padding: 8px 0 5px 5px; /* matches the width of the toolMenu*/
     margin: 0;
-    width: 100%;
+    width: 96%;
 }
 /* the individual containers for the site links, tool menu control, tool menu*/
 ul.topnav li {
