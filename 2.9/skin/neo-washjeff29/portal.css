@@ -348,7 +348,7 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
 }
 #roleSwitch label, #roleSwitch a#roleSwitchAnchor {
     text-decoration: none;
-    color: #fff;
+    color: #000;
     padding: 0 5px;
 }
 /* PART 3 - SITE NAVIGATION - children of #siteNavWrapper
