@@ -333,7 +333,7 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
     margin: 0;
     width: 100%;
     min-height: 80px;
-    background: transparent url(images/CorinthRC_logotypeWHITE-01.png) 8px 4px no-repeat;
+    background: transparent url(images/CorinthRClogotypeWHITE-01.png) 8px 4px no-repeat;
 }
 /* the individual containers for the site links, tool menu control, tool menu*/
 ul.topnav li {
@@ -352,6 +352,7 @@ ul.topnav li {
     background: -o-linear-gradient(top, #6D6E70 0%, #231F20 100%);
     background: -ms-linear-gradient(top, #6D6E70 0%, #231F20 100%);
     background: linear-gradient(top, #6D6E70 0%, #231F20 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6D6E70', endColorstr='#231F20',GradientType=0 ); /* IE6-9 */`
     /* border: 1px solid transparent; */
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -372,6 +373,7 @@ ul.topnav li.nav-menu:hover, ul.topnav li.more-tab:hover {
     background: -o-linear-gradient(top, #29ABE2 0%,#0E6385 100%);
     background: -ms-linear-gradient(top, #29ABE2 0%,#0E6385 100%);
     background: linear-gradient(top, #29ABE2 0%,#0E6385 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#29ABE2', endColorstr='#0E6385',GradientType=0 );
     /* border: 1px solid transparent; */
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
