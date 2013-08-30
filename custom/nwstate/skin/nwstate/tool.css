@@ -1229,3 +1229,8 @@ input[type="checkbox"][disabled="disabled"], input[type="checkbox"][disabled="tr
 .listNav input[type="submit"], .listNav input[type="button"] {
     height: 20px !important
 }
+
+div.tool_list ul.sortable  li a.hide_link,
+div.tool_list ul.sortable  li a.show_link {
+  display: none;
+}
