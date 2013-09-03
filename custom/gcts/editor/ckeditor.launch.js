@@ -65,8 +65,8 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
         disableNativeSpellChecker: false,
         browserContextMenuOnCtrl: true,
 
-        // DTCC custom!
-        font_names: 'Arial/Arial, sans-serif;Courier New/Courier New, Courier, Fixed, monospace;Times New Roman/Times New Roman, Times, serif;Trebuchet MS/Trebuchet MS, trebuchet, arial, helvetica, sans-serif;Verdana',
+        // GCTS custom!
+        font_names: 'Arial;Comic Sans MS;Courier New;Tahoma;Times New Roman;Verdana;TekniaGreek;TekniaHebrew;SBL Greek;SBL Hebrew',
         toolbarCanCollapse: false,
 
         toolbar_Basic:
