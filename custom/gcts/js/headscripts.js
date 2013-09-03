@@ -26,6 +26,61 @@ var focus_path;
 var ignoreCourier = false;
 var doubleDeep = false;
 
+var jQueryScriptOutputted = false;
+function initJQuery() {
+    
+    //if the jQuery object isn't available
+    if (typeof(jQuery) == 'undefined') {
+    
+    
+        if (! jQueryScriptOutputted) {
+            //only output the script once..
+            jQueryScriptOutputted = true;
+            
+            //output the script (load it from google api)
+            document.write("<scr" + "ipt type=\"text/javascript\" src=\"/library/js/jquery-latest.min.js\"></scr" + "ipt>");
+        }
+        setTimeout("initJQuery()", 50);
+    } else {
+                        
+        $(function() {  
+            //do anything that needs to be done on document.ready
+			$("a").each(function (){
+				var link = $(this);
+				var href = link.attr("href");
+				if(href && href[0] == "#") {
+					var name = href.substring(1);
+					$(this).click(function() {
+						var nameElement = $("[name='"+name+"']");
+						var idElement = $("#"+name);
+						var element = null;
+						if(nameElement.length > 0) {
+							element = nameElement;
+						} else if(idElement.length > 0) {
+							element = idElement;
+						}
+
+						if(element) {
+							var offset = element.offset();
+							window.parent.scrollTo(offset.left, offset.top);
+						}
+
+						return false;
+					});
+				}
+			});
+       });
+    }
+            
+}
+// If the user is in Firefox 4 or above, init jquery 
+if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+	var ffversion=new Number(RegExp.$1);
+	if (ffversion >= 4) {
+		initJQuery();
+	}
+}
+
 function openWindow(url, title, options)
 {
 	var win = top.window.open(url, title, options);
