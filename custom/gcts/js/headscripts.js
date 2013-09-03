@@ -43,7 +43,12 @@ function initJQuery() {
         setTimeout("initJQuery()", 50);
     } else {
                         
-        $(function() {  
+        jQuery(document).ready(function($) {
+          if (location.href.indexOf("addAssignment") > -1) {
+               console.log(location.href);
+               return false;
+           }
+
             //do anything that needs to be done on document.ready
 			$("a").each(function (){
 				var link = $(this);
@@ -51,6 +56,7 @@ function initJQuery() {
 				if(href && href[0] == "#") {
 					var name = href.substring(1);
 					$(this).click(function() {
+                                                if (!name) return false;
 						var nameElement = $("[name='"+name+"']");
 						var idElement = $("#"+name);
 						var element = null;
@@ -62,7 +68,7 @@ function initJQuery() {
 
 						if(element) {
 							var offset = element.offset();
-							window.parent.scrollTo(offset.left, offset.top);
+							window.parent.scrollTo(offset.left, offset.top + 180);
 						}
 
 						return false;
@@ -76,7 +82,8 @@ function initJQuery() {
 // If the user is in Firefox 4 or above, init jquery 
 if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
 	var ffversion=new Number(RegExp.$1);
-	if (ffversion >= 4) {
+
+	if (ffversion >= 4 && location.href.indexOf("addAssignment") < 0) {
 		initJQuery();
 	}
 }
