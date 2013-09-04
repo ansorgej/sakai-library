@@ -585,35 +585,25 @@ ul.otherSitesCategorList {
  *  ul.otherSitesCategorList. This last one will appear once per each category
  */
 ul#otherSiteList li, ul.otherSitesCategorList li {
-    background: #44569C;
-    background: -moz-linear-gradient(top, #44569C 0%, #5568B4 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#44569C), color-stop(100%,#5568B4));
-    background: -webkit-linear-gradient(top, #44569C 0%,#5568B4 100%);
-    background: -o-linear-gradient(top, #44569C 0%,#5568B4 100%);
-    background: -ms-linear-gradient(top, #44569C 0%,#5568B4 100%);
-    background: linear-gradient(top, #44569C 0%,#5568B4 100%);
-    border: 1px solid #5568B4;
     font-weight: bold;
     position: relative;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
     overflow: hidden;
     margin: 6px 6px 0 0;; /*Note: check uncategorized */
     line-height: 1.1em;
     width: 18em;
     float: left;
     display: block;
+    color: #000;
 }
 ul#otherSiteList li a, ul.otherSitesCategorList li a {
     display: block;
     padding: 8px;
     text-decoration: none;
-    color: #fff;
     white-space: nowrap;
+    color: #000;
 }
 ul#otherSiteList li a:focus span, ul.otherSitesCategorList li a:focus span {
-    outline: 1px dotted #fff;
+    outline: 1px dotted #000;
 }
 ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     width: 14em;
@@ -677,7 +667,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     right: 1px;
     top: 2px;
     height: 11px;
-    border-left: thin solid #FFFFFF;
+    border-left: thin solid #ddd;
 }
 .toolMenus:hover {
     background: url(images/subnav_btn.png) no-repeat  10px -38px;
