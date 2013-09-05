@@ -1226,3 +1226,17 @@ input[type="checkbox"][disabled="disabled"], input[type="checkbox"][disabled="tr
 .listNav input[type="submit"], .listNav input[type="button"] {
     height: 20px !important
 }
+
+form[name=importSelectionForm] a[title='I would like to merge my user(s)'] {
+  display: none;
+}
+
+/* this doesn't work in IE8
+ * form[name=importSelectionForm] p:last-of-type {
+  display: none;
+} */
+
+form[name=importSelectionForm] p:first-child + br + div + p + p + div + p + p + div + p {
+  display: none;
+}
+
