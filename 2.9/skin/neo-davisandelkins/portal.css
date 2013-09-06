@@ -306,7 +306,7 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
 }
 #roleSwitch label, #roleSwitch a#roleSwitchAnchor {
     text-decoration: none;
-    color: #fff;
+    color: #000;
     padding: 0 5px;
 }
 /* PART 3 - SITE NAVIGATION - children of #siteNavWrapper
@@ -737,8 +737,6 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     padding: 0;
     /*border-bottom: 1px solid #ccc;*/
     text-align: left;
-    background: gray;
-/*
     background: #f3f3f3;
     background: -moz-linear-gradient(top, #f3f3f3 0%, #e7e7e7 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(100%,#e7e7e7));
@@ -746,7 +744,6 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     background: -o-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
     background: -ms-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
     background: linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
-*/
 }
 
 /* the current tool */
