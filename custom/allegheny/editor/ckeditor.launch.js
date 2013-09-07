@@ -53,7 +53,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
         filebrowserBrowseUrl :'/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + collectionId + folder,
         filebrowserImageBrowseUrl : '/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Type=Image&Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + collectionId + folder,
         filebrowserFlashBrowseUrl :'/library/editor/FCKeditor/editor/filemanager/browser/default/browser.html?Type=Flash&Connector=/sakai-fck-connector/web/editor/filemanager/browser/default/connectors/jsp/connector' + collectionId + folder,
-	extraPlugins: (sakai.editor.enableResourceSearch ? 'resourcesearch,' : '')+'',
+	extraPlugins: (sakai.editor.enableResourceSearch ? 'resourcesearch,' : 'sharestream,')+'',
 
 
         // These two settings enable the browser's native spell checking and context menus.
@@ -85,11 +85,11 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
             ['JustifyLeft','JustifyCenter','JustifyRight'],
             ['Link','Unlink',],
             (sakai.editor.enableResourceSearch
-                ? ['ResourceSearch', 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak']
-                : ['Image','Table','HorizontalRule','SpecialChar','Symbol']),
+                ? ['ResourceSearch', 'Image','Flash','Table','HorizontalRule','Smiley','PageBreak']
+                : ['Image','Table','HorizontalRule','Symbol']),
             '/',
             ['Format','Font','FontSize'],
-            ['Maximize','Templates','-','ckeditor_wiris_formulaEditor','-','Source']
+            ['Maximize','Templates','-','sharestream','ckeditor_wiris_formulaEditor','-','Source']
         ],
         toolbar: 'Full',
         resize_dir: 'both'
