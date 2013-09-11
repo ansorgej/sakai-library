@@ -591,7 +591,7 @@ ul#otherSiteList li, ul.otherSitesCategorList li {
     overflow: hidden;
     margin: 6px 6px 0 0;; /*Note: check uncategorized */
     line-height: 1.1em;
-    width: 18em;
+    width: 23em;
     float: left;
     display: block;
 }
@@ -606,7 +606,7 @@ ul#otherSiteList li a:focus span, ul.otherSitesCategorList li a:focus span {
     outline: 1px dotted #fff;
 }
 ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
-    width: 14em;
+    width: 20em;
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
