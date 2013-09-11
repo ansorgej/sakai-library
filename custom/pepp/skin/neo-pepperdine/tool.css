@@ -1264,3 +1264,12 @@ input[type="checkbox"][disabled="disabled"], input[type="checkbox"][disabled="tr
     color: white !important;
  }
 
+div.wrapper div.header {
+  padding-top: 50px;
+  background-image: url(images/courses-rev.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+div.wrapper div.spacerVertical {
+  border-color: #00457C;
+}
