@@ -871,6 +871,12 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     width: 34%;
     float: right;
 }
+div.workspace #col1of2 {
+  width: 50%;
+}
+div.workspace #col2of2 {
+    width: 48%;
+}
 .portletTitle {
     width: 100%;
     height: 100%;
