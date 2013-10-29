@@ -84,7 +84,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
             ['Bold','Italic','Underline','Strike','Subscript','Superscript','-','TextColor','BGColor'],
 	    ['atd-ckeditor'],
             ['JustifyLeft','JustifyCenter','JustifyRight'],
-            ['Link','Unlink','Anchor'],
+            ['Link','Unlink','oembed','Anchor'],
             (sakai.editor.enableResourceSearch
                 ? ['ResourceSearch', 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak','fmath_formula']
                 : ['Image','Table','fmath_formula']),
