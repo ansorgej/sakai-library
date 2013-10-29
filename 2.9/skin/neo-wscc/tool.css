@@ -1229,3 +1229,9 @@ input[type="checkbox"][disabled="disabled"], input[type="checkbox"][disabled="tr
 .listNav input[type="submit"], .listNav input[type="button"] {
     height: 20px !important
 }
+
+table#synopticForm\3A myWorkspaceUnread\3A myWorkspaceTable {
+  margin-left: 5px !important;
+  width: 95% !important;
+  font-size: .9em;
+}

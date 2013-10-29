@@ -85,14 +85,14 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
             '/',
             ['Bold','Italic','Underline','Strike','Subscript','Superscript','-','TextColor','BGColor'],
 	    ['atd-ckeditor'],
-            ['JustifyLeft','JustifyCenter','JustifyRight'],
+            ['JustifyLeft','JustifyCenter','JustifyRight', 'JustifyBlock'],
             ['Link','Unlink',],
             (sakai.editor.enableResourceSearch
-                ? ['ResourceSearch', 'Image','Flash','Movie','Table','HorizontalRule','SpecialChar','PageBreak']
-                : ['Image','Flash','Movie','Table','HorizontalRule','SpecialChar']),
+                ? ['ResourceSearch', 'Image','Flash','Movie','Table']
+                : ['Image','Flash','Movie','Table','HorizontalRule']),
             '/',
             ['Format','Font','FontSize'],
-            ['Maximize','Templates','-','Source']
+            ['Maximize','Templates','-','HorizontalRule','SpecialChar','-','Source']
         ],
         toolbar: 'Full',
         resize_dir: 'both'
