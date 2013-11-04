@@ -67,7 +67,7 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
         browserContextMenuOnCtrl: true,
 
         // DTCC custom!
-        font_names: 'Arial/Arial, sans-serif;Courier New/Courier New, Courier, Fixed, monospace;Times New Roman/Times New Roman, Times, serif;Trebuchet MS/Trebuchet MS, trebuchet, arial, helvetica, sans-serif;Verdana',
+        font_names: 'Arial/Arial, sans-serif;Arial Narrow/Arial Narrow, Arial, sans-serif;Bookman Old Style;Century Schoolbook;Courier New/Courier New, Courier, Fixed, monospace;Garamond;Georgia;Palantino;Times New Roman/Times New Roman, Times, serif;Trebuchet MS/Trebuchet MS, trebuchet, arial, helvetica, sans-serif;Verdana',
         toolbarCanCollapse: false,
 
         toolbar_Basic:
