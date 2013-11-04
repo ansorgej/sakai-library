@@ -138,11 +138,11 @@ that can be used or hidden,can also use a background: url(images/<image name>.<e
 in this skin is rendered via ul.topnav, which a anon user does not see)*/
 #headerMin #mastLogo {
     display: block; 
-    background-image: url(images/logo.png);
+    background-image: url(images/myworkspace-dtcclogo-35px-high.png);
     background-repeat: no-repeat;
     background-position: 8px 4px;
     float: left;
-    width: 100px;
+    width: 160px;
     height: 50px;
 }
 /* another container wrapping branding images - portal outputs one /library/skin/<skin name>/images/banner_inst.gif
@@ -167,7 +167,7 @@ that can be used or hidden,can also use a background: url(images/<image name>.<e
 }
 #loginForm label {
     padding: 0 6px;
-    color: #fff;
+    color: #000;
 }
 #eid, #pw {
     border: 1px solid #ccc;
@@ -241,6 +241,7 @@ guests, for example */
 #loginLinks .nav-menu > span.drop {
     display: block !important;
 }
+
 /* link to toggle the user info and controls */
 #mastLogin span.drop {
     cursor: pointer;
@@ -1728,3 +1729,11 @@ a.qtipLinkButton:hover {
     font-size: 120%;
     text-decoration:none;
 }
+
+ul.topnav li {
+  display: none;
+}
+ul.topnav li.nav-selected, ul.topnav li.more-tab, ul.topnav li:first-child {
+  display: inline-block;
+}
+
