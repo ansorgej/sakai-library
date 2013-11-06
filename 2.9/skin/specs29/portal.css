@@ -330,7 +330,6 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
 /* wrapper for the site link list and link to the 'more sites' tray - since the logo is displayed here on left, it is padded.*/
 #linkNav {
     display: block;
-    padding-right: 300px;
 }
 /* site tab navigation: a list right padding makes room for logo and matches width of tool menu
  * if you do not have a logo you can eliminate it to save some room */
