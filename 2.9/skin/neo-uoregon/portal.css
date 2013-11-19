@@ -118,7 +118,9 @@ div#portalContainer {
 
 /* PART 2 - HEADER BLOCKS (BRANDING,LOGIN) */
 #headerMax, #headerMin {
-    background: #472835; /* Old browsers */
+    background: #478E3E; /* Old browsers */
+    background-image: url(images/background-tile.jpg);
+    background-repeat: repeat-x;
     border-bottom: 1px solid #222;
     min-height: 65px !important;
 }
@@ -148,12 +150,12 @@ that can be used or hidden,can also use a background: url(images/<image name>.<e
 in this skin is rendered via ul.topnav, which a anon user does not see)*/
 #headerMin #mastLogo {
     display: block; 
-    background-image: url(images/logo_new.png);
+    background-image: url(images/logo.png);
     background-repeat: no-repeat;
     background-position: 5px 13px;
     float: left;
     width: 235px;
-    height: 50px;
+    height: 80px;
 }
 /* another container wrapping branding images - portal outputs one /library/skin/<skin name>/images/banner_inst.gif
 that can be used or hidden,can also use a background: url(images/<image name>.<ext>) in this block,or both superimposing them  */
@@ -369,11 +371,11 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
  * if you do not have a logo you can eliminate it to save some room */
 #linkNav ul.topnav {
     list-style: none;
-    padding: 20px 0 11px 245px; /* matches the width of the toolMenu*/
+    padding: 20px 0 11px 175px; /* matches the width of the toolMenu*/
     margin: 0;
     width: 94%;
-    background: url(images/logo_new.png) 5px 13px no-repeat;
-    min-height: 37px;
+    background: url(images/logo.png) 20px 13px no-repeat;
+    min-height: 48px;
 }
 /* the individual containers for the site links, tool menu control, tool menu*/
 ul.topnav li {
