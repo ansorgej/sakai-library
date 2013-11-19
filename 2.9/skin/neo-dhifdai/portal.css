@@ -74,12 +74,12 @@ body.portalBody {
 #headerMax, #headerMin {
     background: #000;
     border-bottom: 1px solid #000;
-    background: -moz-linear-gradient(left, #000 0%, #000000 100%);
-    background: -webkit-gradient(linear, left, right, color-stop(0%,#000), color-stop(100%,#000000));
-    background: -webkit-linear-gradient(left, #000 0%,#000000 100%);
-    background: -o-linear-gradient(left, #000 0%,#000000 100%);
-    background: -ms-linear-gradient(left, #000 0%,#000000 100%);
-    background: linear-gradient(left, #000 0%,#000000 100%);
+    background: -moz-linear-gradient(left, #FFF 0%, #000000 100%);
+    background: -webkit-gradient(linear, left, right, color-stop(0%,#FFF), color-stop(100%,#000000));
+    background: -webkit-linear-gradient(left, #FFF 0%,#000000 100%);
+    background: -o-linear-gradient(left, #FFF 0%,#000000 100%);
+    background: -ms-linear-gradient(left, #FFF 0%,#000000 100%);
+    background: linear-gradient(left, #FFF 0%,#000000 100%);
 }
 #headerMin {
     overflow: hidden;
@@ -302,7 +302,7 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
  * if you do not have a logo you can eliminate it to save some room */
 #linkNav ul.topnav {
     list-style: none;
-    padding: 36px 0 5px 200px; /* matches the width of the toolMenu*/
+    padding: 36px 0 5px 300px; /* matches the width of the toolMenu*/
     margin: 0;
     width: 100%;
     background: url(images/logo_inst.jpg) top left no-repeat; 

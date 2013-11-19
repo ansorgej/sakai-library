@@ -73,13 +73,13 @@ body.portalBody {
 /* PART 2 - HEADER BLOCKS (BRANDING,LOGIN) */
 #headerMax, #headerMin {
     background: #ffffff;
-    border-bottom: 1px solid #dcdcdc;
-    background: -moz-linear-gradient(left, #ffffff 0%, #dcdcdc 100%);
-    background: -webkit-gradient(linear, left, right, color-stop(0%,#ffffff), color-stop(100%,#dcdcdc));
-    background: -webkit-linear-gradient(left, #ffffff 0%,#dcdcdc 100%);
-    background: -o-linear-gradient(left, #ffffff 0%,#dcdcdc 100%);
-    background: -ms-linear-gradient(left, #ffffff 0%,#dcdcdc 100%);
-    background: linear-gradient(left, #ffffff 0%,#dcdcdc 100%);    
+    border-bottom: 1px solid #ccc;
+    background: -moz-linear-gradient(left, #ffffff 0%, #ccc 100%);
+    background: -webkit-gradient(linear, left, right, color-stop(0%,#ffffff), color-stop(100%,#ccc));
+    background: -webkit-linear-gradient(left, #ffffff 0%,#ccc 100%);
+    background: -o-linear-gradient(left, #ffffff 0%,#ccc 100%);
+    background: -ms-linear-gradient(left, #ffffff 0%,#ccc 100%);
+    background: linear-gradient(left, #ffffff 0%,#ccc 100%);    
 
 }
 #headerMin {
@@ -307,7 +307,7 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
     margin: 0;
     width: 100%;
     background: url(images/logo_inst.jpg) transparent top left no-repeat; 
-    background-position: 5px 5px;
+    background-position: 5px -10px;
 }
 /* the individual containers for the site links, tool menu control, tool menu*/
 ul.topnav li {

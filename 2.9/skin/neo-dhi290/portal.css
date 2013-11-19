@@ -143,13 +143,13 @@ body.portalBody {
 #headerMax, #headerMin {
     background: #68AADC;
     border-bottom: 1px solid #9dc6bf;
-    /*background: -moz-linear-gradient(left, #ffffff 0%, #9dc6bf 100%);
-    background: -webkit-gradient(linear, left, right, color-stop(0%,#ffffff), color-stop(100%,#9dc6bf));
-    background: -webkit-linear-gradient(left, #ffffff 0%,#9dc6bf 100%);
-    background: -o-linear-gradient(left, #ffffff 0%,#9dc6bf 100%);
-    background: -ms-linear-gradient(left, #ffffff 0%,#9dc6bf 100%);
-    background: linear-gradient(left, #ffffff 0%,#9dc6bf 100%);   
-*/}
+    background: -moz-linear-gradient(left, #ffffff 0%, #68AADC 100%);
+    background: -webkit-gradient(linear, left, right, color-stop(0%,#ffffff), color-stop(100%,#68AADC));
+    background: -webkit-linear-gradient(left, #ffffff 0%,#68AADC 100%);
+    background: -o-linear-gradient(left, #ffffff 0%,#68AADC 100%);
+    background: -ms-linear-gradient(left, #ffffff 0%,#68AADC 100%);
+    background: linear-gradient(left, #ffffff 0%,#68AADC 100%);   
+}
 
 #headerMin {
     overflow: hidden;
@@ -319,7 +319,7 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
     padding-left: 25px;
     font-weight: normal;
     color: #111;
-    color: #444;
+    color: #444 !important;
     padding: 7px 6px 6px 25px !important;
     font-size: 1em !important;
 }
@@ -471,10 +471,13 @@ ul.topnav li ul.subnav li:hover, ul.topnav li ul.subnav li a:focus,
 ul.topnav li a {
     padding: 8px 7px 8px 8px;
     font-size: 13px;
-    color: #fff;
+    color: #000;
     text-decoration: none;
     float: left;
     display: block;
+}
+ul.topnav li.nav-selected a {
+	color: #FFF;
 }
 /* Note:not needed? tool submenu for sites in site list
 span.topnav li ul.subnav li {
