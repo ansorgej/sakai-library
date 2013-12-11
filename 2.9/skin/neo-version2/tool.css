@@ -1243,10 +1243,19 @@ div.portletBody form#listmodulesform ul.navIntraTool li:last-child a:after {
 }
 
 /* fix button weirdness around Melete's button icons by removing borders, etc. */
-#listauthmodulesform li span, #listmodulesform li span, #listmodulesStudentform li span {
+#listauthmodulesform li span, #listmodulesform li span, #listmodulesStudentform li span, #viewsectionform li span, #EditSectionForm li span, #AddModuleForm li span {
     background: none repeat scroll 0 0 transparent !important;
     border: medium none !important;
     box-shadow: none !important;
     padding: 3px 4px !important;
 }
 
+/* fix Rich-Text answers in T&Q multiple choice */
+.mcAnswerText {
+    display: inline-table;
+    width: 85%;
+	vertical-align:text-top;
+}
+.mcAnswerText > p {
+	margin-top: 0px;
+}
