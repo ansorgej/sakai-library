@@ -1210,7 +1210,8 @@ background: linear-gradient(to bottom,  #f8e8b7 0%,#c49813 100%); /* W3C */
 .icon-sakai-sitesetup {
     background-image: url(/library/image/silk/application_lightning.png) !important
 }
-.icon-sakai-site-roster {
+.icon-sakai-site-roster,
+.icon-sakai-site-roster2 {
     background-image: url(/library/image/silk/vcard.png) !important
 }
 .icon-sakai-synoptic-messagecenter {
