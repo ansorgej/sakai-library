@@ -49,9 +49,6 @@ FCKConfig.PluginsPath = FCKConfig.BasePath + 'plugins/' ;
 
 FCKConfig.Plugins.Add( 'attachments' ) ;
 FCKConfig.Plugins.Add( 'movieplayer', 'en,pt' ) ;
-FCKConfig.Plugins.Add( 'kaltura' );
-FCKConfig.Plugins.Add( 'sakaientitybrowser', 'en' ) ;
-FCKConfig.Plugins.Add( 'fckeditor_wiris', 'en' );
 
 // FCKConfig.Plugins.Add( 'autogrow' ) ;
 // FCKConfig.Plugins.Add( 'dragresizetable' );
@@ -84,6 +81,8 @@ FCKConfig.ForcePasteAsPlainText	= false ;
 FCKConfig.AutoDetectPasteFromWord = true ;	// IE only.
 FCKConfig.ShowDropDialog = true ;
 FCKConfig.ForceSimpleAmpersand	= false ;
+// SAK-1735: By setting TabSpaces=0 in the config.js files used for the FCKeditor, 
+// then the FCKeditor is no longer a keyboard trap. The user can tab in and tab out of it.
 FCKConfig.TabSpaces		= 5 ;
 FCKConfig.ShowBorders	= true ;
 FCKConfig.SourcePopup	= false ;
@@ -107,9 +106,9 @@ FCKConfig.ToolbarSets["Default"] = [
         ['OrderedList','UnorderedList','Outdent','Indent'],
         ['JustifyLeft','JustifyCenter','JustifyRight','JustifyFull','TextColor','BGColor'],
         ['Link','Unlink','Anchor'],
-        ['Kaltura','Sakai_Entity_Link','Image','Movie','Flash','Table','Rule','Smiley','SpecialChar'],['Style'],
+        ['Image','Movie','Flash','Table','Rule','Smiley','SpecialChar'],['Style'],
         ['FontFormat','FontName','FontSize'],
-        ['fckeditor_wiris_openFormulaEditor','FitWindow']
+        ['About']
 ] ;
 
 FCKConfig.ToolbarSets["large"] = [
@@ -120,9 +119,8 @@ FCKConfig.ToolbarSets["large"] = [
         ['OrderedList','UnorderedList','Outdent','Indent'],
         ['JustifyLeft','JustifyCenter','JustifyRight','JustifyFull','TextColor','BGColor'],
         ['Link','Unlink','Anchor'],
-        ['Kaltura','Sakai_Entity_Link','Image','Movie','Flash','Table','Rule','Smiley','SpecialChar'],['Style'],
+        ['Image','Movie','Flash','Table','Rule','Smiley','SpecialChar'],['Style'],
         ['FontFormat','FontName','FontSize'],
-        ['fckeditor_wiris_openFormulaEditor','FitWindow']
 ] ;
 
 FCKConfig.ToolbarSets["largecompressed"] = [
@@ -131,9 +129,8 @@ FCKConfig.ToolbarSets["largecompressed"] = [
         ['Bold','Italic','Underline','StrikeThrough','Subscript','Superscript'],
         ['OrderedList','UnorderedList','Outdent','Indent','JustifyLeft','JustifyCenter','JustifyRight','JustifyFull'],
         ['TextColor','BGColor','Link','Unlink','Anchor'],
-        ['Kaltura','Sakai_Entity_Link','Image','Movie','Flash','Table','Rule','Smiley','SpecialChar'],
+        ['Image','Movie','Flash','Table','Rule','Smiley','SpecialChar'],
         ['FontFormat','FontName'],['Style','FontSize'],
-        ['FitWindow']
 ] ;
 
 FCKConfig.ToolbarSets["medium"] = [
@@ -141,8 +138,7 @@ FCKConfig.ToolbarSets["medium"] = [
 	      ['Cut','Copy','Paste','PasteText','PasteWord'],
         ['Undo','Redo','-','Find','Replace'],
         ['Bold','Italic','Underline','TextColor','BGColor','OrderedList','UnorderedList','Outdent','Indent','JustifyLeft','JustifyCenter','JustifyRight','JustifyFull'],
-        ['Kaltura','Sakai_Entity_Link','Image','Table','Link','Unlink','-','FontFormat','Style'],
-        ['FitWindow']
+        ['Image','Table','Link','Unlink','-','FontFormat','Style']        
 ] ;
 
 FCKConfig.ToolbarSets["small"] = [
@@ -158,7 +154,7 @@ FCKConfig.ToolbarSets["Attachments"] = [
    ['OrderedList','UnorderedList','Outdent','Indent'],
    ['JustifyLeft','JustifyCenter','JustifyRight','JustifyFull','TextColor','BGColor'],
    ['Link','Unlink','Anchor'],
-   ['Kaltura','Sakai_Entity_Link','Image','Movie','Flash','Table','Rule','Smiley','SpecialChar'],['Style'],
+   ['Image','Movie','Flash','Table','Rule','Smiley','SpecialChar'],['Style'],
    ['FontFormat','FontName','FontSize'],
    ['About'],
    '/',
@@ -166,7 +162,7 @@ FCKConfig.ToolbarSets["Attachments"] = [
 ] ;
 
 FCKConfig.ToolbarSets["Basic"] = [
-        ['Bold','Italic','-','OrderedList','UnorderedList','-','Link','Unlink','-','FitWindow']
+        ['Bold','Italic','-','OrderedList','UnorderedList','-','Link','Unlink','-','About']
 ] ;
 
 FCKConfig.EnterMode = 'br' ;			// p | div | br
@@ -294,7 +290,9 @@ FCKConfig.CoreStyles =
 		Overrides	: [ { Element : 'font', Attributes : { 'color' : null } } ]
 	},
 	
-	'BackColor'		: { Element : 'span', Styles : { 'background-color' : '#("Color","color")' } }
+	'BackColor'		: { Element : 'span', Styles : { 'background-color' : '#("Color","color")' } },
+
+	'SelectionHighlight' : { Element : 'span', Styles : { 'background-color' : 'navy', 'color' : 'white' } }
 };
 
 // The distance of an indentation step.
@@ -320,15 +318,15 @@ FCKConfig.FlashBrowser = true ;
 FCKConfig.FlashBrowserWindowWidth  = FCKConfig.ScreenWidth * 0.7 ;	//70% ;
 FCKConfig.FlashBrowserWindowHeight = FCKConfig.ScreenHeight * 0.7 ;	//70% ;
 
-FCKConfig.LinkUpload = false ;
+FCKConfig.LinkUpload = true ;
 FCKConfig.LinkUploadAllowedExtensions	= ".(7z|aiff|asf|avi|bmp|csv|doc|fla|flv|gif|gz|gzip|jpeg|jpg|mid|mov|mp3|mp4|mpc|mpeg|mpg|ods|odt|pdf|png|ppt|pxd|qt|ram|rar|rm|rmi|rmvb|rtf|sdc|sitd|swf|sxc|sxw|tar|tgz|tif|tiff|txt|vsd|wav|wma|wmv|xls|xml|zip)$" ;			// empty for all
 FCKConfig.LinkUploadDeniedExtensions	= "" ;	// empty for no one
 
-FCKConfig.ImageUpload = false ;
+FCKConfig.ImageUpload = true ;
 FCKConfig.ImageUploadAllowedExtensions	= ".(jpg|gif|jpeg|png|bmp)$" ;		// empty for all
 FCKConfig.ImageUploadDeniedExtensions	= "" ;							// empty for no one
 
-FCKConfig.FlashUpload = false ;
+FCKConfig.FlashUpload = true ;
 FCKConfig.FlashUploadAllowedExtensions	= ".(swf|flv)$" ;		// empty for all
 FCKConfig.FlashUploadDeniedExtensions	= "" ;					// empty for no one
 

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/121680/reference/branches/sakai-2.9.x/library/src/webapp/skin/neo-default
+END
+tool.css
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/118855/reference/branches/sakai-2.9.x/library/src/webapp/skin/neo-default/tool.css
+END
+access.css
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/101906/reference/branches/sakai-2.9.x/library/src/webapp/skin/neo-default/access.css
+END
+portal.css
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/121680/reference/branches/sakai-2.9.x/library/src/webapp/skin/neo-default/portal.css
+END
+portalchat.css
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/115225/reference/branches/sakai-2.9.x/library/src/webapp/skin/neo-default/portalchat.css
+END
+pda.css
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/113363/reference/branches/sakai-2.9.x/library/src/webapp/skin/neo-default/pda.css
+END

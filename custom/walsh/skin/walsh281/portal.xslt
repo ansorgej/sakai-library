@@ -380,6 +380,11 @@ your browser doesn't support iframes
             <span class="skip"><xsl:value-of select="$externalized/entry[@key='sit_selectmessage']"/></span>
             <xsl:for-each select="sites/siteTypes/siteType">
                <xsl:sort select="@order" data-type="number"/>
+
+               <xsl:if test="title != 'Fall 2006' and title != 'Spring 2007' and title != 'Summer 2007' and title != 'Fall 2007'
+                 and title != 'Spring 2008' and title != 'Summer 2008' and title != 'Fall 2008' and title != 'Spring 2009' and title != 'Summer 2009' 
+                 and title != 'Fall 2009' and title != 'Spring 2010' and title != 'Summer 2010' and title != 'Fall 2010' and title != 'Spring 2011' ">
+
                <div class="termContainer">
                   <h4><xsl:value-of disable-output-escaping="yes" select="title" /></h4>
                   <ul id="siteLinkList2">
@@ -391,6 +396,8 @@ your browser doesn't support iframes
                      </xsl:for-each>
                   </ul>
                </div> <!-- /termContainer -->
+
+               </xsl:if>
             </xsl:for-each>
             <div id="more_tabs_instr">
                <xsl:value-of disable-output-escaping="yes" select="$externalized/entry[@key='sit_moretab_inst']"/>
@@ -776,11 +783,19 @@ your browser doesn't support iframes
    -->
    <xsl:template match="site">
       <li>
+        <xsl:choose>
+          <xsl:when test="published='false' and siteUpdate='false'">
+            <span class="unpublishedSite" title="Unpublished site"><xsl:value-of disable-output-escaping="yes" select="title"/></span>
+          </xsl:when>
+          <xsl:otherwise>
          <a>
+           <xsl:attribute name="class">sitelink</xsl:attribute>
             <xsl:attribute name="href"><xsl:value-of select="url"/></xsl:attribute>
             <xsl:attribute name="title"><xsl:value-of disable-output-escaping="yes" select="title"/></xsl:attribute>
             <span><xsl:value-of disable-output-escaping="yes" select="title"/></span>
          </a>
+          </xsl:otherwise>
+        </xsl:choose>
       </li>
    </xsl:template>
 

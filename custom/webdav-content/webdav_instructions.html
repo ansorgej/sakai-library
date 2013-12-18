@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<title>Upload-Download Multiple Resources</title>
+		<script type="text/javascript" language="JavaScript" src="/library/js/headscripts.js">
+	</script>
+		<script language="JavaScript" type="text/JavaScript">
+		<!--
+			var i, a, href
+			for(i=0; (a = top.document.getElementsByTagName("link")[i]); i++) 
+			{
+				if(a.getAttribute("rel").indexOf("style") != -1)
+				{
+					if(a.getAttribute("href").indexOf("portal.css") != -1)
+					{
+						//normal - top is portal
+						document.write ('<link href=\"');
+						document.write (a.getAttribute("href").substring(0,a.getAttribute("href").indexOf("portal")));
+						document.write ('tool.css\" type=\"text/css\" rel=\"stylesheet\" media=\"all\" />');
+						document.write ('<link href=\"');
+						document.write (a.getAttribute("href").substring(0,(a.getAttribute("href").indexOf("skin") + 5 )));
+						document.write ('tool_base.css\" type=\"text/css\" rel=\"stylesheet\" media=\"all\" />');
+					}
+					else
+					{
+						//not normal - top is something else - use it's stylesheets
+						document.write ('<link href=\"');
+						document.write (a.getAttribute("href"));
+						document.write ('" type=\"text/css\" rel=\"stylesheet\" media=\"all\" />');
+					}
+				}
+			}
+	function trim(s){
+		if((s==null)||(typeof(s)!='string')||!s.length)return'';return s.replace(/^\s+/,'').replace(/\s+$/,'')
+		}
+	function splitedWebDavLink() {
+		for(i=0; (p = parent.document.getElementsByTagName("p")[i]); i++) {
+			if (p.className=='indnt3') {
+				return p.getElementsByTagName("strong")[0].innerHTML.split('/');
+			}
+		}
+	}
+	var swdl = splitedWebDavLink();
+	function localizeData() {
+		for(i=0; (p = document.getElementsByTagName("span")[i]); i++) {
+			if (p.className=='webDavPort') {
+				p.innerHTML=getHostPort();
+			}
+			if (p.className=='webDavHostName') {
+				p.innerHTML=getServerName();
+			}
+			if (p.className=='webDavUrlEncoded') {
+				p.innerHTML=getBaseUrlEncoded();
+			}
+			if (p.className=='webDavService') {
+				p.innerHTML=getWebDavType();
+			}
+			if (p.className=='webDavFolderUrlEncoded') {
+				p.innerHTML=getFolderUrlEncoded();
+			}
+		}
+	}
+	function getBaseUrlEncoded() {
+		return '<b>'+swdl[0]+'//'+swdl[2]+'/'+swdl[3]+'/'+escape(swdl[4]).replace('@','%40')+'</b>';
+	}
+	function getFolderUrlEncoded() {
+		return '<b>'+swdl[3]+'/'+swdl[4]+'</b>';
+	}
+	function getHostPort() {
+		// Return HTTP specific port
+		if (swdl[2].indexOf(":")>0) return swdl[2].substring(swdl[2].indexOf(':')+1);
+		else {
+			// Return HTTP default ports
+			if (swdl[0]=='https:') return '443';
+			else return '80';
+		}
+	}
+	function getWebDavType() {
+		if (swdl[0]=='https:') return '(HTTP/SSL)';
+		else return '';
+	}
+	function getServerName() {
+		// remove the port
+		if (swdl[2].indexOf(":")>0) return swdl[2].substring(0,swdl[2].indexOf(':'));
+		else {
+			return swdl[2];
+		}
+	}
+	
+		// -->
+		</script>
+		
+	</head>
+<body onload="(window.frameElement) ? setMainFrameHeight(trim(window.frameElement.id)):'';localizeData()">
+		<div>
+<!-- BEGIN CUSTOM -->
+<p> <a name="top"> </a> </p>
+<h2><strong>Step 2</strong></h2>
+<p>
+	Install <a href="http://cyberduck.ch/">CyberDuck</a> or <a href="http://www.jscape.com/download-anyclient">AnyClient</a><br />
+	&nbsp;</p>
+<h2>
+	<strong>Step 3</strong></h2>
+<p>
+	Open the application and create the connection to the course.</p>
+<ul>
+	<li>
+		In CyberDuck: Select <strong>Open Connection</strong></li>
+	<li>
+		In AnyClient: Select <strong>File &gt; SiteManager &gt; New</strong></li>
+</ul>
+<h2>
+	<strong>Step 4</strong></h2>
+<p>
+	In each client, the following information may be required:</p>
+<ul>
+	<li>
+		Host/Server: Paste the URL for this site shown above (from Step 1)</li>
+	<li>
+		Protocol: Choose <strong>WebDAV</strong> (HTTP/SSL)</li>
+	<li>
+		Username: your Sakai username</li>
+	<li>
+		Password: your Sakai password</li>
+	<li>
+		Folder/directory: <strong><span class="webDavFolderUrlEncoded">dav/xxxx-xxxx-xxxx</span></strong></li>
+</ul>
+<h2>
+	Step 5</h2>
+<p>
+	Connect to the server</p>
+<div>
+	<h2>
+		Step 6</h2>
+	<p>
+		You should now see a window on your screen that displays the resources folder on your Sakai site. Simply drag/drop or copy/paste files between this window and other folders on your local computer.</p>
+	<hr />
+	<h1>
+		Direct Connection Methods</h1>
+</div>
+<p>
+	It is possible to establish direct connections between one&rsquo;s computer and Sakai (i.e., mapped drives) without the use of third-party software (using WebDAV within Finder/Mac or Explorer/Windows), but this method is unstable and should be considered as unsupported. This method is known to not function reliably in certain operating systems (such as 32-bit Windows 7), and work inconsistently in others.</p>
+<p>
+	Use these methods at your own risk:</p>
+<ul>
+	<li>
+		<a href="#WinXP">Setting up WebDAV for Windows XP</a></li>
+	<li>
+		<a href="#Win7">Setting up WebDAV for Windows Vista/Windows 7</a></li>
+	<li>
+		<a href="#Mac">Setting up WebDAV for Mac</a></li>
+	<li>
+		<a href="#LGnome">Setting up WebDAV for Linux (Gnome)</a></li>
+	<li>
+		<a href="#LKDE">Setting up WebDAV for Linux (KDE)</a></li>
+	<li>
+		<a href="#LConsole">Setting up WebDAV for Linux (console)</a></li>
+</ul>
+<hr />
+<h2>
+	<a name="WinXP">Setting up WebDAV for Windows XP</a></h2>
+<p>
+	<strong>Note: </strong>There must be at least one object (file, folder etc.) in the course or project resource area before you begin the setup procedure. This procedure needs to be done once for each site before you can use WebDAV to transfer files to and from any one site.</p>
+<ol>
+	<li>
+		Double-click on the <strong>My Network Places</strong> icon on your PC desktop or click <strong>Start &gt; My Network Places</strong>.</li>
+	<li>
+		Click <strong>Add a network place</strong> on the left menu.</li>
+	<li>
+		Click <strong>Next</strong>.</li>
+	<li>
+		Make sure that <em>Choose another network location</em> is selected and click <strong>Next</strong>.</li>
+	<li>
+		In the <em>Internet or network address</em> field, type (or copy and paste) the URL for this site shown above and click <strong>Next</strong>.</li>
+	<li>
+		When prompted, enter your Username and your password and click <strong>OK</strong>.</li>
+	<li>
+		Enter a name for the course or project resources you are adding (e.g., <em>History 101 Resources</em>) and click <strong>Next</strong>.</li>
+	<li>
+		Click <strong>Finish</strong> to complete the set up.</li>
+</ol>
+<p>
+	When the setup process is complete, the course or project resources folder will appear in your My Network Places as a folder, where it will act just like any other folder in Windows Explorer. You can now drag files and folders to and from your computer and the site&#39;s Resources folder.</p>
+<p>
+	<span style="font-family:georgia,serif;"><a href="#top">[ TOP &uarr;]</a></span></p>
+<hr />
+<p>
+	<a name="Win7"></a></p>
+<h2>
+	<a name="Win7"> Setting up WebDAV for Windows Vista/Windows 7</a></h2>
+<p>
+	<strong>Note 1: </strong>There must be at least one object (file, folder etc.) in the course or project resource area before you begin the setup procedure. This procedure needs to be done once for each site before you can use WebDAV to transfer files to and from any one site.</p>
+<p>
+	<strong>Note 2:</strong> Use of Sakai&#39;s WebDAV functionality on Windows Vista requires that you have Vista Service Pack 2 installed. If you do not yet have Service Pack 2 installed, please run Windows Update by clicking <strong>Start &gt; All Programs &gt; Windows Update</strong>.</p>
+<ol>
+	<li>
+		From the desktop or the Start menu, click <strong>Computer</strong>.</li>
+	<li>
+		At the top of the window, click <strong>Map Network Drive</strong>.</li>
+	<li>
+		Select a vacant drive letter (e.g., Z) from the <em>Drive</em> drop down menu.</li>
+	<li>
+		In the <em>Folder</em> field, type (or copy and paste) the URL for this site shown above. Click <strong>Finish</strong>.</li>
+	<li>
+		When prompted, enter your Sakai username and your password and click&nbsp;<strong>OK</strong>.</li>
+	<li>
+		You can now drag files and folders to and from your computer and the site Resources folder.</li>
+</ol>
+<p>
+	When the setup process is complete, the course or project resources folder will appear under Computer as a drive, where it will act just like any other drive in Windows Explorer. You can now drag files and folders to and from your computer and the site&#39;s Resources folder.</p>
+<pre>
+<a href="#top" style="font-family: georgia, serif;">[ TOP &uarr;]</a></pre>
+<hr />
+<p>
+	<a name="Mac"></a></p>
+<h2>
+	<a name="Mac"> Setting up WebDAV for Mac</a></h2>
+<p>
+	<strong>Note: </strong>There must be at least one object (file, folder etc.) in the course or project resource area before you begin the setup procedure. This procedure needs to be done once for each site before you can use WebDAV to transfer files to and from any one site.</p>
+<ol>
+	<li>
+		From the menu bar at the top of the screen in Finder, select <strong>Go &gt; Connect to Server</strong>...</li>
+	<li>
+		In the <em>Server Address</em> dialog box, type (or copy and paste) the path as shown above in <strong>Step 1</strong>.</li>
+	<li>
+		Press the <strong>+</strong> button to save this path for future use.</li>
+	<li>
+		Click <strong>Connect</strong>.</li>
+	<li>
+		Type in your Sakai username and your password and click&nbsp;<strong>OK</strong>.</li>
+</ol>
+<p>
+	You will now see a window on your screen that represents the resources in your site. You can now drag and drop files into or out of this window and delete files by dragging them to the Trash.</p>
+<pre>
+<a href="#top" style="font-family: georgia, serif;">[ TOP &uarr;]</a></pre>
+<hr />
+<p>
+	<a name="LGnome"></a></p>
+<h2>
+	<a name="LGnome"> Setting up WebDAV for Linux (Gnome)</a></h2>
+<p>
+	<strong>Note: </strong>Some versions of Linux might have problems accessing My Workspace&#39;s resources, but the access to all other sites types will work fine (course, project, etc.).</p>
+<ol>
+	<li>
+		Go to <strong>Places &gt; Connect to Server</strong>...</li>
+	<li>
+		In <strong>Service type</strong> select WebDav (HTTP/SSL).</li>
+	<li>
+		In <strong>Server</strong>, type (or copy and paste): <b><span class="webDavHostName">hostname</span></b></li>
+	<li>
+		In <strong>Port</strong>, type (or copy and paste): 443</li>
+	<li>
+		In <strong>Folder</strong>, type (or copy and paste) the last part of the &quot;Step 1&quot; URL: <strong><span class="webDavFolderUrlEncoded">dav/xxxx-xxxx-xxxx</span></strong></li>
+	<li>
+		Check the option <strong>Add bookmark</strong></li>
+	<li>
+		In <strong>Bookmark name</strong>, supply the name of the folder to create under &quot;Network&quot; and click <strong>Next</strong>.</li>
+	<li>
+		Now click on <strong>Connect</strong>.</li>
+	<li>
+		Finally, you will be asked to supply your Sakai username and your password.</li>
+</ol>
+<p>
+	You will now see a new drive under <strong>Places</strong>. This represents the resources in your site. It will act like any other folder on your computer. You can now drag and drop files into or out of this window and delete files by dragging them to the Trash.</p>
+<pre>
+<a href="#top" style="font-family: georgia, serif;">[ TOP &uarr;]</a></pre>
+<hr />
+<p>
+	<a name="LKDE"></a></p>
+<h2>
+	<a name="LKDE"> Setting up WebDAV for Linux (KDE)</a></h2>
+<p>
+	<strong>Note:</strong> There are some versions of Linux that might have problems accessing My Workspace&#39;s resources, but the access to all other sites types should work fine (course, project, etc.).</p>
+<ol>
+	<li>
+		Open the file manager (Dolphin).</li>
+	<li>
+		On the left side, in <strong>Places</strong>, choose <strong>Network</strong>.</li>
+	<li>
+		Click on <strong>Add network folder</strong>.</li>
+	<li>
+		Check <em>web folder (webdav)</em> and click&nbsp;<strong>Next</strong>.</li>
+	<li>
+		In <strong>Name</strong> supply the name of the folder to create under &quot;Network&quot; and click <strong>Next</strong>.</li>
+	<li>
+		In <strong>User</strong> supply your Sakai username and your password.</li>
+	<li>
+		In <strong>Server</strong>, type (or copy and paste): <b><span class="webDavHostName">hostname</span></b></li>
+	<li>
+		In <strong>Folder</strong>, type (or copy and paste) the last part of the &quot;Step 1&quot; URL: <strong><span class="webDavFolderUrlEncoded">dav/xxxx-xxxx-xxxx</span></strong></li>
+	<li>
+		If the URL uses HTTPS, check the option <strong>Encoded</strong>, and the port will change automatically to 443.</li>
+	<li>
+		Check the option <strong>Create an icon for this remote folder</strong>.</li>
+	<li>
+		Now click on <strong>Save and connect</strong>.</li>
+	<li>
+		Finally, you will be asked to supply your Sakai password.</li>
+</ol>
+<p>
+	You will now see a new drive under <strong>Network</strong> inside the file manager (Dolphin). This represents the resources in your site. It will act like any other folder from your computer. You can now drag and drop files into or out of this window and delete files by dragging them to the Trash.</p>
+<pre>
+<a href="#top" style="font-family: georgia, serif;">[ TOP &uarr;]</a></pre>
+<hr />
+<p>
+	<a name="LConsole"></a></p>
+<h2>
+	<a name="LConsole"> Setting up WebDAV for Linux (console)</a></h2>
+<ol>
+	<li>
+		Open a new terminal.</li>
+	<li>
+		Type in the command cadaver <strong><span class="webDavUrlEncoded">URL from Step 1</span></strong></li>
+	<li>
+		You might be asked to accept a certificate</li>
+	<li>
+		Type in your Sakai username and your password.</li>
+	<li>
+		Now you can download and upload documents from the command line.</li>
+</ol>
+<p>
+	Type &quot;<strong>help</strong>&quot; for all available commands.</p>
+<pre>
+<a href="#top" style="font-family: georgia, serif;">[ TOP &uarr;]</a></pre>
+<hr />
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+
+
+
+<!-- END CUSTOM -->
+		</div>
+
+	</body>
+</html>
