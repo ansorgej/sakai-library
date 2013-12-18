@@ -1137,3 +1137,5 @@ div#privacy_overlay {
 	opacity: 0.7;
    z-index: 0;
 }
+
+#siteStatus a{display:none;}

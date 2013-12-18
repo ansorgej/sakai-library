@@ -1000,3 +1000,4 @@ background-image: url(../../image/silk/comment.png);
 	font: normal 120% Verdana, Geneva, Arial, Helvetica, sans-serif;
 	text-decoration:none;
 }
+#siteStatus a{display:none;}

@@ -1315,4 +1315,7 @@ div#privacy_overlay {
 	color:#fff;
 	font: normal 120% Verdana, Geneva, Arial, Helvetica, sans-serif;
 	text-decoration:none;
-}</a>
+}
+
+
+#siteStatus a{display:none;}

@@ -82,6 +82,8 @@ FCKConfig.ForcePasteAsPlainText	= false ;
 FCKConfig.AutoDetectPasteFromWord = true ;	// IE only.
 FCKConfig.ShowDropDialog = true ;
 FCKConfig.ForceSimpleAmpersand	= false ;
+// SAK-1735: By setting TabSpaces=0 in the config.js files used for the FCKeditor,
+// then the FCKeditor is no longer a keyboard trap. The user can tab in and tab out of it.
 FCKConfig.TabSpaces		= 5 ;
 FCKConfig.ShowBorders	= true ;
 FCKConfig.SourcePopup	= false ;
@@ -202,10 +204,10 @@ FCKConfig.FontSizes		= 'smaller;larger;xx-small;x-small;small;medium;large;x-lar
 FCKConfig.StylesXmlPath		= FCKConfig.EditorPath + 'fckstyles.xml' ;
 FCKConfig.TemplatesXmlPath	= FCKConfig.EditorPath + 'fcktemplates.xml' ;
 
-FCKConfig.SpellChecker		= 'SpellerPages' ;	// 'ieSpell' | 'SpellerPages'
+FCKConfig.SpellChecker		= 'ieSpell' ;	// 'ieSpell' | 'SpellerPages'
 FCKConfig.IeSpellDownloadUrl	= 'http://www.iespell.com/download.php' ;
-FCKConfig.SpellerPagesServerScript = '/proxy/spellcheck/' ;	// Available extension: .php .cfm .pl
-FCKConfig.FirefoxSpellChecker	= true ;
+FCKConfig.SpellerPagesServerScript = 'server-scripts/spellchecker.php' ;	// Available extension: .php .cfm .pl
+FCKConfig.FirefoxSpellChecker	= false ;
 
 FCKConfig.MaxUndoLevels = 15 ;
 
