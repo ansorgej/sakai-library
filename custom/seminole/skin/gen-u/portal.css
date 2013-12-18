@@ -770,3 +770,6 @@ below they are contextually defined depending on the column as an example,as you
 	font: normal 120% Verdana, Geneva, Arial, Helvetica, sans-serif;
 	text-decoration:none;
 }
+
+
+#siteStatus a{display:none;}
