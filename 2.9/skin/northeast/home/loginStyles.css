@@ -1,0 +1,227 @@
+/* CSS Document */
+
+body,td,th {
+    font-family: Verdana, Geneva, sans-serif;
+}
+body {
+	background-image:url(background.jpg); 
+   background-repeat:repeat-x; 
+	border-top: 0px solid #2A373D;
+	background-color: #FFFFFF;
+	margin-top:0px;
+	margin-left:0px;
+	margin-right:0px;
+	text-align:center;
+}
+
+iframe{
+	border-collapse: collapse;
+	border-width: 0;
+}
+
+#loginBlock{
+	
+}
+
+#eid, #pw{
+	padding-top: 3px;
+	padding-bottom: 3px;
+	border: 1px solid #000000;
+	background-color:#ffffff;
+}
+
+#logoED{ 
+    width:240px;  
+    height:300px;
+	 font-size: 0.85em;
+	 text-align: left;
+	 padding-right: 10px;
+	 padding-left: 20px;
+	 vertical-align: top;
+	 color:#486374;
+}
+
+#videoClip{ 
+    background-color:#dddddd;
+    width:672px; 
+    height:300px;
+}
+
+#space{ 
+    width:100%; 
+    height:5px;
+}
+.login_headers
+{ 
+    font-family: Verdana, Geneva, sans-serif, arial; 
+    font-size:130%; 
+    text-align:left; 
+    font-weight:normal;
+	 color: #496570;
+    width:258px;  
+    height:34px;
+}
+#loginButton{
+  text-align:right; 
+  padding-right: 100px;
+}
+.content_headers
+{ 
+    font-family:Arial, Sans-Serif; 
+    font-size:145%; 
+    text-align:left; 
+    font-weight:normal;
+	 
+}
+
+
+#oneTD div{
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	background-color:#ffffff;
+	width:285px; 
+	height: 250px;
+	font-size: .8em;
+	text-align: left;
+	padding: 5px;
+   overflow: auto;
+}
+
+#twoTD{
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	background-color:#ffffff;
+	width:285px; 
+	height: 250px;
+	font-size: .8em;
+	text-align: left;
+	padding: 5px;
+	overflow: auto;
+}
+
+#threeTD{
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	background-color:#ffffff;
+	width:285px; 
+	height: 250px;
+	font-size: .8em;
+	text-align: left;
+	padding: 5px;
+	vertical-align: top;
+	overflow: auto;
+}
+
+#headerOneTD{
+	width:285px;
+	height: 40px;
+	background-color:#CF0F41;
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-top: 1px solid #000000;
+	color: #ffffff;
+	text-align: left;
+	padding-left: 5px;
+}
+
+#headerTwoTD{
+	width:285px;
+	height: 40px;
+	background-color:#CF0F41;
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-top: 1px solid #000000;
+	color: #ffffff;
+	text-align: left;
+	padding-left: 5px;
+}
+
+#headerThreeTD{
+	width:285px;
+	height: 40px;
+	background-color:#CF0F41;
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-top: 1px solid #000000;
+	color: #ffffff;
+	text-align: left;
+	padding-left: 5px;
+}
+
+#contTable{
+position: relative;
+	padding-left: 10px;
+        font-family: Helvetica Neue, sans-serif;
+}
+
+#logoED a{ 
+    text-decoration:none; 
+    color:#005fa9;
+	 font-size: .8em;
+	 font-weight: bold;
+} 
+
+table#contTable a {
+        text-decoration: underline;
+        color: #585858;
+}
+
+
+/* #toolLink{ 
+   
+	 background: transparent url(images/highlight3.gif) no-repeat left top;
+} */
+
+.copyright{
+    text-align:center;
+	color:#333;
+	font-size:10px;
+}
+
+#banner_inst_right{
+	position: relative;
+	top: -20px;
+}
+
+#bottompage{
+	height: 40px;
+}
+
+#innerWt{
+	background-color:#ffffff;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-left: 50%;
+	position:absolute;
+	left:50%;
+	width:980px;
+	margin-left:-490px;
+			
+}
+
+#outerWt{
+	padding-top: 20px;
+	padding-left: 20px;
+}
+
+#gatewayLogo{
+	padding-top: 2px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+   text-align: left;
+	position: relative;
+	left: -280px;	
+}
+
+form #loginT{
+	position: relative;
+	top: -5px;
+}
+
+h2 {
+        font-weight: 500;
+        font-family: Helvetica Neue, sans-serif;
+}

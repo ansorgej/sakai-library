@@ -1,0 +1,5 @@
+.login td.logo {
+    background: url("images/logo_inst.jpg") no-repeat scroll left top #FFFFFF;
+    width: 18em;
+    background-position: 10px 30px;
+}

@@ -9,7 +9,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *       http://www.osedu.org/licenses/ECL-2.0
+ *       http://www.opensource.org/licenses/ECL-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -246,7 +246,14 @@ function setMainFrameHeightNow(id)
 	// this tells us that the iframe in parent by the name of 'id' is the one who spawned us
 	if (typeof window.name != "undefined" && id != window.name) return;
 
-	var frame = parent.document.getElementById(id);
+	//SAK-21209 check we can access the document, 
+	//ie this could be a Basic LTI request and therefore we are not allowed
+	try {
+		var frame = parent.document.getElementById(id);
+	} catch (e) {
+		return;
+	}
+	
 	if (frame)
 	{
 		// reset the scroll
@@ -284,7 +291,7 @@ function setMainFrameHeightNow(id)
    // SAK-11014 revert             var height = getFrameHeight(frame);
 
 		// here we fudge to get a little bigger
-		var newHeight = height + 40;
+		var newHeight = height + 80;
 
 		// but not too big!
 		if (newHeight > 32760) newHeight = 32760;
@@ -455,17 +462,10 @@ function showNotif(item, button,formName)
 	}
 	if (item !="noNotif")
 	{
-		var browserType;
-		if (document.all) {browserType = "ie"}
-		if (window.navigator.userAgent.toLowerCase().match("gecko") || window.navigator.userAgent.toLowerCase().match("opera") ) {browserType= "gecko"}
-		if (browserType == "gecko" )
-			document.showItem = eval('document.getElementById(item)');
-		else if (browserType == "ie")
-			document.showItem = eval('document.all[item]');
-		else
-			document.showItem = eval('document.layers[item]');
+		// SAK-21041 simplified to use getElementById
+		document.showItem = document.getElementById(item);
 
-			document.showItem.style.visibility = "visible";
+		document.showItem.style.visibility = "visible";
 	}
 	
 	for (var i=0;i<document.getElementsByTagName("input").length; i++) 
