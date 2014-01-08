@@ -148,12 +148,11 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
 			  You have to actually setup a server or get an API key
 			  Hopefully this will get easier to configure soon.
 			 */
-			 //CKEDITOR.plugins.addExternal('atd-ckeditor',basePath+'atd-ckeditor/', 'plugin.js'); 
-			 //ckconfig.atd_rpc='/proxy/atd';
-			 //ckconfig.extraPlugins+="movieplayer,wordcount,atd-ckeditor,stylesheetparser";
-			 //ckconfig.contentsCss = basePath+'/atd-ckeditor/atd.css';
+			 CKEDITOR.plugins.addExternal('atd-ckeditor',basePath+'atd-ckeditor/', 'plugin.js'); 
+			 ckconfig.atd_rpc='/proxy/atd';
+			 ckconfig.extraPlugins+="movieplayer,wordcount,fmath_formula,atd-ckeditor";
+			 ckconfig.contentsCss = basePath+'/atd-ckeditor/atd.css';
 
-			 ckconfig.extraPlugins+="movieplayer,wordcount,fmath_formula";
     })();
 
 	  CKEDITOR.replace(targetId, ckconfig);
