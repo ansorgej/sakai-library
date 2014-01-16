@@ -874,9 +874,10 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 /* PART 6 - SITE AFFILIATION,SITE TYPE/STATUS - children of #toolMenuWrap */
 /* site logo wrapper  */
 #worksiteLogo {
-    height: auto;
+    /*height: auto;
     overflow: hidden;
-    display: block;
+    display: block;*/
+    display: none;
 }
 /* setting the max-width by percentage to avoid crops and permit scaling when tool menu is minimized*/
 #worksiteLogo img {
