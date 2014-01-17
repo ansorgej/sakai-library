@@ -154,6 +154,15 @@ sakai.editor.editors.ckeditor.launch = function(targetId, config, w, h) {
 			 //ckconfig.extraPlugins+="movieplayer,wordcount";
     })();
 
+      // Overrides for recursive encoding of kaltura player html PWL-349709
+      CKEDITOR.config.basicEntities = false;
+      CKEDITOR.config.entities = false;
+      CKEDITOR.config.entities_greek = false;
+      CKEDITOR.config.entities_latin = false;
+      CKEDITOR.config.htmlEncodeOutput = false;
+      CKEDITOR.config.entities_processNumerical = false;
+      CKEDITOR.config.forceSimpleAmpersand = false;
+
 	  CKEDITOR.replace(targetId, ckconfig);
       //SAK-22505
       CKEDITOR.on('dialogDefinition', function(e) {
