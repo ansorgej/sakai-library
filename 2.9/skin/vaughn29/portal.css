@@ -6,7 +6,6 @@ body.portalBody {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: .8em;
     margin: 0;
-    *background-color: #000;
     background-repeat: repeat-x;
 }
  /* outer wrapper for portal content (decorative - child is #portalContainer )  */
@@ -22,20 +21,7 @@ body.portalBody {
 #skipNav {}
 /* wrapper for site content (includes as children #toolMenuWrap,#content and #footer)  */
 #container {
-   /*background: #fff;
-    margin: 0 0px;
-    -webkit-box-shadow: 0px 2px 5px rgba(50, 50, 50, 0.25);
-    -moz-box-shadow:  0px 2px 5px rgba(50, 50, 50, 0.25);
-    box-shadow: 0px 2px 5px rgba(50, 50, 50, 0.25);
-    border:1px solid #000;
-   -moz-border-radius: 0 0 10px 10px;
-   -webkit-border-radius: 0 0 10px 10px;
-   -khtml-border-radius: 0 0 10px 10px;
-    border-radius: 0 0 10px 10px;*/
-	background: url("images/bg.jpg") repeat scroll left top rgba(0, 0, 0, 0); /*update, wavy bg*/
-    float: left;/*update, wavy bg*/
-    min-height: 100%;/*update, wavy bg*/
-    width: 100%;/*update, wavy bg*/
+    background: #fff;
 }
 /* wrapper for #toolMenu - children are #worsiteLogo,#toolMenu  */
 #toolMenuWrap {
@@ -62,14 +48,9 @@ body.portalBody {
 #content {
     padding: .8em 0 0 13.2em;
 }
-/* second wrapper for content - needed by SAK-12563 */
-#innercontent {
-    float: left;
-    width:100%
-}
 #col1of2 .portletTitleWrap, #col2of2 .portletTitleWrap {
     width: 98.5%;
-    border-bottom: 2px solid #C49813;
+    border-bottom: 2px solid #012648;
 }
 #col1of2 .portletMainWrap, #col2of2 .portletMainWrap {
     width: 98.5%;
@@ -77,7 +58,7 @@ body.portalBody {
 }
 #col1 .portletTitleWrap {
     width: 99%;
-    border-bottom: 2px solid #C49813 !important;
+    border-bottom: 2px solid #012648 !important;
 }
 #col1 .portletMainWrap {
     width: 99%
@@ -91,7 +72,7 @@ body.portalBody {
     background: #f3f3f3;
     border: 1px solid #ddd;
     width: 90%;
-    margin: 0px auto 50px auto;
+    margin: 0 auto 50px auto;
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
     border-radius: 8px;
@@ -113,16 +94,18 @@ body.portalBody {
     border: none
 }
 
-/* PART 2 - HEADER BLOCKS (BRANDING,LOGIN) - SSC Blue) */
+/* PART 2 - HEADER BLOCKS (BRANDING,LOGIN) */
 #headerMax, #headerMin {
-	background: #05417c; /* Old browsers */
-	background: -moz-linear-gradient(top,  #0869c7 0%, #05417c 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0869c7), color-stop(100%,#05417c)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #0869c7 0%,#05417c 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #0869c7 0%,#05417c 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #0869c7 0%,#05417c 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #0869c7 0%,#05417c 100%); /* W3C */
-	border: 1px solid #032d56;
+    /* background: #012648;
+    background: -moz-linear-gradient(top, #012648 0%, #007EA5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#012648), color-stop(100%,#007EA5));
+    background: -webkit-linear-gradient(top, #012648 0%,#007EA5 100%);
+    background: -o-linear-gradient(top, #012648 0%,#007EA5 100%);
+    background: -ms-linear-gradient(top, #012648 0%,#007EA5 100%);
+    background: linear-gradient(top, #012648 0%,#007EA5 100%); */
+    background: url(images/header-brknd.jpg) #FBCA6E;
+    border-bottom: 1px solid #035199;
+    min-height: 80px;
 }
 #headerMin {
     overflow: hidden;
@@ -137,59 +120,27 @@ body.portalBody {
 #mastHead {
     clear: both;
     display: block;
-    background: none repeat scroll 0 0 #ffffff;
-    height: 50px;
-    border-bottom: 3px solid #C49813;
 }
 /* container wrapping branding images - portal outputs one /library/skin/<skin name>/images/logo_inst.gif
 that can be used or hidden,can also use a background: url(images/<image name>.<ext>) in this block,or both superimposing them  */
-#mastLogo {
-    *display: none;
-}
 #mastLogo img {
     display: none
 }
 /* show #mastLogo if the user is not logged in so that we can display the logo in the usual place (the logo
 in this skin is rendered via ul.topnav, which a anon user does not see)*/
 #headerMin #mastLogo {
-    display: block; 
+    background-image: url(images/vaughn-logo.gif);
+    background-repeat: no-repeat;
+    background-position: 8px 4px;
+    float: left;
+    width: 300px;
+    height: 53px;
 }
-
-/* container wrapping branding images - portal outputs one /library/skin/<skin name>/images/logo_inst.gif
-that can be used or hidden,can also use a background: url(images/<image name>.<ext>) in this block,or both superimposing them  */
-
-#headerMax #mastLogo {
-	display: inblock; 
-    background: url("images/logo_sakai.png") no-repeat scroll 0px 4px rgba(0, 0, 0, 0);
-    float: right;
-    height: 50px;
-    *left: 20px;
-    width: 95px;
-}
-#mastLogo img {
-    display: none
-    padding: 3px 0px 0px 0px
-}
-
 /* another container wrapping branding images - portal outputs one /library/skin/<skin name>/images/banner_inst.gif
 that can be used or hidden,can also use a background: url(images/<image name>.<ext>) in this block,or both superimposing them  */
 #mastBanner {
-    background: url("images/logo_ssc.png") no-repeat scroll 0 0 transparent;
-    background-position: 8px 8px;
-    float: left;
-    height: 50px;
-    width: 425px;
+    display: none;
 }
-#headerMax #mastBanner {
-	background: url("images/logo_ssc.png") no-repeat scroll 0 0 transparent;
-    background-repeat: no-repeat;
-    background-position: 8px 8px;    
-    height: 50px;
-   *float: left;
-	position: absolute;
-    margin-left: 0px;
-}
-
 #mastBanner img {
     display: none;
 }
@@ -199,7 +150,7 @@ that can be used or hidden,can also use a background: url(images/<image name>.<e
 */
 #mastLogin {
     float: right;
-    padding: 17px 15px 10px;
+    padding: 17px 10px 10px;
 }
 /* #mastLogin #loginForm is the form for login - contains children #eid #pw #submit as well as labels for these inputs*/
 #loginForm {
@@ -207,7 +158,7 @@ that can be used or hidden,can also use a background: url(images/<image name>.<e
 }
 #loginForm label {
     padding: 0 6px;
-    color: #333;
+    color: #B20838;
 }
 #eid, #pw {
     border: 1px solid #ccc;
@@ -227,7 +178,7 @@ that can be used or hidden,can also use a background: url(images/<image name>.<e
 }
 /* login links for CAS,logout link  */
 #loginLinks a, #loginLinks a:visited {
-    color: #032343;
+    color: #fff;
     float: right;
 }
 /* #loginLink1 is the "login/logout" link in a CAS setup, #loginLink2 is the secondary CAS link: login for
@@ -242,32 +193,26 @@ guests, for example */
 /* main rendering for all links and the submit button */
 #loginLink1, #loginLink2, form#loginForm input#submit {
     display: block;
-    border-radius: 3px;
+    border-radius: 5px;
     padding: 4px 6px;
     text-align: center;
     text-decoration: none;
-    background: #ffffff;
-    background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5));
-    background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%);
-    background: -o-linear-gradient(top, #ffffff 0%,#e5e5e5 100%);
-    background: -ms-linear-gradient(top, #ffffff 0%,#e5e5e5 100%);
-    background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+    background: #01284f;
+    background: -moz-linear-gradient(top, #01284f 0%, #035199 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#01284f), color-stop(100%,#035199));
+    background: -webkit-linear-gradient(top, #01284f 0%,#035199 100%);
+    background: -o-linear-gradient(top, #01284f 0%,#035199 100%);
+    background: -ms-linear-gradient(top, #01284f 0%,#035199 100%);
+    background: linear-gradient(top, #01284f 0%,#035199 100%);
+    border: 1px solid #005A76;
 }
 #headerMin #loginLink1, #headerMin #loginLink2 {
     margin-top: -2px;
 }
 #loginLink1:hover, #loginLink2:hover, form#loginForm input#submit:hover {
-    color: #009DCE !important;
-    background: #e5e5e5;
-    background: -moz-linear-gradient(top, #e5e5e5 0%, #ffffff 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5e5e5), color-stop(100%,#ffffff));
-    background: -webkit-linear-gradient(top, #e5e5e5 0%,#ffffff 100%);
-    background: -o-linear-gradient(top, #e5e5e5 0%,#ffffff 100%);
-    background: -ms-linear-gradient(top, #e5e5e5 0%,#ffffff 100%);
-    background: linear-gradient(to bottom, #e5e5e5 0%,#ffffff 100%);
+    background: #035199;
+    text-decoration: none;
 }
- 
 /*make secondary CAS login link (ie. Guest Login) different*/ 
 #loginLink2, #loginLink2:hover {
     background: none;
@@ -376,16 +321,16 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
 /* wrapper for the site link list and link to the 'more sites' tray - since the logo is displayed here on left, it is padded.*/
 #linkNav {
     display: block;
-    padding-right: 10px; /*update-reduced padding from 300px to 10px to allow better navUL appearance*/
+    padding-right: 300px;
 }
 /* site tab navigation: a list right padding makes room for logo and matches width of tool menu
  * if you do not have a logo you can eliminate it to save some room */
 #linkNav ul.topnav {
     list-style: none;
-    padding: 8px 0px 5px 10px; /* matches the width of the toolMenu*/
+    padding: 8px 0 12px 305px; /* matches the width of the toolMenu*/
     margin: 0;
     width: 100%;
-    /*background: transparent url(images/logo.png) 8px 4px no-repeat;*/
+    background: transparent url(images/vaughn-logo.gif) 0 4px no-repeat;
 }
 /* the individual containers for the site links, tool menu control, tool menu*/
 ul.topnav li {
@@ -401,29 +346,25 @@ ul.topnav li {
 }
 /* hover treatment for site links*/
 ul.topnav li.nav-menu:hover, ul.topnav li.more-tab:hover {
-    border: 1px solid #C49813;
+    border: 1px solid #005A76;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
 }
 /* current site control rendering */
  ul.topnav li.nav-selected {
-background: #c49813; /* Old browsers */
-background: -moz-linear-gradient(top,  #f8e8b7 0%, #c49813 66%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8e8b7), color-stop(66%,#c49813)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #f8e8b7 0%,#c49813 66%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #f8e8b7 0%,#c49813 66%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #f8e8b7 0%,#c49813 66%); /* IE10+ */
-background: linear-gradient(to bottom,  #f8e8b7 0%,#c49813 66%); /* W3C */
-    cursor: default;
-	border: 1px solid #C49813;
+    background: #01284f;
+    background: -moz-linear-gradient(top, #01284f 0%, #035199 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#01284f), color-stop(100%,#035199));
+    background: -webkit-linear-gradient(top, #01284f 0%,#035199 100%);
+    background: -o-linear-gradient(top, #01284f 0%,#035199 100%);
+    background: -ms-linear-gradient(top, #01284f 0%,#035199 100%);
+    background: linear-gradient(top, #01284f 0%,#035199 100%);
+    border: 1px solid #005A76;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
-    border-radius: 3px;	
-}
- ul.topnav li.nav-selected a {
-    color:#333333;
-}
+    border-radius: 3px;
+ }
 /* site submenu trigger */
 ul.topnav li span.drop {
     width: 17px;
@@ -477,7 +418,6 @@ ul.topnav li ul.subnav li:hover, ul.topnav li ul.subnav li a:focus,
     color: #000;
     background: #e1e1e1;
 }
-
 /* link to site */
 ul.topnav li a {
     padding: 8px 7px 8px 8px;
@@ -593,7 +533,7 @@ ul#otherSitesMenu li, #siteStatus a {
 }
 /* since the publish site link is the same, doubled up here */ 
 #otherSitesMenu li a:hover, #siteStatus a:hover, #siteStatus a:focus {
-    color: #c49813;
+    color: #012648;
 }
 /*container and control to close the "Other sites tray"*/
 #otherSitesMenu #otherSiteCloseW {
@@ -625,14 +565,14 @@ ul.otherSitesCategorList {
  *  ul.otherSitesCategorList. This last one will appear once per each category
  */
 ul#otherSiteList li, ul.otherSitesCategorList li {
-	background: #05417c; /* Old browsers */
-	background: -moz-linear-gradient(top,  #0869c7 0%, #05417c 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0869c7), color-stop(100%,#05417c)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #0869c7 0%,#05417c 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #0869c7 0%,#05417c 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #0869c7 0%,#05417c 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #0869c7 0%,#05417c 100%); /* W3C */
-	border: 1px solid #032d56;
+    background: #012648;
+    background: -moz-linear-gradient(top, #012648 0%, #007EA5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#012648), color-stop(100%,#007EA5));
+    background: -webkit-linear-gradient(top, #012648 0%,#007EA5 100%);
+    background: -o-linear-gradient(top, #012648 0%,#007EA5 100%);
+    background: -ms-linear-gradient(top, #012648 0%,#007EA5 100%);
+    background: linear-gradient(top, #012648 0%,#007EA5 100%);
+    border: 1px solid #005A76;
     font-weight: bold;
     position: relative;
     border-radius: 5px;
@@ -654,9 +594,6 @@ ul#otherSiteList li a, ul.otherSitesCategorList li a {
 }
 ul#otherSiteList li a:focus span, ul.otherSitesCategorList li a:focus span {
     outline: 1px dotted #fff;
-}
-ul#otherSiteList li a:hover span, ul.otherSitesCategorList li a:hover span {
-    color: #efc959;
 }
 ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     width: 14em;
@@ -708,7 +645,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     display: block;
 }
 #otherSiteTools li a:focus {
-    color: #009DCE;
+    color: #012648;
 }
 /* trigger that retrieves from entity broker the tool menu for a site in the "More sites" tray*/
 .toolMenus {
@@ -749,7 +686,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     padding: 0 1px 0 0;
 }
 #siteHierarchy li a, #siteHierarchy li a:visited {
-    color: #009DCE;
+    color: #012648;
     font-size: 1.2em;
     text-decoration: none;
 }
@@ -784,7 +721,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     width: auto;
     padding: 0;
     border-bottom: 1px solid #ccc;
-    text-align: right;
+    text-align: left;
     background: #f3f3f3;
     background: -moz-linear-gradient(top, #f3f3f3 0%, #e7e7e7 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(100%,#e7e7e7));
@@ -795,28 +732,20 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 /* the current tool */
 #toolMenu li.selectedTool a {
-background: #c49813; /* Old browsers */
-background: -moz-linear-gradient(top,  #f8e8b7 0%, #c49813 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8e8b7), color-stop(100%,#c49813)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #f8e8b7 0%,#c49813 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #f8e8b7 0%,#c49813 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #f8e8b7 0%,#c49813 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #f8e8b7 0%,#c49813 100%); /* W3C */
+    color: #012648 !important;
     cursor: default;
 }
 /* eliminate the normal hover effect when it is current tool */
 #toolMenu li.selectedTool a:hover {
-    *background: inherit !important;
-    *background: #c49813 !important;
-    color: #222222;
+    background: inherit !important;
+    *background: #f3f3f3 !important;
 }
-/* span holds the tool icon bkgnd image for left hand menu 
- * and "a" the icon for tool pull downs - here a default is provided */
-#toolMenu li span, #subSites li span, .submenuitem a, .otherSiteTool a {
+/* span holds the tool icon bkgnd image - here a default is provided */
+#toolMenu li span, #subSites li span {
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: left;
     background-image: url(../../image/silk/application.png);
-    padding-right: 22px;
+    padding-left: 22px;
     line-height: 1.4;
 }
 /* adjusting rendering of last item in the tool menu */
@@ -832,7 +761,7 @@ background: linear-gradient(to bottom,  #f8e8b7 0%,#c49813 100%); /* W3C */
 #toolMenu li a:link, #toolMenu li a, #subSites li a:link, #subSites li a {
     display: block;
     text-decoration: none;
-    color: #0e0e0e;
+    color: #444;
     padding: 7px 6px 6px;
     margin-bottom: 0px;
     margin-left: 0px;
@@ -842,14 +771,14 @@ background: linear-gradient(to bottom,  #f8e8b7 0%,#c49813 100%); /* W3C */
 }
 #toolMenu li a:hover, #subSites li a:hover, #toolMenu li a:focus, #subSites li a:focus {
     text-decoration: none;
-background: #f8e8b7; /* Old browsers */
-background: -moz-linear-gradient(top,  #f8e8b7 0%, #c49813 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8e8b7), color-stop(100%,#c49813)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #f8e8b7 0%,#c49813 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #f8e8b7 0%,#c49813 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #f8e8b7 0%,#c49813 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #f8e8b7 0%,#c49813 100%); /* W3C */
-    color: #333333;
+    background: #012648;
+    background: -moz-linear-gradient(top, #012648 0%, #007EA5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#012648), color-stop(100%,#007EA5));
+    background: -webkit-linear-gradient(top, #012648 0%,#007EA5 100%);
+    background: -o-linear-gradient(top, #012648 0%,#007EA5 100%);
+    background: -ms-linear-gradient(top, #012648 0%,#007EA5 100%);
+    background: linear-gradient(top, #012648 0%,#007EA5 100%);
+    color: #fff;
 }
 /* link in tool menu that allows adding one more tool, may be disabled */
 #toolMenu li.moreTools {
@@ -862,7 +791,7 @@ background: linear-gradient(to bottom,  #f8e8b7 0%,#c49813 100%); /* W3C */
     -webkit-border-radius: 4px !important;
     -khtml-border-radius: 4px !important;
     border-radius: 4px !important;
-    color: #444444;
+    color: #444;
     margin-right: 6px;
 }
 #toolMenu li.moreTools a:hover {
@@ -896,7 +825,7 @@ background: linear-gradient(to bottom,  #f8e8b7 0%,#c49813 100%); /* W3C */
 #siteStatus {
     text-transform: capitalize;
     clear: both;
-    color: #c49813;
+    color: #012648;
     font-size: small;
     font-weight: bold;
     line-height: 130%;
@@ -920,30 +849,15 @@ background: linear-gradient(to bottom,  #f8e8b7 0%,#c49813 100%); /* W3C */
 /* a page may display portlets in one column or two columns - the next three id selectors address the three possiblities - sole child of column is the .portlet   */
 #col1 {
     padding-right: 1em
-   	*background:#fff;
-   	border: 1px solid #CCCCCC;
-    border-radius: 4px;
-   	margin: 0 10px 0 0;
-    background: none repeat scroll 0 0 #FFFFFF; /*update, white background*/
-    padding: 1em 0 0 1em;
 }
 #col1of2 {
-    width: 47%;
+    width: 49%;
     float: left;
-    border: 1px solid #CCCCCC;
-    border-radius: 4px;
-    background:#ffffff;
     margin: 0;
-    padding: 1em 0 0 1em;
 }
 #col2of2 {
-    width: 47%;
+    width: 49%;
     float: right;
-    border: 1px solid #CCCCCC;
-    border-radius: 4px;
-	background:#ffffff;
-	margin: 0 10px 0 0;
-    padding: 1em 0 0 1em;
 }
 .portletTitle {
     width: 100%;
@@ -1210,8 +1124,7 @@ background: linear-gradient(to bottom,  #f8e8b7 0%,#c49813 100%); /* W3C */
 .icon-sakai-sitesetup {
     background-image: url(/library/image/silk/application_lightning.png) !important
 }
-.icon-sakai-site-roster,
-.icon-sakai-site-roster2 {
+.icon-sakai-site-roster {
     background-image: url(/library/image/silk/vcard.png) !important
 }
 .icon-sakai-synoptic-messagecenter {
@@ -1410,7 +1323,7 @@ background: linear-gradient(to bottom,  #f8e8b7 0%,#c49813 100%); /* W3C */
 }
 /* list item when the user is an a chat room is a link to that chat room */
 .presenceList li a {
-    color: #009DCE;
+    color: #012648;
     text-decoration: none;
 }
 
@@ -1618,8 +1531,8 @@ a#toggleToolMenu {
     background: #fff;
 }
 .sakaiMinimizePageNavigation  #toolMenu li.selectedTool span {
-    *-moz-opacity: 0.5;
-    *opacity: 0.5;
+    -moz-opacity: 0.5;
+    opacity: 0.5;
 }
 .sakaiMinimizePageNavigation #toolMenu li span, .sakaiMinimizePageNavigation #subSites li span {
     background-position: center left;
@@ -1633,14 +1546,13 @@ a#toggleToolMenu {
 /*when the tool menu is shoved away a class of .sakaiMinimizePageNavigation gets added to parent block, here we style the selected tool link so that when 
 everything except the tool icon is gone it is still distincts as the current tool (also hover treatment for tools and subsites)*/
 .sakaiMinimizePageNavigation #toolMenu li.selectedTool a, .sakaiMinimizePageNavigation #toolMenu li a:hover, .sakaiMinimizePageNavigation #subSites li a:hover,.sakaiMinimizePageNavigation #toolMenu li a:focus, .sakaiMinimizePageNavigation #subSites li a:focus {
-*background: #05417c; /* Old browsers */
-*background: -moz-linear-gradient(top,  #0868c6 0%, #05417c 85%, #043463 100%); /* FF3.6+ */
-*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0868c6), color-stop(85%,#05417c), color-stop(100%,#043463)); /* Chrome,Safari4+ */
-*background: -webkit-linear-gradient(top,  #0868c6 0%,#05417c 85%,#043463 100%); /* Chrome10+,Safari5.1+ */
-*background: -o-linear-gradient(top,  #0868c6 0%,#05417c 85%,#043463 100%); /* Opera 11.10+ */
-*background: -ms-linear-gradient(top,  #0868c6 0%,#05417c 85%,#043463 100%); /* IE10+ */
-*background: linear-gradient(to bottom,  #0868c6 0%,#05417c 85%,#043463 100%); /* W3C */
-	I*border: 1px solid #C49813;
+    background: #9cd1e8;
+    background: -moz-linear-gradient(top, #9cd1e8 0%, #7bc1e1 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9cd1e8), color-stop(100%,#7bc1e1));
+    background: -webkit-linear-gradient(top, #9cd1e8 0%,#7bc1e1 100%);
+    background: -o-linear-gradient(top, #9cd1e8 0%,#7bc1e1 100%);
+    background: -ms-linear-gradient(top, #9cd1e8 0%,#7bc1e1 100%);
+    background: linear-gradient(top, #9cd1e8 0%,#7bc1e1 100%);
 }
 .sakaiMinimizePageNavigation #togglebar {
     padding-left: 0em;
@@ -1768,37 +1680,3 @@ a.qtipLinkButton:hover {
 	width:250px;
 	display:block;
 }
-
-/* Time in the portal footer */
-.server-time-container {
- /*position: absolute;*/
- right: 0px;
- font-size: 0.9em;
- text-align: right;
-}
-
-.server-time {
- font-weight: bold;
-}
-
-
-/*back to mobile link*/
-#mobile-portal-link{
-    display:block;
-    position:absolute;
-    top:8px;
-    left:7px;
-    background: #fff;
-    padding:8px 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-}
-#mobile-portal-link a,#mobile-portal-link a:visited{
-    color:#0077B5;
-    font-size: 120%;
-    text-decoration:none;
-}
-
-
-#siteStatus a{display:none;}
