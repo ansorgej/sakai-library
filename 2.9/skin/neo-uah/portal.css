@@ -139,12 +139,12 @@ that can be used or hidden,can also use a background: url(images/<image name>.<e
 in this skin is rendered via ul.topnav, which a anon user does not see)*/
 #headerMin #mastLogo {
     display: block; 
-    background-image: url(images/logo.png);
+    background-image: url(images/UAH.png);
     background-repeat: no-repeat;
-    background-position: 8px 4px;
+    background-position: 4px 0px;
     float: left;
-    width: 100px;
-    height: 50px;
+    width: 300px;
+    height: 100px;
 }
 /* another container wrapping branding images - portal outputs one /library/skin/<skin name>/images/banner_inst.gif
 that can be used or hidden,can also use a background: url(images/<image name>.<ext>) in this block,or both superimposing them  */

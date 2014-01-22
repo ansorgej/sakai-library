@@ -985,10 +985,10 @@ tr.selectedFound td {
     color: #111
 }
 .login td.logo {
-    width: 122px;
-    background-color: #009DCE;
-    background-image: url(../neo-default/images/logo_inst.png);
-    background-position: -150px 25px;
+    width: 220px;
+    background-color: #003466;
+    background-image: url(images/UAH.png) !important;
+    /* background-position: -150px 25px; */
     border: 1px solid #ccc;
 }
 .login td.form {
