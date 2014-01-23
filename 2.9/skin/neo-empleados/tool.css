@@ -1226,6 +1226,10 @@ input[type="checkbox"][disabled="disabled"], input[type="checkbox"][disabled="tr
     height: 20px !important
 }
 
+div#col1 form[name=customizeForm] > table {
+  width: 100%;
+}
+
 div#col1of2 form[name=customizeForm] > table {
   width: 100%;
 }
